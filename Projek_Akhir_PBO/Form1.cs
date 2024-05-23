@@ -4,20 +4,22 @@ namespace Projek_Akhir_PBO
 {
     public partial class Form1 : Form
     {
+        UserControlRegister formRegister;
         UserControlLogin formLogin;
         UserControlAdmin formAdmin;
         public Form1()
         {
+            formRegister = new UserControlRegister(this);
             formLogin = new UserControlLogin(this);
             formAdmin = new UserControlAdmin(this);
             InitializeComponent();
-            formLogin.Visible = true;
-            //formRegister.Visible = false;
+            formLogin.Visible = false;
+            formRegister.Visible = true;
             formAdmin.Visible = false;
             //formPemilik.Visible = false;
             //formPenyewa.Visible = false;
             this.Controls.Add(formLogin);
-            //this.Controls.Add(formRegister);
+            this.Controls.Add(formRegister);
             this.Controls.Add(formAdmin);
             //this.Controls.Add(formPemilik);
             //this.Controls.Add(formPenyewa);
@@ -33,7 +35,7 @@ namespace Projek_Akhir_PBO
         public void ShowUserControRegister()
         {
             //formLogin.Visible = false;
-            //formRegister.Visible = false;
+            formRegister.Visible = true;
             //formAdmin.Visible = false;
             //formPemilik.Visible = false;
             //formPenyewa.Visible = false;

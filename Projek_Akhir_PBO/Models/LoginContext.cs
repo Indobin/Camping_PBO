@@ -13,7 +13,8 @@ namespace Projek_Akhir_PBO.Models
 
         public LoginContext()
         {
-            string connectionString = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;";
+            //string connectionString = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;";
+            string connectionString = "Host=localhost;Username=postgres;Password=tiarahmadina;Database=Camping";
             _connection = new NpgsqlConnection(connectionString);
             _connection.Open();
         }
