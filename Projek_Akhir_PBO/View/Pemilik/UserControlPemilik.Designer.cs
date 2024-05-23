@@ -1,6 +1,6 @@
-﻿namespace Projek_Akhir_PBO.View.Admin
+﻿namespace Projek_Akhir_PBO.View.Pemilik
 {
-    partial class UserControlAdmin
+    partial class UserControlPemilik
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,32 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F);
-            label1.Location = new Point(3, 67);
-            label1.Name = "label1";
-            label1.Size = new Size(212, 54);
-            label1.TabIndex = 0;
-            label1.Text = "dashboard";
-            // 
-            // UserControlAdmin
+            // UserControlPemilik
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
-            Name = "UserControlAdmin";
-            Size = new Size(1009, 608);
+            Name = "UserControlPemilik";
+            Size = new Size(1119, 613);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
     }
 }

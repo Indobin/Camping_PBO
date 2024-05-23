@@ -34,7 +34,8 @@ namespace Projek_Akhir_PBO.View
             if (result == "admin")
             {
                 //new AdminDashboard().Show();
-                MessageBox.Show("Admin");
+                //MessageBox.Show("Admin");
+                this.FormParent.ShowUserControlAdmin();
             }
             else if (result == "pemilik")
             {

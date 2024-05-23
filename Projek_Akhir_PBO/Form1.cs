@@ -1,6 +1,5 @@
 using Projek_Akhir_PBO.View;
 using Projek_Akhir_PBO.View.Admin;
-
 namespace Projek_Akhir_PBO
 {
     public partial class Form1 : Form

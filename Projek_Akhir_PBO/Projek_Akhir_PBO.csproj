@@ -27,9 +27,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="View\Penyewa\" />
-    <Folder Include="View\Pemilik\" />
-  </ItemGroup>
-
 </Project>
