@@ -42,6 +42,8 @@
             namabox = new TextBox();
             label7 = new Label();
             btnRegister = new Button();
+            sebagai = new ComboBox();
+            label8 = new Label();
             SuspendLayout();
             // 
             // usernamebox
@@ -177,7 +179,7 @@
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(373, 503);
+            btnRegister.Location = new Point(413, 488);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(115, 34);
             btnRegister.TabIndex = 18;
@@ -185,10 +187,32 @@
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += btnRegister_Click;
             // 
+            // sebagai
+            // 
+            sebagai.FormattingEnabled = true;
+            sebagai.Items.AddRange(new object[] { "Penyewa", "Pemilik" });
+            sebagai.Location = new Point(153, 526);
+            sebagai.Name = "sebagai";
+            sebagai.Size = new Size(121, 25);
+            sebagai.TabIndex = 19;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 13F);
+            label8.Location = new Point(138, 483);
+            label8.Margin = new Padding(2, 0, 2, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(157, 24);
+            label8.TabIndex = 20;
+            label8.Text = "Register Sebagai:";
+            // 
             // UserControlRegister
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label8);
+            Controls.Add(sebagai);
             Controls.Add(btnRegister);
             Controls.Add(namabox);
             Controls.Add(label7);
@@ -225,5 +249,7 @@
         private TextBox namabox;
         private Label label7;
         private Button btnRegister;
+        private ComboBox sebagai;
+        private Label label8;
     }
 }

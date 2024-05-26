@@ -25,58 +25,91 @@ namespace Projek_Akhir_PBO
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string nama = namabox.Text;
-            string alamat = alamatbox.Text;
-            string notelp = notelpbox.Text;
+            string namapenyewa = namabox.Text;
+            string alamat_penyewa = alamatbox.Text;
+            string no_teleponpenyewa = notelpbox.Text;
+            string namapemilik = namabox.Text;
+            string alamat_pemilik = alamatbox.Text;
+            string no_teleponpemilik = notelpbox.Text;
             string username = usernamebox.Text;
             string password = passwordbox.Text;
             string konfirmasi = konfirmasibox.Text;
+            string selectedTable = sebagai.SelectedItem.ToString();
 
             if (password == konfirmasi)
             {
                 using (NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Username=postgres;Password=tiarahmadina;Database=Camping"))
                 {
-                    con.Open();
-
-                    string checkUsernameQuery = "SELECT COUNT(*) FROM Akun WHERE username = @username";
-
-                    using (NpgsqlCommand checkCmd = new NpgsqlCommand(checkUsernameQuery, con))
+                    if (selectedTable == "Penyewa")
                     {
-                        checkCmd.Parameters.AddWithValue("@username", username);
-                        int existingUserCount = Convert.ToInt32(checkCmd.ExecuteScalar());
+                        con.Open();
 
-                        if (existingUserCount > 0)
+                        string checkUsernameQuery = "SELECT COUNT(*) FROM penyewa WHERE username = @username";
+
+                        using (NpgsqlCommand checkCmd = new NpgsqlCommand(checkUsernameQuery, con))
                         {
-                            MessageBox.Show("username sudah ada. Silakan ganti username anda.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
+                            checkCmd.Parameters.AddWithValue("@username", username);
+                            int existingUserCount = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                            if (existingUserCount > 0)
+                            {
+                                MessageBox.Show("username sudah ada. Silakan ganti username anda.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
                         }
+
+                        string register = "INSERT INTO penyewa (id_penyewa, namapenyewa, alamat_penyewa, no_teleponpenyewa, username, password) VALUES (nextval('id_penyewa_seq'), @namapenyewa, @alamat_penyewa, @no_teleponpenyewa, @username, @password)";
+
+                        using (NpgsqlCommand cmd = new NpgsqlCommand(register, con))
+                        {
+                            cmd.Parameters.AddWithValue("namapenyewa", namapenyewa);
+                            cmd.Parameters.AddWithValue("alamat_penyewa", alamat_penyewa);
+                            cmd.Parameters.AddWithValue("no_teleponpenyewa", no_teleponpenyewa);
+                            cmd.Parameters.AddWithValue("username", username);
+                            cmd.Parameters.AddWithValue("password", password);
+                            cmd.ExecuteNonQuery();
+                        }
+                        con.Close();
                     }
-
-                    string register = "INSERT INTO Akun (nama, alamat, notelp, username, password, konfirmasi) VALUES (@nama, @alamat, @notelp, @username, @password, @konfirmasi)";
-
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(register, con))
+                    else if (selectedTable == "Pemilik")
                     {
-                        cmd.Parameters.AddWithValue("nama", nama);
-                        cmd.Parameters.AddWithValue("alamat", alamat);
-                        cmd.Parameters.AddWithValue("notelp", notelp);
-                        cmd.Parameters.AddWithValue("username", username);
-                        cmd.Parameters.AddWithValue("password", password);
-                        cmd.Parameters.AddWithValue("konfirmasi", konfirmasi);
-                        cmd.ExecuteNonQuery();
-                    }
+                        con.Open();
 
-                    con.Close();
+                        string checkUsernameQuery = "SELECT COUNT(*) FROM pemilik WHERE username = @username";
+
+                        using (NpgsqlCommand checkCmd = new NpgsqlCommand(checkUsernameQuery, con))
+                        {
+                            checkCmd.Parameters.AddWithValue("@username", username);
+                            int existingUserCount = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                            if (existingUserCount > 0)
+                            {
+                                MessageBox.Show("username sudah ada. Silakan ganti username anda.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
+
+                        string register = "INSERT INTO pemilik (id_pemilik, namapemilik, alamat_pemilik, no_teleponpemilik, username, password) VALUES (nextval('id_pemilik_seq'), @namapemilik, @alamat_pemilik, @no_teleponpemilik, @username, @password)";
+
+                        using (NpgsqlCommand cmd = new NpgsqlCommand(register, con))
+                        {
+                            cmd.Parameters.AddWithValue("namapemilik", namapemilik);
+                            cmd.Parameters.AddWithValue("alamat_pemilik", alamat_pemilik);
+                            cmd.Parameters.AddWithValue("no_teleponpemilik", no_teleponpemilik);
+                            cmd.Parameters.AddWithValue("username", username);
+                            cmd.Parameters.AddWithValue("password", password);
+                            cmd.ExecuteNonQuery();
+                        }
+                        con.Close();
+                    }
                 }
                 MessageBox.Show("Register Berhasil");
-                Form1 Form1 = new Form1();
-                Form1.Show();
-                this.Hide();
+                this.FormParent.ShowFormlogin();
             }
             else
             {
                 MessageBox.Show("Konfirmasi Password Salah. Silakan coba lagi.");
             }
-
         }
     }
 }
