@@ -55,7 +55,7 @@ CREATE TABLE pemilik (
     namapemilik       VARCHAR(50) NOT NULL,
     username          VARCHAR(20) NOT NULL,
     password          VARCHAR(20) NOT NULL,
-    no_teleponpemilik INTEGER NOT NULL,
+    no_teleponpemilik VARCHAR(14) NOT NULL,
     alamat_pemilik    TEXT NOT NULL
 );
 
@@ -89,6 +89,11 @@ CREATE TABLE penyewa (
     no_teleponpenyewa VARCHAR(14) NOT NULL,
     alamat_penyewa    TEXT NOT NULL
 );
+
+CREATE SEQUENCE id_penyewa_seq;
+CREATE SEQUENCE id_pemilik_seq;
+--ALTER TABLE penyewa ALTER COLUMN id_penyewa SET DEFAULT nextval('id_penyewa_seq');
+--ALTER TABLE pemilik ALTER COLUMN id_pemilik SET DEFAULT nextval('id_pemilik_seq');
 
 ALTER TABLE alat_camping
     ADD CONSTRAINT alat_camping_kategori_alat_camping_fk FOREIGN KEY ( id_kategori )
