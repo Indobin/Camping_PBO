@@ -51,7 +51,22 @@ namespace Projek_Akhir_PBO.View
             {
                 MessageBox.Show(result);
             }
-           
+
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.FormParent.ShowUserControlRegister();
+        }
+
+        private void UserControlLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernamebox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

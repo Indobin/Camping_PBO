@@ -32,7 +32,7 @@ namespace Projek_Akhir_PBO
             //formPemilik.Visible = false;
             //formPenyewa.Visible = false;
         }
-        public void ShowUserControRegister()
+        public void ShowUserControlRegister()
         {
             //formLogin.Visible = false;
             formRegister.Visible = true;

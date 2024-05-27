@@ -111,5 +111,15 @@ namespace Projek_Akhir_PBO
                 MessageBox.Show("Konfirmasi Password Salah. Silakan coba lagi.");
             }
         }
+
+        private void UserControlRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

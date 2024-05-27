@@ -28,17 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
             SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20F);
+            label1.Location = new Point(13, 40);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(296, 46);
+            label1.TabIndex = 1;
+            label1.Text = "dashboard pemilik";
             // 
             // UserControlPemilik
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "UserControlPemilik";
-            Size = new Size(1119, 613);
+            Size = new Size(960, 540);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
     }
 }

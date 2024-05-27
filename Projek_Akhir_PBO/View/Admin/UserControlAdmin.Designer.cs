@@ -35,19 +35,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F);
-            label1.Location = new Point(3, 67);
+            label1.Location = new Point(23, 26);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(212, 54);
+            label1.Size = new Size(281, 46);
             label1.TabIndex = 0;
-            label1.Text = "dashboard";
+            label1.Text = "dashboard admin";
             // 
             // UserControlAdmin
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "UserControlAdmin";
-            Size = new Size(1009, 608);
+            Size = new Size(960, 540);
             ResumeLayout(false);
             PerformLayout();
         }
