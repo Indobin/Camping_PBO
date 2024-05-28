@@ -11,7 +11,7 @@ CREATE TABLE alat_camping (
     namaalatcamping                   VARCHAR(60) NOT NULL,
     hargaalatcamping                  INTEGER NOT NULL,
     jumlahalatcamping                 INTEGER NOT NULL,
-    deskripsi                         CLOB NOT NULL,
+    deskripsi                         TEXT NOT NULL,
     id_pemilik                SERIAL NOT NULL, 
     id_kategori SERIAL NOT NULL
 );
@@ -32,10 +32,10 @@ CREATE TABLE kategori_alat_camping (
 
 CREATE TABLE laporan (
     id_laporan                           SERIAL NOT NULL PRIMARY KEY,
-    isi_laporan                          CLOB NOT NULL,
+    isi_laporan                          TEXT NOT NULL,
     tanggallaporan                       DATE NOT NULL,
     statuslaporan                        CHAR(1) NOT NULL,
-    isi_tanggapan                        CLOB NOT NULL,
+    isi_tanggapan                        TEXT NOT NULL,
     id_penyewa                   SERIAL NOT NULL,
     id_admin                       SERIAL NOT NULL, 
     id_detail_transaksi SERIAL NOT NULL
@@ -58,7 +58,7 @@ CREATE TABLE pemilik (
     username          VARCHAR(20) NOT NULL UNIQUE,
     password          VARCHAR(20) NOT NULL,
     no_teleponpemilik INTEGER NOT NULL,
-    alamat_pemilik    CLOB NOT NULL
+    alamat_pemilik    TEXT NOT NULL
 );
 
 CREATE TABLE peminjaman (
@@ -87,7 +87,7 @@ CREATE TABLE penyewa (
     username          VARCHAR(20) NOT NULL UNIQUE,
     password          VARCHAR(20) NOT NULL,
     no_teleponpenyewa VARCHAR(14) NOT NULL,
-    alamat_penyewa    CLOB NOT NULL
+    alamat_penyewa    TEXT NOT NULL
 );
 
 CREATE SEQUENCE id_penyewa_seq;
