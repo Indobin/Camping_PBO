@@ -18,8 +18,8 @@ namespace Projek_Akhir_PBO
             InitializeComponent();
             formLogin.Visible = false;
             formRegister.Visible = false;
-            formAdmin.Visible = false;
-            formPemilik.Visible = true;
+            formAdmin.Visible = true;
+            formPemilik.Visible = false;
             //formPenyewa.Visible = false;
             this.Controls.Add(formLogin);
             this.Controls.Add(formRegister);
