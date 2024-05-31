@@ -40,7 +40,7 @@ namespace Projek_Akhir_PBO.View
             else if (result == "pemilik")
             {
                 //new PemilikDashboard().Show();
-                MessageBox.Show("Pemilik");
+                this.FormParent.ShowUserControlPemilik();
             }
             else if (result == "penyewa")
             {
