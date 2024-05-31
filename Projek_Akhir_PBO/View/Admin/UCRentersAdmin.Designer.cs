@@ -1,6 +1,6 @@
 ﻿namespace Projek_Akhir_PBO.View.Admin
 {
-    partial class UCOwner
+    partial class UCRentersAdmin
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            SuspendLayout();
+            // 
+            // UCRentersAdmin
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Name = "UCRentersAdmin";
+            Size = new Size(1277, 864);
+            ResumeLayout(false);
         }
 
         #endregion

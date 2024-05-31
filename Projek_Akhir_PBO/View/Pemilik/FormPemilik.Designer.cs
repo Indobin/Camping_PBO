@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPemilik));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPemilik));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -43,183 +43,33 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label4 = new Label();
-            guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label3 = new Label();
-            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label2 = new Label();
-            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label1 = new Label();
-            paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
-            juduldashboard = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             sidebardashboard = new Panel();
+            buttonprofilepeyewa = new Guna.UI2.WinForms.Guna2Button();
+            buttonTransactionsPeyewa = new Guna.UI2.WinForms.Guna2Button();
+            buttondaftarpenyewa = new Guna.UI2.WinForms.Guna2Button();
             buttonlogoutpemilik = new Guna.UI2.WinForms.Guna2Button();
-            buttonprofilpeyewa = new Guna.UI2.WinForms.Guna2Button();
             buttohistorypenyewa = new Guna.UI2.WinForms.Guna2Button();
             buttontransactionpenyewa = new Guna.UI2.WinForms.Guna2Button();
             buttonhomepenyewa = new Guna.UI2.WinForms.Guna2Button();
             panellogo = new Guna.UI2.WinForms.Guna2Panel();
             LogoGoCamp = new PictureBox();
             GO_CAMP = new Label();
-            guna2ShadowPanel4.SuspendLayout();
-            guna2ShadowPanel3.SuspendLayout();
-            guna2ShadowPanel2.SuspendLayout();
-            guna2ShadowPanel1.SuspendLayout();
-            paneltopdashboard.SuspendLayout();
             sidebardashboard.SuspendLayout();
             panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LogoGoCamp).BeginInit();
             SuspendLayout();
-            // 
-            // guna2ShadowPanel4
-            // 
-            guna2ShadowPanel4.BackColor = Color.Transparent;
-            guna2ShadowPanel4.Controls.Add(label4);
-            guna2ShadowPanel4.FillColor = Color.White;
-            guna2ShadowPanel4.Location = new Point(1208, 155);
-            guna2ShadowPanel4.Name = "guna2ShadowPanel4";
-            guna2ShadowPanel4.Radius = 10;
-            guna2ShadowPanel4.RightToLeft = RightToLeft.Yes;
-            guna2ShadowPanel4.ShadowColor = Color.Black;
-            guna2ShadowPanel4.ShadowDepth = 5;
-            guna2ShadowPanel4.ShadowShift = 10;
-            guna2ShadowPanel4.Size = new Size(300, 200);
-            guna2ShadowPanel4.TabIndex = 47;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Lufga SemiBold", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(14, 115, 116);
-            label4.ImageAlign = ContentAlignment.MiddleLeft;
-            label4.Location = new Point(34, 28);
-            label4.Name = "label4";
-            label4.Size = new Size(147, 26);
-            label4.TabIndex = 23;
-            label4.Text = "Total Revenue";
-            // 
-            // guna2ShadowPanel3
-            // 
-            guna2ShadowPanel3.BackColor = Color.Transparent;
-            guna2ShadowPanel3.Controls.Add(label3);
-            guna2ShadowPanel3.FillColor = Color.White;
-            guna2ShadowPanel3.Location = new Point(902, 155);
-            guna2ShadowPanel3.Name = "guna2ShadowPanel3";
-            guna2ShadowPanel3.Radius = 10;
-            guna2ShadowPanel3.RightToLeft = RightToLeft.Yes;
-            guna2ShadowPanel3.ShadowColor = Color.Black;
-            guna2ShadowPanel3.ShadowDepth = 5;
-            guna2ShadowPanel3.ShadowShift = 10;
-            guna2ShadowPanel3.Size = new Size(300, 200);
-            guna2ShadowPanel3.TabIndex = 46;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Lufga SemiBold", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(14, 115, 116);
-            label3.ImageAlign = ContentAlignment.MiddleLeft;
-            label3.Location = new Point(34, 28);
-            label3.Name = "label3";
-            label3.Size = new Size(180, 26);
-            label3.TabIndex = 23;
-            label3.Text = "Total Equipments";
-            // 
-            // guna2ShadowPanel2
-            // 
-            guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(label2);
-            guna2ShadowPanel2.FillColor = Color.White;
-            guna2ShadowPanel2.Location = new Point(596, 155);
-            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            guna2ShadowPanel2.Radius = 10;
-            guna2ShadowPanel2.RightToLeft = RightToLeft.Yes;
-            guna2ShadowPanel2.ShadowColor = Color.Black;
-            guna2ShadowPanel2.ShadowDepth = 5;
-            guna2ShadowPanel2.ShadowShift = 10;
-            guna2ShadowPanel2.Size = new Size(300, 200);
-            guna2ShadowPanel2.TabIndex = 45;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Lufga SemiBold", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(14, 115, 116);
-            label2.ImageAlign = ContentAlignment.MiddleLeft;
-            label2.Location = new Point(32, 28);
-            label2.Name = "label2";
-            label2.Size = new Size(179, 26);
-            label2.TabIndex = 22;
-            label2.Text = "Total Permintaan";
-            // 
-            // guna2ShadowPanel1
-            // 
-            guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(label1);
-            guna2ShadowPanel1.FillColor = Color.White;
-            guna2ShadowPanel1.Location = new Point(290, 155);
-            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            guna2ShadowPanel1.Radius = 10;
-            guna2ShadowPanel1.RightToLeft = RightToLeft.Yes;
-            guna2ShadowPanel1.ShadowColor = Color.Black;
-            guna2ShadowPanel1.ShadowDepth = 5;
-            guna2ShadowPanel1.ShadowShift = 10;
-            guna2ShadowPanel1.Size = new Size(300, 200);
-            guna2ShadowPanel1.TabIndex = 44;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Lufga SemiBold", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(14, 115, 116);
-            label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(29, 28);
-            label1.Name = "label1";
-            label1.Size = new Size(122, 26);
-            label1.TabIndex = 21;
-            label1.Text = "Total Order";
-            // 
-            // paneltopdashboard
-            // 
-            paneltopdashboard.BackColor = Color.FromArgb(245, 248, 241);
-            paneltopdashboard.BorderColor = Color.FromArgb(91, 80, 80);
-            paneltopdashboard.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            paneltopdashboard.Controls.Add(juduldashboard);
-            paneltopdashboard.CustomBorderColor = Color.FromArgb(217, 224, 184);
-            paneltopdashboard.CustomBorderThickness = new Padding(0, 0, 0, 1);
-            paneltopdashboard.CustomizableEdges = customizableEdges1;
-            paneltopdashboard.Dock = DockStyle.Top;
-            paneltopdashboard.Location = new Point(256, 0);
-            paneltopdashboard.Name = "paneltopdashboard";
-            paneltopdashboard.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            paneltopdashboard.Size = new Size(1280, 131);
-            paneltopdashboard.TabIndex = 43;
-            // 
-            // juduldashboard
-            // 
-            juduldashboard.AutoSize = true;
-            juduldashboard.BackColor = Color.Transparent;
-            juduldashboard.Font = new Font("Lufga", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            juduldashboard.ForeColor = Color.FromArgb(91, 80, 80);
-            juduldashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            juduldashboard.Location = new Point(34, 41);
-            juduldashboard.Name = "juduldashboard";
-            juduldashboard.Size = new Size(233, 52);
-            juduldashboard.TabIndex = 20;
-            juduldashboard.Text = "Dashboard";
             // 
             // sidebardashboard
             // 
             sidebardashboard.BackColor = Color.FromArgb(14, 115, 116);
             sidebardashboard.BackgroundImage = (Image)resources.GetObject("sidebardashboard.BackgroundImage");
             sidebardashboard.BorderStyle = BorderStyle.FixedSingle;
+            sidebardashboard.Controls.Add(buttonprofilepeyewa);
+            sidebardashboard.Controls.Add(buttonTransactionsPeyewa);
+            sidebardashboard.Controls.Add(buttondaftarpenyewa);
             sidebardashboard.Controls.Add(buttonlogoutpemilik);
-            sidebardashboard.Controls.Add(buttonprofilpeyewa);
             sidebardashboard.Controls.Add(buttohistorypenyewa);
             sidebardashboard.Controls.Add(buttontransactionpenyewa);
             sidebardashboard.Controls.Add(buttonhomepenyewa);
@@ -231,10 +81,83 @@
             sidebardashboard.Size = new Size(256, 864);
             sidebardashboard.TabIndex = 42;
             // 
+            // buttonprofilepeyewa
+            // 
+            buttonprofilepeyewa.BackColor = Color.Transparent;
+            buttonprofilepeyewa.BorderRadius = 10;
+            buttonprofilepeyewa.CustomizableEdges = customizableEdges1;
+            buttonprofilepeyewa.DisabledState.BorderColor = Color.DarkGray;
+            buttonprofilepeyewa.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonprofilepeyewa.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonprofilepeyewa.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonprofilepeyewa.Dock = DockStyle.Top;
+            buttonprofilepeyewa.FillColor = Color.FromArgb(14, 115, 116);
+            buttonprofilepeyewa.Font = new Font("Lufga Medium", 13F);
+            buttonprofilepeyewa.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonprofilepeyewa.Image = Properties.Resources.profile;
+            buttonprofilepeyewa.ImageAlign = HorizontalAlignment.Left;
+            buttonprofilepeyewa.ImageOffset = new Point(32, 0);
+            buttonprofilepeyewa.Location = new Point(0, 440);
+            buttonprofilepeyewa.Name = "buttonprofilepeyewa";
+            buttonprofilepeyewa.Padding = new Padding(3, 2, 0, 0);
+            buttonprofilepeyewa.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            buttonprofilepeyewa.Size = new Size(254, 62);
+            buttonprofilepeyewa.TabIndex = 8;
+            buttonprofilepeyewa.Text = "          Profile";
+            buttonprofilepeyewa.TextAlign = HorizontalAlignment.Left;
+            // 
+            // buttonTransactionsPeyewa
+            // 
+            buttonTransactionsPeyewa.BackColor = Color.Transparent;
+            buttonTransactionsPeyewa.BorderRadius = 10;
+            buttonTransactionsPeyewa.CustomizableEdges = customizableEdges3;
+            buttonTransactionsPeyewa.DisabledState.BorderColor = Color.DarkGray;
+            buttonTransactionsPeyewa.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonTransactionsPeyewa.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonTransactionsPeyewa.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonTransactionsPeyewa.Dock = DockStyle.Top;
+            buttonTransactionsPeyewa.FillColor = Color.FromArgb(14, 115, 116);
+            buttonTransactionsPeyewa.Font = new Font("Lufga Medium", 13F);
+            buttonTransactionsPeyewa.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonTransactionsPeyewa.ImageAlign = HorizontalAlignment.Left;
+            buttonTransactionsPeyewa.ImageOffset = new Point(32, 0);
+            buttonTransactionsPeyewa.Location = new Point(0, 378);
+            buttonTransactionsPeyewa.Name = "buttonTransactionsPeyewa";
+            buttonTransactionsPeyewa.Padding = new Padding(3, 2, 0, 0);
+            buttonTransactionsPeyewa.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            buttonTransactionsPeyewa.Size = new Size(254, 62);
+            buttonTransactionsPeyewa.TabIndex = 12;
+            buttonTransactionsPeyewa.Text = "          Transactions";
+            buttonTransactionsPeyewa.TextAlign = HorizontalAlignment.Left;
+            // 
+            // buttondaftarpenyewa
+            // 
+            buttondaftarpenyewa.BackColor = Color.Transparent;
+            buttondaftarpenyewa.BorderRadius = 10;
+            buttondaftarpenyewa.CustomizableEdges = customizableEdges5;
+            buttondaftarpenyewa.DisabledState.BorderColor = Color.DarkGray;
+            buttondaftarpenyewa.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttondaftarpenyewa.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttondaftarpenyewa.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttondaftarpenyewa.Dock = DockStyle.Top;
+            buttondaftarpenyewa.FillColor = Color.FromArgb(14, 115, 116);
+            buttondaftarpenyewa.Font = new Font("Lufga Medium", 13F);
+            buttondaftarpenyewa.ForeColor = Color.FromArgb(193, 200, 207);
+            buttondaftarpenyewa.ImageAlign = HorizontalAlignment.Left;
+            buttondaftarpenyewa.ImageOffset = new Point(32, 0);
+            buttondaftarpenyewa.Location = new Point(0, 316);
+            buttondaftarpenyewa.Name = "buttondaftarpenyewa";
+            buttondaftarpenyewa.Padding = new Padding(3, 2, 0, 0);
+            buttondaftarpenyewa.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            buttondaftarpenyewa.Size = new Size(254, 62);
+            buttondaftarpenyewa.TabIndex = 11;
+            buttondaftarpenyewa.Text = "          Renters";
+            buttondaftarpenyewa.TextAlign = HorizontalAlignment.Left;
+            // 
             // buttonlogoutpemilik
             // 
             buttonlogoutpemilik.BorderRadius = 10;
-            buttonlogoutpemilik.CustomizableEdges = customizableEdges3;
+            buttonlogoutpemilik.CustomizableEdges = customizableEdges7;
             buttonlogoutpemilik.DisabledState.BorderColor = Color.DarkGray;
             buttonlogoutpemilik.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonlogoutpemilik.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -244,42 +167,17 @@
             buttonlogoutpemilik.ForeColor = Color.White;
             buttonlogoutpemilik.Location = new Point(22, 754);
             buttonlogoutpemilik.Name = "buttonlogoutpemilik";
-            buttonlogoutpemilik.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            buttonlogoutpemilik.ShadowDecoration.CustomizableEdges = customizableEdges8;
             buttonlogoutpemilik.Size = new Size(210, 53);
             buttonlogoutpemilik.TabIndex = 6;
             buttonlogoutpemilik.Text = "Logout";
             buttonlogoutpemilik.Click += buttonlogoutpemilik_Click;
             // 
-            // buttonprofilpeyewa
-            // 
-            buttonprofilpeyewa.BackColor = Color.Transparent;
-            buttonprofilpeyewa.BorderRadius = 10;
-            buttonprofilpeyewa.CustomizableEdges = customizableEdges5;
-            buttonprofilpeyewa.DisabledState.BorderColor = Color.DarkGray;
-            buttonprofilpeyewa.DisabledState.CustomBorderColor = Color.DarkGray;
-            buttonprofilpeyewa.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            buttonprofilpeyewa.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            buttonprofilpeyewa.Dock = DockStyle.Top;
-            buttonprofilpeyewa.FillColor = Color.FromArgb(14, 115, 116);
-            buttonprofilpeyewa.Font = new Font("Lufga Medium", 13F);
-            buttonprofilpeyewa.ForeColor = Color.FromArgb(193, 200, 207);
-            buttonprofilpeyewa.Image = Properties.Resources.profile;
-            buttonprofilpeyewa.ImageAlign = HorizontalAlignment.Left;
-            buttonprofilpeyewa.ImageOffset = new Point(32, 0);
-            buttonprofilpeyewa.Location = new Point(0, 307);
-            buttonprofilpeyewa.Name = "buttonprofilpeyewa";
-            buttonprofilpeyewa.Padding = new Padding(3, 2, 0, 0);
-            buttonprofilpeyewa.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            buttonprofilpeyewa.Size = new Size(254, 58);
-            buttonprofilpeyewa.TabIndex = 8;
-            buttonprofilpeyewa.Text = "          Profile";
-            buttonprofilpeyewa.TextAlign = HorizontalAlignment.Left;
-            // 
             // buttohistorypenyewa
             // 
             buttohistorypenyewa.BackColor = Color.Transparent;
             buttohistorypenyewa.BorderRadius = 10;
-            buttohistorypenyewa.CustomizableEdges = customizableEdges7;
+            buttohistorypenyewa.CustomizableEdges = customizableEdges9;
             buttohistorypenyewa.DisabledState.BorderColor = Color.DarkGray;
             buttohistorypenyewa.DisabledState.CustomBorderColor = Color.DarkGray;
             buttohistorypenyewa.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -288,24 +186,23 @@
             buttohistorypenyewa.FillColor = Color.FromArgb(14, 115, 116);
             buttohistorypenyewa.Font = new Font("Lufga Medium", 13F);
             buttohistorypenyewa.ForeColor = Color.FromArgb(193, 200, 207);
-            buttohistorypenyewa.Image = Properties.Resources.history;
             buttohistorypenyewa.ImageAlign = HorizontalAlignment.Left;
             buttohistorypenyewa.ImageOffset = new Point(29, 0);
             buttohistorypenyewa.ImageSize = new Size(23, 20);
-            buttohistorypenyewa.Location = new Point(0, 245);
+            buttohistorypenyewa.Location = new Point(0, 254);
             buttohistorypenyewa.Name = "buttohistorypenyewa";
             buttohistorypenyewa.Padding = new Padding(3, 1, 0, 0);
-            buttohistorypenyewa.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            buttohistorypenyewa.ShadowDecoration.CustomizableEdges = customizableEdges10;
             buttohistorypenyewa.Size = new Size(254, 62);
             buttohistorypenyewa.TabIndex = 10;
-            buttohistorypenyewa.Text = "          History";
+            buttohistorypenyewa.Text = "          Categories";
             buttohistorypenyewa.TextAlign = HorizontalAlignment.Left;
             // 
             // buttontransactionpenyewa
             // 
             buttontransactionpenyewa.BackColor = Color.Transparent;
             buttontransactionpenyewa.BorderRadius = 10;
-            buttontransactionpenyewa.CustomizableEdges = customizableEdges9;
+            buttontransactionpenyewa.CustomizableEdges = customizableEdges11;
             buttontransactionpenyewa.DisabledState.BorderColor = Color.DarkGray;
             buttontransactionpenyewa.DisabledState.CustomBorderColor = Color.DarkGray;
             buttontransactionpenyewa.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -314,16 +211,15 @@
             buttontransactionpenyewa.FillColor = Color.FromArgb(14, 115, 116);
             buttontransactionpenyewa.Font = new Font("Lufga Medium", 13F);
             buttontransactionpenyewa.ForeColor = Color.FromArgb(193, 200, 207);
-            buttontransactionpenyewa.Image = Properties.Resources.transaksi;
             buttontransactionpenyewa.ImageAlign = HorizontalAlignment.Left;
             buttontransactionpenyewa.ImageOffset = new Point(30, 0);
-            buttontransactionpenyewa.Location = new Point(0, 182);
+            buttontransactionpenyewa.Location = new Point(0, 192);
             buttontransactionpenyewa.Name = "buttontransactionpenyewa";
             buttontransactionpenyewa.Padding = new Padding(3, 2, 0, 0);
-            buttontransactionpenyewa.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            buttontransactionpenyewa.Size = new Size(254, 63);
+            buttontransactionpenyewa.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            buttontransactionpenyewa.Size = new Size(254, 62);
             buttontransactionpenyewa.TabIndex = 9;
-            buttontransactionpenyewa.Text = "          Transaction";
+            buttontransactionpenyewa.Text = "          Stocks";
             buttontransactionpenyewa.TextAlign = HorizontalAlignment.Left;
             // 
             // buttonhomepenyewa
@@ -331,7 +227,7 @@
             buttonhomepenyewa.BackColor = Color.Transparent;
             buttonhomepenyewa.BorderColor = Color.Transparent;
             buttonhomepenyewa.BorderRadius = 10;
-            buttonhomepenyewa.CustomizableEdges = customizableEdges11;
+            buttonhomepenyewa.CustomizableEdges = customizableEdges13;
             buttonhomepenyewa.DisabledState.BorderColor = Color.DarkGray;
             buttonhomepenyewa.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonhomepenyewa.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -346,8 +242,8 @@
             buttonhomepenyewa.Location = new Point(0, 130);
             buttonhomepenyewa.Name = "buttonhomepenyewa";
             buttonhomepenyewa.Padding = new Padding(3, 1, 0, 0);
-            buttonhomepenyewa.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            buttonhomepenyewa.Size = new Size(254, 52);
+            buttonhomepenyewa.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            buttonhomepenyewa.Size = new Size(254, 62);
             buttonhomepenyewa.TabIndex = 7;
             buttonhomepenyewa.Text = "          Dashboard";
             buttonhomepenyewa.TextAlign = HorizontalAlignment.Left;
@@ -356,11 +252,11 @@
             // 
             panellogo.Controls.Add(LogoGoCamp);
             panellogo.Controls.Add(GO_CAMP);
-            panellogo.CustomizableEdges = customizableEdges13;
+            panellogo.CustomizableEdges = customizableEdges15;
             panellogo.Dock = DockStyle.Top;
             panellogo.Location = new Point(0, 0);
             panellogo.Name = "panellogo";
-            panellogo.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            panellogo.ShadowDecoration.CustomizableEdges = customizableEdges16;
             panellogo.Size = new Size(254, 130);
             panellogo.TabIndex = 5;
             // 
@@ -392,25 +288,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1536, 864);
-            Controls.Add(guna2ShadowPanel4);
-            Controls.Add(guna2ShadowPanel3);
-            Controls.Add(guna2ShadowPanel2);
-            Controls.Add(guna2ShadowPanel1);
-            Controls.Add(paneltopdashboard);
             Controls.Add(sidebardashboard);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormPemilik";
             Text = "GO-CAMP";
-            guna2ShadowPanel4.ResumeLayout(false);
-            guna2ShadowPanel4.PerformLayout();
-            guna2ShadowPanel3.ResumeLayout(false);
-            guna2ShadowPanel3.PerformLayout();
-            guna2ShadowPanel2.ResumeLayout(false);
-            guna2ShadowPanel2.PerformLayout();
-            guna2ShadowPanel1.ResumeLayout(false);
-            guna2ShadowPanel1.PerformLayout();
-            paneltopdashboard.ResumeLayout(false);
-            paneltopdashboard.PerformLayout();
             sidebardashboard.ResumeLayout(false);
             panellogo.ResumeLayout(false);
             panellogo.PerformLayout();
@@ -419,25 +300,16 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel4;
-        private Label label4;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
-        private Label label3;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Label label2;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Label label1;
-        private Guna.UI2.WinForms.Guna2Panel paneltopdashboard;
-        private Label juduldashboard;
         private Panel sidebardashboard;
         private Guna.UI2.WinForms.Guna2Button buttonlogoutpemilik;
-        private Guna.UI2.WinForms.Guna2Button buttonprofilpeyewa;
+        private Guna.UI2.WinForms.Guna2Button buttonprofilepeyewa;
         private Guna.UI2.WinForms.Guna2Button buttohistorypenyewa;
         private Guna.UI2.WinForms.Guna2Button buttontransactionpenyewa;
         private Guna.UI2.WinForms.Guna2Button buttonhomepenyewa;
         private Guna.UI2.WinForms.Guna2Panel panellogo;
         private PictureBox LogoGoCamp;
         private Label GO_CAMP;
+        private Guna.UI2.WinForms.Guna2Button buttonTransactionsPeyewa;
+        private Guna.UI2.WinForms.Guna2Button buttondaftarpenyewa;
     }
 }

@@ -297,7 +297,7 @@
             LogoGoCamp.Anchor = AnchorStyles.None;
             LogoGoCamp.BackColor = Color.Transparent;
             LogoGoCamp.Image = (Image)resources.GetObject("LogoGoCamp.Image");
-            LogoGoCamp.Location = new Point(731, 64);
+            LogoGoCamp.Location = new Point(715, 64);
             LogoGoCamp.Name = "LogoGoCamp";
             LogoGoCamp.Size = new Size(75, 75);
             LogoGoCamp.SizeMode = PictureBoxSizeMode.Zoom;
@@ -422,7 +422,7 @@
             guna2ShadowPanel1.BackColor = Color.Transparent;
             guna2ShadowPanel1.Controls.Add(btnRegister);
             guna2ShadowPanel1.FillColor = Color.FromArgb(14, 115, 116);
-            guna2ShadowPanel1.Location = new Point(168, 151);
+            guna2ShadowPanel1.Location = new Point(155, 151);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 20;
             guna2ShadowPanel1.RightToLeft = RightToLeft.Yes;
