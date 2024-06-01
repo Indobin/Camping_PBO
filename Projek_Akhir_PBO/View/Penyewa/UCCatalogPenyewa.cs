@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projek_Akhir_PBO.View.Pemilik
+namespace Projek_Akhir_PBO.View.Penyewa
 {
-    public partial class UCDashboardPemilik : UserControl
+    public partial class UCCatalogPenyewa : UserControl
     {
-        public UCDashboardPemilik()
+        public UCCatalogPenyewa()
         {
             InitializeComponent();
         }
 
-        private void paneltopdashboard_Paint(object sender, PaintEventArgs e)
+        private void judulCatalog_Click(object sender, EventArgs e)
         {
 
         }

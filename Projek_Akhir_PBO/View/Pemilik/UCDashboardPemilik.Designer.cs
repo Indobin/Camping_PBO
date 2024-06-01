@@ -174,6 +174,7 @@
             paneltopdashboard.ShadowDecoration.CustomizableEdges = customizableEdges2;
             paneltopdashboard.Size = new Size(1277, 131);
             paneltopdashboard.TabIndex = 48;
+            paneltopdashboard.Paint += paneltopdashboard_Paint;
             // 
             // juduldashboard
             // 
