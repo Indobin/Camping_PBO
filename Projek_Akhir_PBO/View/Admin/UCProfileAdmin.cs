@@ -23,7 +23,7 @@ namespace Projek_Akhir_PBO.View.Admin
             set
             {
                 _userId = value;
-                profileControllerA.UserId = _userId;
+                //profileControllerA.UserId = _userId;
                 // Load data or perform operations based on the new UserId value
             }
         }
@@ -48,19 +48,20 @@ namespace Projek_Akhir_PBO.View.Admin
 
         private void UCProfileAdmin_Load(object sender, EventArgs e)
         {
-            if (_userId > 0)
-            {
-                var profileData = profileControllerA.Read();
-                if (profileData != null)
-                {
-                    textBoxNamaAdmin.Text = profileData.namaadmin;
-                    textBoxNoHp.Text = profileData.no_hp;
-                }
-                else
-                {
-                    MessageBox.Show("Data tidak ditemukan untuk UserId ini.");
-                }
-            }
+            //profileControllerA.Read();
+            //if (_userId > 0)
+            //{
+            //    var profileData = profileControllerA.Read();
+            //    if (profileData != null)
+            //    {
+            //        textBoxNamaAdmin.Text = profileData.namaadmin;
+            //        textBoxNoHp.Text = profileData.no_hp;
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Data tidak ditemukan untuk UserId ini.");
+            //    }
+            //}
         }
     }
 }

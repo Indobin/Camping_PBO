@@ -108,7 +108,7 @@
             usernamebox.ShadowDecoration.CustomizableEdges = customizableEdges4;
             usernamebox.Size = new Size(433, 45);
             usernamebox.TabIndex = 48;
-            usernamebox.TextChanged += usernamebox_TextChanged;
+            //usernamebox.TextChanged += usernamebox_TextChanged;
             // 
             // passwordbox
             // 
