@@ -12,6 +12,18 @@ namespace Projek_Akhir_PBO.View.Admin
 {
     public partial class UCOwner : UserControl
     {
+        private int _userId;
+
+        public int UserId
+        {
+            get { return _userId; }
+            set
+            {
+                _userId = value;
+                //kategoriController.UserId = _userId;
+                // Load data or perform operations based on the new UserId value
+            }
+        }
         public UCOwner()
         {
             InitializeComponent();

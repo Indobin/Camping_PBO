@@ -34,11 +34,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controller\Admin\" />
-    <Folder Include="Controller\Penyewa\" />
-    <Folder Include="Models\Admin\" />
-    <Folder Include="Models\Penyewa\" />
-  </ItemGroup>
-
 </Project>
