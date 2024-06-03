@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
             juduldashboard = new Label();
             label1 = new Label();
@@ -45,6 +45,8 @@
             label4 = new Label();
             textBox3 = new TextBox();
             label5 = new Label();
+            label3 = new Label();
+            comboBox1 = new ComboBox();
             paneltopdashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -57,11 +59,11 @@
             paneltopdashboard.Controls.Add(juduldashboard);
             paneltopdashboard.CustomBorderColor = Color.FromArgb(217, 224, 184);
             paneltopdashboard.CustomBorderThickness = new Padding(0, 0, 0, 1);
-            paneltopdashboard.CustomizableEdges = customizableEdges1;
+            paneltopdashboard.CustomizableEdges = customizableEdges7;
             paneltopdashboard.Dock = DockStyle.Top;
             paneltopdashboard.Location = new Point(0, 0);
             paneltopdashboard.Name = "paneltopdashboard";
-            paneltopdashboard.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            paneltopdashboard.ShadowDecoration.CustomizableEdges = customizableEdges8;
             paneltopdashboard.Size = new Size(1277, 131);
             paneltopdashboard.TabIndex = 45;
             // 
@@ -112,6 +114,7 @@
             button1tambah.TabIndex = 58;
             button1tambah.Text = "Tambah";
             button1tambah.UseVisualStyleBackColor = false;
+            button1tambah.Click += button1tambah_Click;
             // 
             // button2edit
             // 
@@ -202,7 +205,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 15F);
-            textBox3.Location = new Point(441, 509);
+            textBox3.Location = new Point(204, 511);
             textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(189, 34);
@@ -212,17 +215,40 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15F);
-            label5.Location = new Point(271, 509);
+            label5.Location = new Point(34, 511);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(91, 28);
             label5.TabIndex = 65;
             label5.Text = "Deskripsi";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15F);
+            label3.Location = new Point(443, 516);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(87, 28);
+            label3.TabIndex = 68;
+            label3.Text = "Kategori";
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 15F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Aktif", "Tidak Aktif" });
+            comboBox1.Location = new Point(611, 511);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(189, 36);
+            comboBox1.TabIndex = 67;
+            // 
             // UCStockPemilik
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label3);
+            Controls.Add(comboBox1);
             Controls.Add(textBox3);
             Controls.Add(label5);
             Controls.Add(textBox2);
@@ -263,5 +289,7 @@
         private Label label4;
         private TextBox textBox3;
         private Label label5;
+        private Label label3;
+        private ComboBox comboBox1;
     }
 }

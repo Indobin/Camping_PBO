@@ -83,6 +83,26 @@ namespace Projek_Akhir_PBO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camping {
+            get {
+                object obj = ResourceManager.GetObject("camping", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap camping1 {
+            get {
+                object obj = ResourceManager.GetObject("camping1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap history {
             get {
                 object obj = ResourceManager.GetObject("history", resourceCulture);
@@ -266,6 +286,16 @@ namespace Projek_Akhir_PBO.Properties {
         internal static System.Drawing.Bitmap profile {
             get {
                 object obj = ResourceManager.GetObject("profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_North_Face_Wawona_6_Review_Intro_1024x576 {
+            get {
+                object obj = ResourceManager.GetObject("The-North-Face-Wawona-6-Review-Intro-1024x576", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

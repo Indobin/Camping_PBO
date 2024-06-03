@@ -29,5 +29,10 @@ namespace Projek_Akhir_PBO.View.Pemilik
         {
             InitializeComponent();
         }
+
+        private void paneltopdashboard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -74,7 +74,7 @@
             comboBox1.ItemHeight = 40;
             comboBox1.Items.AddRange(new object[] { "Admin", "Pemilik", "Penyewa" });
             comboBox1.ItemsAppearance.Font = new Font("Lufga Medium", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            comboBox1.Location = new Point(895, 480);
+            comboBox1.Location = new Point(812, 422);
             comboBox1.Margin = new Padding(6, 5, 6, 5);
             comboBox1.Name = "comboBox1";
             comboBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -99,7 +99,7 @@
             usernamebox.Font = new Font("Lufga Medium", 15F, FontStyle.Bold);
             usernamebox.ForeColor = Color.FromArgb(74, 75, 67);
             usernamebox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            usernamebox.Location = new Point(895, 287);
+            usernamebox.Location = new Point(812, 229);
             usernamebox.Margin = new Padding(11, 9, 11, 9);
             usernamebox.Name = "usernamebox";
             usernamebox.PasswordChar = '\0';
@@ -108,6 +108,7 @@
             usernamebox.ShadowDecoration.CustomizableEdges = customizableEdges4;
             usernamebox.Size = new Size(433, 45);
             usernamebox.TabIndex = 48;
+            usernamebox.TextChanged += usernamebox_TextChanged;
             // 
             // passwordbox
             // 
@@ -127,7 +128,7 @@
             passwordbox.Font = new Font("Lufga Medium", 14F, FontStyle.Bold);
             passwordbox.ForeColor = Color.FromArgb(74, 75, 67);
             passwordbox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            passwordbox.Location = new Point(895, 386);
+            passwordbox.Location = new Point(812, 328);
             passwordbox.Margin = new Padding(6, 5, 6, 5);
             passwordbox.Name = "passwordbox";
             passwordbox.PasswordChar = '\0';
@@ -150,7 +151,7 @@
             Loginbutton.FillColor = Color.FromArgb(97, 191, 143);
             Loginbutton.Font = new Font("Lufga", 17F, FontStyle.Bold);
             Loginbutton.ForeColor = Color.FromArgb(74, 75, 67);
-            Loginbutton.Location = new Point(1005, 600);
+            Loginbutton.Location = new Point(922, 542);
             Loginbutton.Name = "Loginbutton";
             Loginbutton.Padding = new Padding(1, 0, 0, 0);
             Loginbutton.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -164,7 +165,7 @@
             LogoGoCamp.Anchor = AnchorStyles.None;
             LogoGoCamp.BackColor = Color.Transparent;
             LogoGoCamp.Image = (Image)resources.GetObject("LogoGoCamp.Image");
-            LogoGoCamp.Location = new Point(344, 144);
+            LogoGoCamp.Location = new Point(261, 86);
             LogoGoCamp.Name = "LogoGoCamp";
             LogoGoCamp.Size = new Size(75, 75);
             LogoGoCamp.SizeMode = PictureBoxSizeMode.Zoom;
@@ -178,7 +179,7 @@
             label4.BackColor = Color.FromArgb(14, 115, 116);
             label4.Font = new Font("Lufga Medium", 15F);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(895, 447);
+            label4.Location = new Point(812, 389);
             label4.Name = "label4";
             label4.Size = new Size(54, 26);
             label4.TabIndex = 44;
@@ -192,7 +193,7 @@
             label3.BackColor = Color.FromArgb(14, 115, 116);
             label3.Font = new Font("Lufga Medium", 15F);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(892, 352);
+            label3.Location = new Point(809, 294);
             label3.Name = "label3";
             label3.Size = new Size(105, 26);
             label3.TabIndex = 43;
@@ -206,7 +207,7 @@
             label2.BackColor = Color.FromArgb(14, 115, 116);
             label2.Font = new Font("Lufga Medium", 15F);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(892, 253);
+            label2.Location = new Point(809, 195);
             label2.Name = "label2";
             label2.Size = new Size(111, 26);
             label2.TabIndex = 42;
@@ -220,7 +221,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Lufga SemiBold", 18F, FontStyle.Bold);
             label9.ForeColor = Color.FromArgb(74, 75, 67);
-            label9.Location = new Point(112, 433);
+            label9.Location = new Point(29, 375);
             label9.Name = "label9";
             label9.Size = new Size(567, 93);
             label9.TabIndex = 41;
@@ -234,7 +235,7 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Lufga Black", 65F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(74, 75, 67);
-            label8.Location = new Point(160, 311);
+            label8.Location = new Point(77, 253);
             label8.Name = "label8";
             label8.Size = new Size(474, 113);
             label8.TabIndex = 40;
@@ -247,7 +248,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Lufga ExtraBold", 30F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(74, 75, 67);
-            label7.Location = new Point(263, 260);
+            label7.Location = new Point(180, 202);
             label7.Name = "label7";
             label7.Size = new Size(254, 52);
             label7.TabIndex = 39;
@@ -260,7 +261,7 @@
             label6.BackColor = Color.FromArgb(14, 115, 116);
             label6.Font = new Font("Lufga Medium", 12F);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(1168, 681);
+            label6.Location = new Point(1085, 623);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
             label6.Size = new Size(74, 21);
@@ -275,7 +276,7 @@
             label5.BackColor = Color.FromArgb(14, 115, 116);
             label5.Font = new Font("Lufga Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(217, 224, 184);
-            label5.Location = new Point(978, 681);
+            label5.Location = new Point(895, 623);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(194, 21);
@@ -289,7 +290,7 @@
             label1.BackColor = Color.FromArgb(14, 115, 116);
             label1.Font = new Font("Lufga SemiBold", 30F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(217, 224, 184);
-            label1.Location = new Point(886, 167);
+            label1.Location = new Point(803, 109);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(123, 52);
@@ -302,7 +303,7 @@
             guna2ShadowPanel1.Anchor = AnchorStyles.None;
             guna2ShadowPanel1.BackColor = Color.Transparent;
             guna2ShadowPanel1.FillColor = Color.FromArgb(14, 115, 116);
-            guna2ShadowPanel1.Location = new Point(847, 121);
+            guna2ShadowPanel1.Location = new Point(764, 63);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 15;
             guna2ShadowPanel1.RightToLeft = RightToLeft.Yes;
@@ -318,7 +319,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources._11798331_4785313__1_;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1536, 864);
+            ClientSize = new Size(1370, 749);
             Controls.Add(comboBox1);
             Controls.Add(usernamebox);
             Controls.Add(passwordbox);

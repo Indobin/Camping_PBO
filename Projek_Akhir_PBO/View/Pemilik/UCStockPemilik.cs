@@ -29,5 +29,15 @@ namespace Projek_Akhir_PBO.View.Pemilik
         {
             InitializeComponent();
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1tambah_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
