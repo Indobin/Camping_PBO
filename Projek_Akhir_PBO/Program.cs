@@ -1,4 +1,6 @@
 using Projek_Akhir_PBO.View.Admin;
+using Projek_Akhir_PBO.View.Pemilik;
+using Projek_Akhir_PBO.View.Penyewa;
 
 namespace Projek_Akhir_PBO
 {

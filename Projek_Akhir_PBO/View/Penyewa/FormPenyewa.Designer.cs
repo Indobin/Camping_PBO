@@ -50,9 +50,15 @@
             panellogo = new Guna.UI2.WinForms.Guna2Panel();
             LogoGoCamp = new PictureBox();
             GO_CAMP = new Label();
+            panel1 = new Panel();
+            ucHomePenyewa1 = new UCHomePenyewa();
+            ucTransactionsPenyewa1 = new UCTransactionsPenyewa();
+            ucHistoryPenyewa1 = new UCHistoryPenyewa();
+            ucProfilePenyewa1 = new UCProfilePenyewa();
             sidebardashboard.SuspendLayout();
             panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LogoGoCamp).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // sidebardashboard
@@ -116,6 +122,7 @@
             buttonprofilpeyewa.TabIndex = 8;
             buttonprofilpeyewa.Text = "          Profile";
             buttonprofilpeyewa.TextAlign = HorizontalAlignment.Left;
+            buttonprofilpeyewa.Click += buttonprofilpeyewa_Click;
             // 
             // buttohistorypenyewa
             // 
@@ -142,6 +149,7 @@
             buttohistorypenyewa.TabIndex = 10;
             buttohistorypenyewa.Text = "          History";
             buttohistorypenyewa.TextAlign = HorizontalAlignment.Left;
+            buttohistorypenyewa.Click += buttohistorypenyewa_Click;
             // 
             // buttontransactionpenyewa
             // 
@@ -167,6 +175,7 @@
             buttontransactionpenyewa.TabIndex = 9;
             buttontransactionpenyewa.Text = "          Transaction";
             buttontransactionpenyewa.TextAlign = HorizontalAlignment.Left;
+            buttontransactionpenyewa.Click += buttontransactionpenyewa_Click;
             // 
             // buttonhomepenyewa
             // 
@@ -193,6 +202,7 @@
             buttonhomepenyewa.TabIndex = 7;
             buttonhomepenyewa.Text = "          Home";
             buttonhomepenyewa.TextAlign = HorizontalAlignment.Left;
+            buttonhomepenyewa.Click += buttonhomepenyewa_Click;
             // 
             // panellogo
             // 
@@ -229,11 +239,52 @@
             GO_CAMP.TabIndex = 19;
             GO_CAMP.Text = "GO-CAMP";
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(ucHomePenyewa1);
+            panel1.Controls.Add(ucTransactionsPenyewa1);
+            panel1.Controls.Add(ucHistoryPenyewa1);
+            panel1.Controls.Add(ucProfilePenyewa1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(256, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1280, 864);
+            panel1.TabIndex = 41;
+            // 
+            // ucHomePenyewa1
+            // 
+            ucHomePenyewa1.Location = new Point(0, 0);
+            ucHomePenyewa1.Name = "ucHomePenyewa1";
+            ucHomePenyewa1.Size = new Size(1277, 864);
+            ucHomePenyewa1.TabIndex = 3;
+            // 
+            // ucTransactionsPenyewa1
+            // 
+            ucTransactionsPenyewa1.Location = new Point(0, 0);
+            ucTransactionsPenyewa1.Name = "ucTransactionsPenyewa1";
+            ucTransactionsPenyewa1.Size = new Size(1277, 864);
+            ucTransactionsPenyewa1.TabIndex = 2;
+            // 
+            // ucHistoryPenyewa1
+            // 
+            ucHistoryPenyewa1.Location = new Point(0, 0);
+            ucHistoryPenyewa1.Name = "ucHistoryPenyewa1";
+            ucHistoryPenyewa1.Size = new Size(1277, 864);
+            ucHistoryPenyewa1.TabIndex = 1;
+            // 
+            // ucProfilePenyewa1
+            // 
+            ucProfilePenyewa1.Location = new Point(0, 0);
+            ucProfilePenyewa1.Name = "ucProfilePenyewa1";
+            ucProfilePenyewa1.Size = new Size(1277, 864);
+            ucProfilePenyewa1.TabIndex = 0;
+            // 
             // FormPenyewa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1536, 864);
+            Controls.Add(panel1);
             Controls.Add(sidebardashboard);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormPenyewa";
@@ -242,6 +293,7 @@
             panellogo.ResumeLayout(false);
             panellogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)LogoGoCamp).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -255,5 +307,10 @@
         private Guna.UI2.WinForms.Guna2Panel panellogo;
         private PictureBox LogoGoCamp;
         private Label GO_CAMP;
+        private Panel panel1;
+        private UCHomePenyewa ucHomePenyewa1;
+        private UCTransactionsPenyewa ucTransactionsPenyewa1;
+        private UCHistoryPenyewa ucHistoryPenyewa1;
+        private UCProfilePenyewa ucProfilePenyewa1;
     }
 }

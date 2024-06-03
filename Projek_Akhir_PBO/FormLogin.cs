@@ -26,32 +26,7 @@ namespace Projek_Akhir_PBO
         }
         private void Loginbutton_Click(object sender, EventArgs e)
         {
-            string selectedTable = comboBox1.SelectedItem.ToString();
-            string username = usernamebox.Text;
-            string password = passwordbox.Text;
-            LoginController loginController = new LoginController();
-            string result = loginController.AuthLogin(selectedTable, username, password);
-
-            if (result == "admin")
-            {
-                //new AdminDashboard().Show();
-                //MessageBox.Show("Admin");
-                //this.FormParent.ShowUserControlAdmin();
-            }
-            else if (result == "pemilik")
-            {
-                //new PemilikDashboard().Show();
-                MessageBox.Show("Pemilik");
-            }
-            else if (result == "penyewa")
-            {
-                //new PenyewaDashboard().Show();
-                MessageBox.Show("Penyewa");
-            }
-            else
-            {
-                MessageBox.Show(result);
-            }
+          
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -63,27 +38,43 @@ namespace Projek_Akhir_PBO
 
         private void Loginbutton_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(usernamebox.Text.Trim()) || string.IsNullOrEmpty(passwordbox.Text.Trim()))
+            {
+                MessageBox.Show("Username dan password tidak boleh kosong", "Login Data",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string selectedTable = comboBox1.SelectedItem.ToString();
             string username = usernamebox.Text;
             string password = passwordbox.Text;
+            //LoginController loginController = new LoginController();
+            //loginController.HandleLogin(selectedTable, username, password, this);
             LoginController loginController = new LoginController();
-            string result = loginController.AuthLogin(selectedTable, username, password);
+            var (result, userId) = loginController.AuthLogin(selectedTable, username, password);
 
-            if (result == "admin")
+            if (result == "Admin")
             {
-                //new AdminDashboard().Show();
-                //MessageBox.Show("Admin");
-                //this.FormParent.ShowUserControlAdmin();
+                MessageBox.Show("Berhasil Login Admin", "Login Data",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormAdmin menuAdmin = new FormAdmin(userId);
+                menuAdmin.Show();
+                this.Hide();
             }
-            else if (result == "pemilik")
+            else if (result == "Pemilik")
             {
-                //new PemilikDashboard().Show();
-                MessageBox.Show("Pemilik");
+                MessageBox.Show("Berhasil Login Pemilik", "Login Data",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormPemilik menuPemilik = new FormPemilik(userId);
+                menuPemilik.Show();
+                this.Hide();
             }
-            else if (result == "penyewa")
+            else if (result == "Penyewa")
             {
-                //new PenyewaDashboard().Show();
-                MessageBox.Show("Penyewa");
+                MessageBox.Show("Berhasil Login Penyewa", "Login Data",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormPenyewa menuPenyewa = new FormPenyewa(userId);
+                menuPenyewa.Show();
+                this.Hide();
             }
             else
             {

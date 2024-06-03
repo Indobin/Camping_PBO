@@ -16,5 +16,10 @@ namespace Projek_Akhir_PBO.View.Admin
         {
             InitializeComponent();
         }
+
+        private void UCRentersAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

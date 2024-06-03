@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             LogoGoCamp = new PictureBox();
             GO_CAMP = new Label();
             buttonlogoutadm = new Guna.UI2.WinForms.Guna2Button();
@@ -53,9 +53,16 @@
             panellogo = new Guna.UI2.WinForms.Guna2Panel();
             sidebardashboard = new Panel();
             buttonrenters = new Guna.UI2.WinForms.Guna2Button();
+            panel1 = new Panel();
+            ucRentersAdmin1 = new UCRentersAdmin();
+            ucReportsAdmin1 = new UCReportsAdmin();
+            ucProfileAdmin1 = new UCProfileAdmin();
+            ucOwner1 = new UCOwner();
+            ucDashboardAdmini1 = new UCDashboardAdmini();
             ((System.ComponentModel.ISupportInitialize)LogoGoCamp).BeginInit();
             panellogo.SuspendLayout();
             sidebardashboard.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // LogoGoCamp
@@ -85,7 +92,7 @@
             // 
             buttonlogoutadm.Anchor = AnchorStyles.Bottom;
             buttonlogoutadm.BorderRadius = 10;
-            buttonlogoutadm.CustomizableEdges = customizableEdges1;
+            buttonlogoutadm.CustomizableEdges = customizableEdges15;
             buttonlogoutadm.DisabledState.BorderColor = Color.DarkGray;
             buttonlogoutadm.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonlogoutadm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -95,7 +102,7 @@
             buttonlogoutadm.ForeColor = Color.White;
             buttonlogoutadm.Location = new Point(22, 754);
             buttonlogoutadm.Name = "buttonlogoutadm";
-            buttonlogoutadm.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            buttonlogoutadm.ShadowDecoration.CustomizableEdges = customizableEdges16;
             buttonlogoutadm.Size = new Size(210, 53);
             buttonlogoutadm.TabIndex = 6;
             buttonlogoutadm.Text = "Logout";
@@ -104,7 +111,7 @@
             // buttonprofiladmin
             // 
             buttonprofiladmin.BackColor = Color.Transparent;
-            buttonprofiladmin.CustomizableEdges = customizableEdges3;
+            buttonprofiladmin.CustomizableEdges = customizableEdges17;
             buttonprofiladmin.DisabledState.BorderColor = Color.DarkGray;
             buttonprofiladmin.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonprofiladmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -120,16 +127,17 @@
             buttonprofiladmin.Location = new Point(0, 378);
             buttonprofiladmin.Name = "buttonprofiladmin";
             buttonprofiladmin.Padding = new Padding(0, 3, 0, 0);
-            buttonprofiladmin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            buttonprofiladmin.ShadowDecoration.CustomizableEdges = customizableEdges18;
             buttonprofiladmin.Size = new Size(254, 62);
             buttonprofiladmin.TabIndex = 8;
             buttonprofiladmin.Text = "          Profile";
             buttonprofiladmin.TextAlign = HorizontalAlignment.Left;
+            buttonprofiladmin.Click += buttonprofiladmin_Click;
             // 
             // buttonlaporan
             // 
             buttonlaporan.BackColor = Color.Transparent;
-            buttonlaporan.CustomizableEdges = customizableEdges5;
+            buttonlaporan.CustomizableEdges = customizableEdges19;
             buttonlaporan.DisabledState.BorderColor = Color.DarkGray;
             buttonlaporan.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonlaporan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -144,16 +152,17 @@
             buttonlaporan.Location = new Point(0, 316);
             buttonlaporan.Name = "buttonlaporan";
             buttonlaporan.Padding = new Padding(0, 3, 0, 0);
-            buttonlaporan.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            buttonlaporan.ShadowDecoration.CustomizableEdges = customizableEdges20;
             buttonlaporan.Size = new Size(254, 62);
             buttonlaporan.TabIndex = 10;
             buttonlaporan.Text = "          Reports";
             buttonlaporan.TextAlign = HorizontalAlignment.Left;
+            buttonlaporan.Click += buttonlaporan_Click;
             // 
             // buttonowners
             // 
             buttonowners.BackColor = Color.Transparent;
-            buttonowners.CustomizableEdges = customizableEdges7;
+            buttonowners.CustomizableEdges = customizableEdges21;
             buttonowners.DisabledState.BorderColor = Color.DarkGray;
             buttonowners.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonowners.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -168,18 +177,19 @@
             buttonowners.Location = new Point(0, 192);
             buttonowners.Name = "buttonowners";
             buttonowners.Padding = new Padding(0, 3, 0, 0);
-            buttonowners.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            buttonowners.ShadowDecoration.CustomizableEdges = customizableEdges22;
             buttonowners.Size = new Size(254, 62);
             buttonowners.TabIndex = 9;
             buttonowners.Text = "          Owners";
             buttonowners.TextAlign = HorizontalAlignment.Left;
+            buttonowners.Click += buttonowners_Click;
             // 
             // buttondashboardadmin
             // 
             buttondashboardadmin.BackColor = Color.Transparent;
             buttondashboardadmin.BorderColor = Color.Transparent;
             buttondashboardadmin.BorderRadius = 10;
-            buttondashboardadmin.CustomizableEdges = customizableEdges9;
+            buttondashboardadmin.CustomizableEdges = customizableEdges23;
             buttondashboardadmin.DisabledState.BorderColor = Color.DarkGray;
             buttondashboardadmin.DisabledState.CustomBorderColor = Color.DarkGray;
             buttondashboardadmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -194,21 +204,22 @@
             buttondashboardadmin.Location = new Point(0, 130);
             buttondashboardadmin.Name = "buttondashboardadmin";
             buttondashboardadmin.Padding = new Padding(3, 1, 0, 0);
-            buttondashboardadmin.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            buttondashboardadmin.ShadowDecoration.CustomizableEdges = customizableEdges24;
             buttondashboardadmin.Size = new Size(254, 62);
             buttondashboardadmin.TabIndex = 7;
             buttondashboardadmin.Text = "          Dashboard";
             buttondashboardadmin.TextAlign = HorizontalAlignment.Left;
+            buttondashboardadmin.Click += buttondashboardadmin_Click;
             // 
             // panellogo
             // 
             panellogo.Controls.Add(LogoGoCamp);
             panellogo.Controls.Add(GO_CAMP);
-            panellogo.CustomizableEdges = customizableEdges11;
+            panellogo.CustomizableEdges = customizableEdges25;
             panellogo.Dock = DockStyle.Top;
             panellogo.Location = new Point(0, 0);
             panellogo.Name = "panellogo";
-            panellogo.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            panellogo.ShadowDecoration.CustomizableEdges = customizableEdges26;
             panellogo.Size = new Size(254, 130);
             panellogo.TabIndex = 5;
             // 
@@ -233,7 +244,7 @@
             // buttonrenters
             // 
             buttonrenters.BackColor = Color.Transparent;
-            buttonrenters.CustomizableEdges = customizableEdges13;
+            buttonrenters.CustomizableEdges = customizableEdges27;
             buttonrenters.DisabledState.BorderColor = Color.DarkGray;
             buttonrenters.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonrenters.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -248,17 +259,67 @@
             buttonrenters.Location = new Point(0, 254);
             buttonrenters.Name = "buttonrenters";
             buttonrenters.Padding = new Padding(0, 3, 0, 0);
-            buttonrenters.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            buttonrenters.ShadowDecoration.CustomizableEdges = customizableEdges28;
             buttonrenters.Size = new Size(254, 62);
             buttonrenters.TabIndex = 11;
             buttonrenters.Text = "          Renters";
             buttonrenters.TextAlign = HorizontalAlignment.Left;
+            buttonrenters.Click += buttonrenters_Click;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(ucDashboardAdmini1);
+            panel1.Controls.Add(ucRentersAdmin1);
+            panel1.Controls.Add(ucReportsAdmin1);
+            panel1.Controls.Add(ucProfileAdmin1);
+            panel1.Controls.Add(ucOwner1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(256, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1280, 864);
+            panel1.TabIndex = 39;
+            // 
+            // ucRentersAdmin1
+            // 
+            ucRentersAdmin1.Location = new Point(0, 0);
+            ucRentersAdmin1.Name = "ucRentersAdmin1";
+            ucRentersAdmin1.Size = new Size(1277, 864);
+            ucRentersAdmin1.TabIndex = 45;
+            // 
+            // ucReportsAdmin1
+            // 
+            ucReportsAdmin1.Location = new Point(0, 0);
+            ucReportsAdmin1.Name = "ucReportsAdmin1";
+            ucReportsAdmin1.Size = new Size(1277, 864);
+            ucReportsAdmin1.TabIndex = 44;
+            // 
+            // ucProfileAdmin1
+            // 
+            ucProfileAdmin1.Location = new Point(0, 0);
+            ucProfileAdmin1.Name = "ucProfileAdmin1";
+            ucProfileAdmin1.Size = new Size(1277, 864);
+            ucProfileAdmin1.TabIndex = 43;
+            // 
+            // ucOwner1
+            // 
+            ucOwner1.Location = new Point(0, 1);
+            ucOwner1.Name = "ucOwner1";
+            ucOwner1.Size = new Size(1277, 864);
+            ucOwner1.TabIndex = 41;
+            // 
+            // ucDashboardAdmini1
+            // 
+            ucDashboardAdmini1.Location = new Point(0, 0);
+            ucDashboardAdmini1.Name = "ucDashboardAdmini1";
+            ucDashboardAdmini1.Size = new Size(1277, 864);
+            ucDashboardAdmini1.TabIndex = 46;
             // 
             // FormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1536, 864);
+            Controls.Add(panel1);
             Controls.Add(sidebardashboard);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormAdmin";
@@ -267,6 +328,7 @@
             panellogo.ResumeLayout(false);
             panellogo.PerformLayout();
             sidebardashboard.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -281,5 +343,11 @@
         private Guna.UI2.WinForms.Guna2Panel panellogo;
         private Panel sidebardashboard;
         private Guna.UI2.WinForms.Guna2Button buttonrenters;
+        private Panel panel1;
+        private UCProfileAdmin ucProfileAdmin1;
+        private UCOwner ucOwner1;
+        private UCRentersAdmin ucRentersAdmin1;
+        private UCReportsAdmin ucReportsAdmin1;
+        private UCDashboardAdmini ucDashboardAdmini1;
     }
 }
