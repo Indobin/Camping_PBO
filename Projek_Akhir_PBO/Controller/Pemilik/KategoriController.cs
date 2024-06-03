@@ -22,7 +22,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
         public void Read()
         {
             string query = string.Format(@"SELECT row_number(*) over() as nomor, id_kategori, namakategori, dihentikan 
-                                FROM kategori_alat_camping WHERE id_pemilik=@userId;");
+                                FROM kategori_alat_camping WHERE id_pemilik=@userId ORDER BY id_kategori ASC;");
 
             using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
             {
@@ -30,7 +30,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                 using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@userId", _userId);
-                    cmd.CommandText = query;
+                    //cmd.CommandText = query;
                     NpgsqlDataReader reader = cmd.ExecuteReader();
                     ListKategori.Clear();
                     while (reader.Read())

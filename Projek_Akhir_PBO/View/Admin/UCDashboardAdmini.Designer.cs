@@ -33,11 +33,14 @@
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label2 = new Label();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            Total_TO = new Label();
             label1 = new Label();
             paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
             juduldashboard = new Label();
             guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label3 = new Label();
+            Total_TRA = new Label();
+            Total_TRE = new Label();
             guna2ShadowPanel2.SuspendLayout();
             guna2ShadowPanel1.SuspendLayout();
             paneltopdashboard.SuspendLayout();
@@ -47,6 +50,7 @@
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(Total_TRE);
             guna2ShadowPanel2.Controls.Add(label2);
             guna2ShadowPanel2.FillColor = Color.White;
             guna2ShadowPanel2.Location = new Point(327, 156);
@@ -75,6 +79,7 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(Total_TO);
             guna2ShadowPanel1.Controls.Add(label1);
             guna2ShadowPanel1.FillColor = Color.White;
             guna2ShadowPanel1.Location = new Point(21, 156);
@@ -87,6 +92,19 @@
             guna2ShadowPanel1.Size = new Size(300, 200);
             guna2ShadowPanel1.TabIndex = 44;
             // 
+            // Total_TO
+            // 
+            Total_TO.AutoSize = true;
+            Total_TO.BackColor = Color.Transparent;
+            Total_TO.Font = new Font("Lufga SemiBold", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Total_TO.ForeColor = Color.FromArgb(14, 115, 116);
+            Total_TO.ImageAlign = ContentAlignment.MiddleLeft;
+            Total_TO.Location = new Point(134, 83);
+            Total_TO.Name = "Total_TO";
+            Total_TO.Size = new Size(47, 52);
+            Total_TO.TabIndex = 22;
+            Total_TO.Text = "0";
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -96,9 +114,9 @@
             label1.ImageAlign = ContentAlignment.MiddleLeft;
             label1.Location = new Point(29, 28);
             label1.Name = "label1";
-            label1.Size = new Size(129, 26);
+            label1.Size = new Size(130, 26);
             label1.TabIndex = 21;
-            label1.Text = "Totol Owner";
+            label1.Text = "Total Owner";
             // 
             // paneltopdashboard
             // 
@@ -132,6 +150,7 @@
             // guna2ShadowPanel3
             // 
             guna2ShadowPanel3.BackColor = Color.Transparent;
+            guna2ShadowPanel3.Controls.Add(Total_TRA);
             guna2ShadowPanel3.Controls.Add(label3);
             guna2ShadowPanel3.FillColor = Color.White;
             guna2ShadowPanel3.Location = new Point(633, 156);
@@ -156,6 +175,32 @@
             label3.Size = new Size(138, 26);
             label3.TabIndex = 23;
             label3.Text = "Total Rentals";
+            // 
+            // Total_TRA
+            // 
+            Total_TRA.AutoSize = true;
+            Total_TRA.BackColor = Color.Transparent;
+            Total_TRA.Font = new Font("Lufga SemiBold", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Total_TRA.ForeColor = Color.FromArgb(14, 115, 116);
+            Total_TRA.ImageAlign = ContentAlignment.MiddleLeft;
+            Total_TRA.Location = new Point(125, 83);
+            Total_TRA.Name = "Total_TRA";
+            Total_TRA.Size = new Size(47, 52);
+            Total_TRA.TabIndex = 23;
+            Total_TRA.Text = "0";
+            // 
+            // Total_TRE
+            // 
+            Total_TRE.AutoSize = true;
+            Total_TRE.BackColor = Color.Transparent;
+            Total_TRE.Font = new Font("Lufga SemiBold", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Total_TRE.ForeColor = Color.FromArgb(14, 115, 116);
+            Total_TRE.ImageAlign = ContentAlignment.MiddleLeft;
+            Total_TRE.Location = new Point(125, 83);
+            Total_TRE.Name = "Total_TRE";
+            Total_TRE.Size = new Size(47, 52);
+            Total_TRE.TabIndex = 24;
+            Total_TRE.Text = "0";
             // 
             // UCDashboardAdmini
             // 
@@ -188,5 +233,8 @@
         private Label juduldashboard;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
         private Label label3;
+        private Label Total_TO;
+        private Label Total_TRE;
+        private Label Total_TRA;
     }
 }
