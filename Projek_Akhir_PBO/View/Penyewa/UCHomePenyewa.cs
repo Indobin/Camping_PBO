@@ -16,5 +16,30 @@ namespace Projek_Akhir_PBO.View.Penyewa
         {
             InitializeComponent();
         }
+
+        private void paneltopdashboard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UCHomePenyewa_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ShadowPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
