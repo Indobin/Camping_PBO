@@ -5,25 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using Projek_Akhir_PBO.Models.Pemilik;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Projek_Akhir_PBO.Controller.Pemilik
 {
     public class KategoriController
     {
-       
+        private int _userId;
         public List<KategoriContext> ListKategori = new List<KategoriContext>();
         string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+        public int UserId
+        {
+            get { return _userId; }
+            set { _userId = value; }
+        }
         public void Read()
         {
-            string query = string.Format(@"SELECT row_number(*) over() as nomor, id_kategori, namakategori 
-                                FROM kategori_alat_camping;");
+            string query = string.Format(@"SELECT row_number(*) over() as nomor, id_kategori, namakategori, dihentikan 
+                                FROM kategori_alat_camping WHERE id_pemilik=@userId ORDER BY id_kategori ASC;");
 
             using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
             {
                 conn.Open();
                 using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                 {
-                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@userId", _userId);
+                    //cmd.CommandText = query;
                     NpgsqlDataReader reader = cmd.ExecuteReader();
                     ListKategori.Clear();
                     while (reader.Read())
@@ -31,22 +38,19 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                         KategoriContext kategoriContext = new KategoriContext();
                         kategoriContext.id_kategori = (int)reader["id_kategori"];
                         kategoriContext.namakategori = (string)reader["namakategori"];
+                        kategoriContext.dihentikan = (bool)reader["dihentikan"];
+                        kategoriContext.Status = (bool)reader["dihentikan"] ? "Tidak Aktif" : "Aktif";
                         ListKategori.Add(kategoriContext);
                     }
                 }
             }
         }
-        public void Tambah(string Namakategori)
+        public void Tambah(string Namakategori, bool dihentikan, string status)
         {
-
-            if (string.IsNullOrEmpty(Namakategori.Trim()))
-            {
-                MessageBox.Show("Nama Kategori tidak boleh kosong", "Tambah Data",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            
+            //MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             string cekQuery = "SELECT COUNT(*) FROM kategori_alat_camping WHERE namakategori = @namakategori";
-            string insertQuery = "INSERT INTO kategori_alat_camping (namakategori) VALUES (@namakategori)";
+            string insertQuery = "INSERT INTO kategori_alat_camping (namakategori,id_pemilik,dihentikan) VALUES (@namakategori,@userId,@dihentikan)";
 
             try
             {
@@ -70,7 +74,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     }
                     using (NpgsqlCommand cmd = new NpgsqlCommand(insertQuery, conn))
                     {
+                        
                         cmd.Parameters.AddWithValue("@namakategori", Namakategori.Trim());
+                        cmd.Parameters.AddWithValue("@userId", _userId);
+                        cmd.Parameters.AddWithValue("@dihentikan", dihentikan);
                         int rowsAffected = cmd.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
@@ -94,7 +101,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void Edit(int idkategori, string namaKategori)
+        public void Edit(int idkategori, string namaKategori, bool dihentikan)
         {
             if (string.IsNullOrEmpty(namaKategori.Trim()))
             {
@@ -103,7 +110,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                 return;
             }
             string cekQuery = "SELECT COUNT(*) FROM kategori_alat_camping WHERE namakategori = @namakategori AND id_kategori != @id";
-            string updateQuery = "UPDATE kategori_alat_camping SET namakategori = @namakategori WHERE id_kategori = @id";
+            string updateQuery = "UPDATE kategori_alat_camping SET namakategori = @namakategori, dihentikan = @dihentikan WHERE id_kategori = @id";
 
             try
             {
@@ -127,6 +134,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     {
                         cmd.Parameters.AddWithValue("@namakategori", namaKategori.Trim());
                         cmd.Parameters.AddWithValue("@id", idkategori);
+                        cmd.Parameters.AddWithValue("@dihentikan", dihentikan);
                         int rowsAffected = cmd.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
@@ -149,46 +157,6 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void Hapus(int idkategori, string namaKategori)
-        {
-            if (string.IsNullOrEmpty(namaKategori.Trim()))
-            {
-                MessageBox.Show("Nama Kategori tidak boleh kosong", "Edit Data",
-                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            string deleteQuery = "DELETE FROM kategori_alat_camping WHERE id_kategori = @id";
-
-            try
-            {
-                using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
-                {
-                    conn.Open();
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(deleteQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@id", idkategori);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Data berhasil dihapus", "Hapus Data",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            // Optional: Update DataGridView if it exists
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data gagal dihapus", "Hapus Data",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
     }
 }
