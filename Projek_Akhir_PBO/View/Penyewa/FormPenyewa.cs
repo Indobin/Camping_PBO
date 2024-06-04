@@ -7,17 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Projek_Akhir_PBO.View.Penyewa
 {
+    
     public partial class FormPenyewa : Form
     {
         FormLogin formloggin;
         private int _userId;
         public FormPenyewa(int userId)
         {
-            InitializeComponent();
             _userId = userId;
+            InitializeComponent();
+            ucHomePenyewa1.UserId = _userId;
+            ucTransactionsPenyewa1.UserId = _userId;
+            ucHistoryPenyewa1.UserId = _userId;
+            ucProfilePenyewa1.UserId = _userId;
         }
 
         private void buttonlogoutpenyewa_Click(object sender, EventArgs e)

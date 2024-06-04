@@ -12,22 +12,24 @@ CREATE TABLE alat_camping (
     hargaalatcamping                  INTEGER NOT NULL,
     jumlahalatcamping                 INTEGER NOT NULL,
     deskripsi                         TEXT NOT NULL,
+	dihentikan bool not null,
     id_pemilik                SERIAL NOT NULL, 
     id_kategori SERIAL NOT NULL
 );
 
 CREATE TABLE detail_transaksi (
     id_detail_transaksi         SERIAL NOT NULL PRIMARY KEY,
-    id_peminjaman    SERIAL NOT NULL,
-    id_alatcamping SERIAL NOT NULL,
+    id_peminjaman int NOT NULL,
+    id_alatcamping int NOT NULL,
     lama_sewa                   INTEGER NOT NULL,
-    quantity                    INTEGER NOT NULL,
-    id_ewallet       SERIAL NOT NULL
+    quantity                    INTEGER NOT NULL
 );
 
 CREATE TABLE kategori_alat_camping (
     id_kategori  SERIAL NOT NULL PRIMARY KEY,
-    namakategori VARCHAR(20) NOT NULL UNIQUE
+    namakategori VARCHAR(20) NOT NULL UNIQUE,
+	id_pemilik int NOT NULL,
+	dihentikan bool not null
 );
 
 CREATE TABLE laporan (
@@ -35,10 +37,10 @@ CREATE TABLE laporan (
     isi_laporan                          TEXT NOT NULL,
     tanggallaporan                       DATE NOT NULL,
     statuslaporan                        CHAR(1) NOT NULL,
-    isi_tanggapan                        TEXT NOT NULL,
+    isi_tanggapan                        TEXT NULL,
     id_penyewa                   SERIAL NOT NULL,
     id_admin                       SERIAL NOT NULL, 
-    id_detail_transaksi SERIAL NOT NULL
+    id_peminjaman int not null
 );
 
 CREATE UNIQUE INDEX laporan__idx ON
@@ -65,15 +67,16 @@ CREATE TABLE peminjaman (
     id_peminjaman      SERIAL NOT NULL PRIMARY KEY,
     id_penyewa SERIAL NOT NULL,
     tanggal_peminjaman DATE NOT NULL,
-    status_pinjam      CHAR(1) NOT NULL
+    status_pinjam      CHAR(1) NOT NULL,
+	id_ewallet int NOT NULL
 );
 
 CREATE TABLE pengembalian (
     id_pengembalian                      SERIAL NOT NULL PRIMARY KEY,
     tanggalpengembalian                  DATE NOT NULL,
-    denda                                NUMBER NOT NULL, 
-    id_detail_transaksi SERIAL NOT NULL,
-    status_kembali                       CHAR(1) NOT NULL
+    denda varchar(10), 
+    id_peminjaman int not null,
+    status_kembali boolean NOT NULL
 );
 
 CREATE UNIQUE INDEX pengembalian__idx ON
@@ -94,7 +97,9 @@ CREATE SEQUENCE id_penyewa_seq;
 CREATE SEQUENCE id_pemilik_seq;
 --ALTER TABLE penyewa ALTER COLUMN id_penyewa SET DEFAULT nextval('id_penyewa_seq');
 --ALTER TABLE pemilik ALTER COLUMN id_pemilik SET DEFAULT nextval('id_pemilik_seq');
-
+ALTER TABLE kategori_alat_camping
+    ADD CONSTRAINT kategori_alat_camping_pemilik_fk FOREIGN KEY ( id_pemilik )
+        REFERENCES pemilik ( id_pemilik );
 
 ALTER TABLE alat_camping
     ADD CONSTRAINT alat_camping_kategori_alat_camping_fk FOREIGN KEY ( id_kategori )
@@ -108,8 +113,8 @@ ALTER TABLE detail_transaksi
     ADD CONSTRAINT detail_transaksi_alat_camping_fk FOREIGN KEY ( id_alatcamping )
         REFERENCES alat_camping ( id_alatcamping );
 
-ALTER TABLE detail_transaksi
-    ADD CONSTRAINT "Detail_Transaksi_E-wallet_FK" FOREIGN KEY ( id_ewallet )
+ALTER TABLE peminjaman
+    ADD CONSTRAINT "Peminjaman_E-wallet_FK" FOREIGN KEY ( id_ewallet )
         REFERENCES pembayaran_ewallet ( id_ewallet );
 
 ALTER TABLE detail_transaksi
@@ -121,8 +126,8 @@ ALTER TABLE laporan
         REFERENCES admin ( id_admin );
 
 ALTER TABLE laporan
-    ADD CONSTRAINT laporan_detail_transaksi_fk FOREIGN KEY ( id_detail_transaksi )
-        REFERENCES detail_transaksi ( id_detail_transaksi );
+    ADD CONSTRAINT laporan_detail_peminjaman foreign key (id_peminjaman)
+        REFERENCES peminjaman (id_peminjaman)
 
 ALTER TABLE laporan
     ADD CONSTRAINT laporan_penyewa_fk FOREIGN KEY ( id_penyewa )
@@ -133,5 +138,5 @@ ALTER TABLE peminjaman
         REFERENCES penyewa ( id_penyewa );
 
 ALTER TABLE pengembalian
-    ADD CONSTRAINT pengembalian_detail_transaksi_fk FOREIGN KEY ( id_detail_transaksi )
-        REFERENCES detail_transaksi ( id_detail_transaksi );
+    ADD CONSTRAINT pengembalian_peminjaman foreign key (id_peminjaman)
+        REFERENCES peminjaman (id_peminjaman)

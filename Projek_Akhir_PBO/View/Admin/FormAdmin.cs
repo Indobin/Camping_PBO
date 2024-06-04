@@ -14,19 +14,17 @@ namespace Projek_Akhir_PBO.View.Admin
     public partial class FormAdmin : Form
     {
         private int _userId;
-        //private UCDashboardAdmini ucDashboardAdmini;
-        //private UCOwner ucOwner;
-        //private UCRentersAdmin ucRentersAdmin;
-        //private UCReportsAdmin ucReportsAdmin;
-        //private UCProfileAdmin ucProfileAdmin;
 
 
         public FormAdmin(int userId)
         {
             _userId = userId;
             InitializeComponent();
-            //ucDashboardAdmini1.Visible = true;
-            //InitializeUserControls();
+            ucDashboardAdmini1.UserId = _userId;
+            ucOwner1.UserId = _userId;
+            ucRentersAdmin1.UserId = _userId;
+            ucReportsAdmin1.UserId = _userId;
+            ucProfileAdmin1.UserId = _userId;
         }
 
         private void buttonlogoutadm_Click(object sender, EventArgs e)
@@ -43,7 +41,7 @@ namespace Projek_Akhir_PBO.View.Admin
 
         private void buttondashboardadmin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ucDashboardAdmini1.Visible = true;
             ucOwner1.Visible = false;
             ucRentersAdmin1.Visible = false;

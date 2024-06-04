@@ -13,5 +13,10 @@ namespace Projek_Akhir_PBO.Models.Pemilik
     {
         public int id_kategori { get; set; }
         public string namakategori { get; set; }
+
+        public string id_pemilik { get; set; }
+
+        public bool dihentikan {  get; set; }
+        public string Status {  get; set; }
     }
 }
