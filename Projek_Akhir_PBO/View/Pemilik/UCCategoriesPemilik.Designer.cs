@@ -76,7 +76,7 @@
             // 
             button1tambah.BackColor = Color.FromArgb(97, 191, 143);
             button1tambah.FlatStyle = FlatStyle.Flat;
-            button1tambah.Font = new Font("Segoe UI", 20F);
+            button1tambah.Font = new Font("Lufga", 20.25F);
             button1tambah.ForeColor = Color.White;
             button1tambah.Location = new Point(34, 460);
             button1tambah.Margin = new Padding(2);
@@ -91,7 +91,7 @@
             // 
             button2edit.BackColor = Color.RoyalBlue;
             button2edit.FlatStyle = FlatStyle.Flat;
-            button2edit.Font = new Font("Segoe UI", 20F);
+            button2edit.Font = new Font("Lufga", 20.25F);
             button2edit.ForeColor = Color.White;
             button2edit.Location = new Point(229, 460);
             button2edit.Margin = new Padding(2);
@@ -104,7 +104,7 @@
             // 
             // textBoxKategori
             // 
-            textBoxKategori.Font = new Font("Segoe UI", 15F);
+            textBoxKategori.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxKategori.Location = new Point(204, 389);
             textBoxKategori.Margin = new Padding(2);
             textBoxKategori.Name = "textBoxKategori";
@@ -114,11 +114,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15F);
+            label2.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(34, 389);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(144, 28);
+            label2.Size = new Size(157, 26);
             label2.TabIndex = 47;
             label2.Text = "Nama Kategori";
             // 
@@ -137,22 +137,22 @@
             // 
             // comboBox1Status
             // 
-            comboBox1Status.Font = new Font("Segoe UI", 15F);
+            comboBox1Status.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1Status.FormattingEnabled = true;
             comboBox1Status.Items.AddRange(new object[] { "Aktif", "Tidak Aktif" });
             comboBox1Status.Location = new Point(580, 389);
             comboBox1Status.Name = "comboBox1Status";
-            comboBox1Status.Size = new Size(189, 36);
+            comboBox1Status.Size = new Size(189, 34);
             comboBox1Status.TabIndex = 52;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
+            label1.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(482, 392);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(65, 28);
+            label1.Size = new Size(75, 26);
             label1.TabIndex = 53;
             label1.Text = "Status";
             // 
