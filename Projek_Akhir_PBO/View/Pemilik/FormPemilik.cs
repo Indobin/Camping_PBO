@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Projek_Akhir_PBO.View.Pemilik
 {
@@ -17,6 +18,12 @@ namespace Projek_Akhir_PBO.View.Pemilik
         {
             _userId = userId;
             InitializeComponent();
+            ucDashboardPemilik1.UserId = _userId;
+            ucStockPemilik1.UserId = _userId;
+            ucCategoriesPemilik1.UserId = _userId;
+            ucRentersPemilik1.UserId = _userId;
+            ucTransactionsPemilik1.UserId = _userId;
+            ucProfilePemilik1.UserId = _userId;
         }
 
         private void buttonlogoutpemilik_Click(object sender, EventArgs e)
@@ -33,7 +40,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private void buttondashboardPemilik_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ucDashboardPemilik1.Visible = true;
             ucStockPemilik1.Visible = false;
             ucCategoriesPemilik1.Visible = false;
