@@ -34,7 +34,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
                 try
                 {
                     conn.Open();
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn)) 
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@NAMA", textBoxUsername.Text);
                         cmd.ExecuteNonQuery();
