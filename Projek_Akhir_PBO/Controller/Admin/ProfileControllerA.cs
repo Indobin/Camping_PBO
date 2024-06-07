@@ -45,32 +45,32 @@ namespace Projek_Akhir_PBO.Controller.Admin
         //        }
         //    }
         //}
-        //public ProfileA Read()
-        //{
-        //    ProfileA profileA = null;
-        //    string selectQuery = "SELECT namaadmin, no_hp FROM admin WHERE id = @userId";
-
-        //    using (var conn = new NpgsqlConnection(conStr))
+        //    public ProfileA Read()
         //    {
-        //        conn.Open();
-        //        using (var cmd = new NpgsqlCommand(selectQuery, conn))
-        //        {
-        //            cmd.Parameters.AddWithValue("@userId", _userId);
+        //        ProfileA profileA = null;
+        //        string selectQuery = "SELECT namaadmin, no_hp FROM admin WHERE id = @userId";
 
-        //            using (var reader = cmd.ExecuteReader())
+        //        using (var conn = new NpgsqlConnection(conStr))
+        //        {
+        //            conn.Open();
+        //            using (var cmd = new NpgsqlCommand(selectQuery, conn))
         //            {
-        //                if (reader.Read())
+        //                cmd.Parameters.AddWithValue("@userId", _userId);
+
+        //                using (var reader = cmd.ExecuteReader())
         //                {
-        //                    profileA = new ProfileA
+        //                    if (reader.Read())
         //                    {
-        //                        namaadmin = reader["namaadmin"].ToString(),
-        //                        no_hp = reader["no_hp"].ToString()
-        //                    };
+        //                        profileA = new ProfileA
+        //                        {
+        //                            namaadmin = reader["namaadmin"].ToString(),
+        //                            no_hp = reader["no_hp"].ToString()
+        //                        };
+        //                    }
         //                }
         //            }
         //        }
+        //        return profileA;
         //    }
-        //    return profileA;
-        //}
     }
 }
