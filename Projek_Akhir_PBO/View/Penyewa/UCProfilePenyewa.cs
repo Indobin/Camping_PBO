@@ -81,33 +81,33 @@ namespace Projek_Akhir_PBO.View.Penyewa
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
         {
-            string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=spensaganomor1;Database=Camping;CommandTimeout=10";
-            string query = "SELECT nama_penyewa FROM penyewa ";
+            //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=spensaganomor1;Database=Camping;CommandTimeout=10";
+            //string query = "SELECT nama_penyewa FROM penyewa ";
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
-            {
-                try
-                {
-                    conn.Open();
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
-                    {
-                        cmd.CommandText = query;
-                        NpgsqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.Read())
-                        {
-                            textBoxUsername.Text = reader["nama_penyewa"].ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Profil pengguna tidak ditemukan.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            //{
+            //    try
+            //    {
+            //        conn.Open();
+            //        using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+            //        {
+            //            cmd.CommandText = query;
+            //            NpgsqlDataReader reader = cmd.ExecuteReader();
+            //            if (reader.Read())
+            //            {
+            //                textBoxUsername.Text = reader["nama_penyewa"].ToString();
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("Profil pengguna tidak ditemukan.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -162,7 +162,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
             }
             if (string.IsNullOrEmpty(textBoxUsername.Text.Trim()) || string.IsNullOrEmpty(textBoxNoHP.Text.Trim()) || string.IsNullOrEmpty(textBoxAlamat.Text.Trim()))
             {
-                MessageBox.Show("Nama admin dan No hp tidak boleh kosong", "Edit Data",
+                MessageBox.Show("Nama penyewa dan No hp tidak boleh kosong", "Edit Data",
                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
