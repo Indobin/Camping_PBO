@@ -246,23 +246,26 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            index = e.RowIndex;
-            DataGridViewRow row = dataGridView1.Rows[index];
-            idBarangSelected = Convert.ToInt32(row.Cells[0].Value);
-            guna2nama.Text = row.Cells[1].Value.ToString();
-            guna2Harga.Text = row.Cells[2].Value.ToString();
-            guna2Stok.Text = row.Cells[3].Value.ToString();
-            string status = row.Cells[4].Value.ToString();
-            guna2ComboBoxStatus.SelectedItem = status;
-            foreach (ComboBoxItem item in guna2ComboBoxKategori.Items)
+            if (e.RowIndex != -1)
             {
-                if (item.Text == row.Cells[5].Value.ToString())
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                idBarangSelected = Convert.ToInt32(row.Cells[0].Value);
+                guna2nama.Text = row.Cells[1].Value.ToString();
+                guna2Harga.Text = row.Cells[2].Value.ToString();
+                guna2Stok.Text = row.Cells[3].Value.ToString();
+                string status = row.Cells[4].Value.ToString();
+                guna2ComboBoxStatus.SelectedItem = status;
+                foreach (ComboBoxItem item in guna2ComboBoxKategori.Items)
                 {
-                    guna2ComboBoxKategori.SelectedItem = item;
-                    break;
+                    if (item.Text == row.Cells[5].Value.ToString())
+                    {
+                        guna2ComboBoxKategori.SelectedItem = item;
+                        break;
+                    }
                 }
+                richTextDeskripsi.Text = row.Cells[6].Value.ToString();
             }
-            richTextDeskripsi.Text = row.Cells[6].Value.ToString();
+           
         }
     }
 }
