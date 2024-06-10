@@ -46,8 +46,8 @@ namespace Projek_Akhir_PBO.View.Pemilik
             DataTable table = new DataTable();
             table.Columns.Add("Id", typeof(int));
             table.Columns.Add("Nama Penyewa", typeof(string));
-            table.Columns.Add("No. Telp", typeof(string));
             table.Columns.Add("Alamat", typeof(string));
+            table.Columns.Add("Nomor Telepon", typeof(string));
             table.Columns.Add("Tanggal Peminjaman", typeof(DateTime));
             table.Columns.Add("Status", typeof(string));
             foreach (var renters in rentersController.ListRenters)
