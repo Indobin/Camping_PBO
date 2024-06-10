@@ -11,7 +11,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Projek_Akhir_PBO.View.Penyewa
 {
-    
+
     public partial class FormPenyewa : Form
     {
         FormLogin formloggin;
@@ -24,6 +24,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
             ucTransactionsPenyewa1.UserId = _userId;
             ucHistoryPenyewa1.UserId = _userId;
             ucProfilePenyewa1.UserId = _userId;
+            ucReportsPenyewa1.UserId = _userId;
         }
 
         private void buttonlogoutpenyewa_Click(object sender, EventArgs e)
@@ -69,6 +70,15 @@ namespace Projek_Akhir_PBO.View.Penyewa
             ucTransactionsPenyewa1.Visible = false;
             ucHistoryPenyewa1.Visible = false;
             ucProfilePenyewa1.Visible = true;
+        }
+
+        private void buttonReportsPy_Click(object sender, EventArgs e)
+        {
+            ucHomePenyewa1.Visible = false;
+            ucTransactionsPenyewa1.Visible = false;
+            ucHistoryPenyewa1.Visible = false;
+            ucProfilePenyewa1.Visible = false;
+            ucReportsPenyewa1.Visible = true;
         }
     }
 }
