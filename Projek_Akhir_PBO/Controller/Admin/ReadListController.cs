@@ -12,10 +12,10 @@ namespace Projek_Akhir_PBO.Controller.Admin
     internal class ReadListController
     {
         public List<ReadListContext> ListOwner = new List<ReadListContext>();
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Database=Camping;CommandTimeout=10";
+        string conStr = "Server=localhost;Port=5432;User Id=postgres; Password=12345678 ;Database=GO-CAMP;CommandTimeout=10";
         public void Read()
         {
-            string query = string.Format(@"SELECT row_number(*) over() as nomor, id_pemilik, nama_pemilik, alamat_pemilik
+            string query = string.Format(@"SELECT id_pemilik, nama_pemilik, no_telepon_pemilik, alamat_pemilik
                                 FROM pemilik;");
 
             using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
@@ -31,6 +31,7 @@ namespace Projek_Akhir_PBO.Controller.Admin
                         ReadListContext readListContext = new ReadListContext();
                         readListContext.id_pemilik = (int)reader["id_pemilik"];
                         readListContext.nama_pemilik = (string)reader["nama_pemilik"];
+                        readListContext.no_telepon_pemilik = (string)reader["no_telepon_pemilik"];
                         readListContext.alamat_pemilik = (string)reader["alamat_pemilik"];
                         ListOwner.Add(readListContext);
                     }
