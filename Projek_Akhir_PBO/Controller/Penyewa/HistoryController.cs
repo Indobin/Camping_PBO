@@ -57,10 +57,9 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
                         }
                         else
                         {
-                            historyPy.tanggal_pengembalian = "Belum ada"; // Or any placeholder indicating no return yet
+                            historyPy.tanggal_pengembalian = "Belum ada"; 
                         }
 
-                        // Check if the return status is DBNull.Value before reading it
                         if (reader["status_kembali"] != DBNull.Value)
                         {
                             historyPy.status_kembali_bool = (bool)reader["status_kembali"];
