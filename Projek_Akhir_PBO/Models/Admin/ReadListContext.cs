@@ -10,11 +10,9 @@ namespace Projek_Akhir_PBO.Models.Admin
     {
         public int id_pemilik { get; set; }
         public string nama_pemilik { get; set; }
-
-        public string username { get; set; }
-        public string password { get; set; }
         public string no_telepon_pemilik {get; set; }
         public string alamat_pemilik { get; set; }
 
     }
+    
 }

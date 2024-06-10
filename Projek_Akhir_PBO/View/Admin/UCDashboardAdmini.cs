@@ -35,7 +35,7 @@ namespace Projek_Akhir_PBO.View.Admin
             Renters();
             Rentals();
         }
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=12345678;Database=GO-CAMP;CommandTimeout=10";
         public void Owners()
         {
             string query = string.Format(@"SELECT COUNT(id_pemilik) FROM pemilik;");
