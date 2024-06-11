@@ -16,5 +16,6 @@ namespace Projek_Akhir_PBO.Models.Penyewa
         public string isi_tanggapan;
         public int id_admin;
         public int id_peminjaman;
+        public string peminjaman;
     }
 }

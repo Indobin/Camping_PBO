@@ -36,7 +36,8 @@ namespace Projek_Akhir_PBO.View.Pemilik
             disabledProfile();
         }
 
-        string conStr = "Server=localhost;Port=5432;UserId=postgres;Password=spensaganomor1;Database=Camping;CommandTimeout=10";
+        //string conStr = "Server=localhost;Port=5432;UserId=postgres;Password=spensaganomor1;Database=Camping;CommandTimeout=10";
+        string conStr = "Server=localhost;Port=5432;UserId=postgres;Password=321;Database=Camping;CommandTimeout=10";
         public void disabledProfile()
         {
             textBoxNamePm.Enabled = false;

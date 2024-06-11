@@ -115,7 +115,7 @@
             button1tambah.Location = new Point(1000, 147);
             button1tambah.Margin = new Padding(2);
             button1tambah.Name = "button1tambah";
-            button1tambah.Size = new Size(144, 59);
+            button1tambah.Size = new Size(114, 59);
             button1tambah.TabIndex = 58;
             button1tambah.Text = "Add";
             button1tambah.UseVisualStyleBackColor = false;
@@ -130,7 +130,7 @@
             button2edit.Location = new Point(1000, 226);
             button2edit.Margin = new Padding(2);
             button2edit.Name = "button2edit";
-            button2edit.Size = new Size(144, 59);
+            button2edit.Size = new Size(114, 59);
             button2edit.TabIndex = 57;
             button2edit.Text = "Edit";
             button2edit.UseVisualStyleBackColor = false;
@@ -355,7 +355,7 @@
             button1Clear.Location = new Point(1000, 311);
             button1Clear.Margin = new Padding(2);
             button1Clear.Name = "button1Clear";
-            button1Clear.Size = new Size(144, 59);
+            button1Clear.Size = new Size(114, 59);
             button1Clear.TabIndex = 77;
             button1Clear.Text = "Clear";
             button1Clear.UseVisualStyleBackColor = false;

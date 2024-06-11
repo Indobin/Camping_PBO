@@ -110,7 +110,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15F);
-            label3.Location = new Point(330, 581);
+            label3.Location = new Point(387, 581);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(70, 28);
@@ -150,14 +150,15 @@
             guna2Nohp.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2Nohp.Font = new Font("Segoe UI", 15F);
             guna2Nohp.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2Nohp.Location = new Point(502, 560);
+            guna2Nohp.Location = new Point(502, 569);
             guna2Nohp.Margin = new Padding(5, 7, 5, 7);
             guna2Nohp.Name = "guna2Nohp";
             guna2Nohp.PasswordChar = '\0';
+            guna2Nohp.PlaceholderForeColor = SystemColors.WindowText;
             guna2Nohp.PlaceholderText = "";
             guna2Nohp.SelectedText = "";
             guna2Nohp.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Nohp.Size = new Size(328, 68);
+            guna2Nohp.Size = new Size(328, 49);
             guna2Nohp.TabIndex = 59;
             // 
             // guna2nama
@@ -170,15 +171,16 @@
             guna2nama.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2nama.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2nama.Font = new Font("Segoe UI", 15F);
+            guna2nama.ForeColor = SystemColors.WindowText;
             guna2nama.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2nama.Location = new Point(502, 470);
+            guna2nama.Location = new Point(502, 480);
             guna2nama.Margin = new Padding(5);
             guna2nama.Name = "guna2nama";
             guna2nama.PasswordChar = '\0';
             guna2nama.PlaceholderText = "";
             guna2nama.SelectedText = "";
             guna2nama.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2nama.Size = new Size(328, 68);
+            guna2nama.Size = new Size(328, 49);
             guna2nama.TabIndex = 60;
             // 
             // guna2ButtonSave

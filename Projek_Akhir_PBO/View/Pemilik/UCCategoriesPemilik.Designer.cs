@@ -85,9 +85,9 @@
             button1tambah.Location = new Point(34, 460);
             button1tambah.Margin = new Padding(2);
             button1tambah.Name = "button1tambah";
-            button1tambah.Size = new Size(144, 59);
+            button1tambah.Size = new Size(114, 59);
             button1tambah.TabIndex = 51;
-            button1tambah.Text = "Tambah";
+            button1tambah.Text = "Add";
             button1tambah.UseVisualStyleBackColor = false;
             button1tambah.Click += button1tambah_Click;
             // 

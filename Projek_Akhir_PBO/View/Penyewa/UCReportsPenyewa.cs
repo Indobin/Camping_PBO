@@ -37,7 +37,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
             reportController = new ReportController();
             InitializeComponent();
             //datapeminjaman();
-            
+
         }
         public class ComboBoxItem
         {
@@ -51,9 +51,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
         }
         private void peminjamandata()
         {
-            //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-            string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=12345678;Database=GO-CAMP;CommandTimeout=10";
-
+            string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
 
             string query = $"SELECT tanggal_peminjaman, id_peminjaman FROM peminjaman WHERE id_penyewa=@userId";
 
@@ -67,6 +65,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
                         cmd.Parameters.AddWithValue("@userId", _userId);
                         using (NpgsqlDataReader reader = cmd.ExecuteReader())
                         {
+                            guna2ComboBoxPeminjaman.Items.Clear();
                             while (reader.Read())
                             {
                                 DateTime tanggalPeminjaman = (DateTime)reader["tanggal_peminjaman"];
@@ -97,16 +96,16 @@ namespace Projek_Akhir_PBO.View.Penyewa
             table.Columns.Add("Status", typeof(string));
             table.Columns.Add("Isi Laporan", typeof(string));
             table.Columns.Add("Isi Tanggapan", typeof(string));
-            table.Columns.Add("Nama Penyewa", typeof(string));
+            table.Columns.Add("Peminjaman", typeof(string));
             foreach (var laporan in reportController.ListLaporan)
             {
                 table.Rows.Add(laporan.id_laporan, laporan.tanggal_laporan, laporan.status_laporan,
-                    laporan.isi_laporan, laporan.isi_tanggapan);
+                    laporan.isi_laporan, laporan.isi_tanggapan, laporan.peminjaman);
             }
 
             dataGridView1.DataSource = table;
         }
-       
+
 
         private void button1tambah_Click_1(object sender, EventArgs e)
         {
@@ -134,8 +133,40 @@ namespace Projek_Akhir_PBO.View.Penyewa
         {
             peminjamandata();
             DataLaporan();
-            richTextTanggapan.Enabled = false;
+            richTextTanggapan.ReadOnly = true;
             guna2tanggal.Enabled = false;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                idlaporanSelected = Convert.ToInt32(row.Cells[0].Value);
+                guna2tanggal.Text = row.Cells[1].Value.ToString();
+                richTextBoxLaporan.Text = row.Cells[3].Value.ToString();
+                richTextTanggapan.Text = row.Cells[4].Value.ToString();
+                foreach (ComboBoxItem item in guna2ComboBoxPeminjaman.Items)
+                {
+                    if (item.Text == row.Cells[5].Value.ToString())
+                    {
+                        guna2ComboBoxPeminjaman.SelectedItem = item;
+                        break;
+                    }
+                }
+                richTextBoxLaporan.ReadOnly = true;
+                guna2ComboBoxPeminjaman.Enabled = false;
+            }
+        }
+
+        private void button1Clear_Click(object sender, EventArgs e)
+        {
+            guna2tanggal.Text = string.Empty;
+            richTextBoxLaporan.Text = string.Empty;
+            richTextTanggapan.Text = string.Empty;
+            guna2ComboBoxPeminjaman.SelectedIndex = -1;
+            richTextBoxLaporan.Enabled = true;
+            guna2ComboBoxPeminjaman.Enabled = true;
         }
     }
 }

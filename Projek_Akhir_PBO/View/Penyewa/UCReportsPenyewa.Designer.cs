@@ -41,7 +41,6 @@
             label5 = new Label();
             label1 = new Label();
             button1tambah = new Button();
-            button2edit = new Button();
             label2 = new Label();
             dataGridView1 = new DataGridView();
             paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
@@ -58,16 +57,19 @@
             button1Clear.FlatStyle = FlatStyle.Flat;
             button1Clear.Font = new Font("Lufga", 20.25F);
             button1Clear.ForeColor = Color.White;
-            button1Clear.Location = new Point(1000, 318);
+            button1Clear.Location = new Point(1000, 237);
             button1Clear.Margin = new Padding(2);
             button1Clear.Name = "button1Clear";
-            button1Clear.Size = new Size(144, 59);
+            button1Clear.Size = new Size(114, 59);
             button1Clear.TabIndex = 94;
             button1Clear.Text = "Clear";
             button1Clear.UseVisualStyleBackColor = false;
+            button1Clear.Click += button1Clear_Click;
             // 
             // richTextTanggapan
             // 
+            richTextTanggapan.BorderStyle = BorderStyle.None;
+            richTextTanggapan.EnableAutoDragDrop = true;
             richTextTanggapan.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             richTextTanggapan.Location = new Point(611, 530);
             richTextTanggapan.Name = "richTextTanggapan";
@@ -77,7 +79,7 @@
             // 
             // guna2ComboBoxPeminjaman
             // 
-            guna2ComboBoxPeminjaman.BackColor = Color.Transparent;
+            guna2ComboBoxPeminjaman.BackColor = Color.White;
             guna2ComboBoxPeminjaman.CustomizableEdges = customizableEdges1;
             guna2ComboBoxPeminjaman.DrawMode = DrawMode.OwnerDrawFixed;
             guna2ComboBoxPeminjaman.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -136,25 +138,11 @@
             button1tambah.Location = new Point(1000, 154);
             button1tambah.Margin = new Padding(2);
             button1tambah.Name = "button1tambah";
-            button1tambah.Size = new Size(144, 59);
+            button1tambah.Size = new Size(114, 59);
             button1tambah.TabIndex = 82;
             button1tambah.Text = "Add";
             button1tambah.UseVisualStyleBackColor = false;
             button1tambah.Click += button1tambah_Click_1;
-            // 
-            // button2edit
-            // 
-            button2edit.BackColor = Color.RoyalBlue;
-            button2edit.FlatStyle = FlatStyle.Flat;
-            button2edit.Font = new Font("Lufga", 20.25F);
-            button2edit.ForeColor = Color.White;
-            button2edit.Location = new Point(1000, 233);
-            button2edit.Margin = new Padding(2);
-            button2edit.Name = "button2edit";
-            button2edit.Size = new Size(144, 59);
-            button2edit.TabIndex = 81;
-            button2edit.Text = "Edit";
-            button2edit.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -185,6 +173,7 @@
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView1.Size = new Size(925, 223);
             dataGridView1.TabIndex = 79;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // paneltopdashboard
             // 
@@ -217,6 +206,7 @@
             // 
             // richTextBoxLaporan
             // 
+            richTextBoxLaporan.BorderStyle = BorderStyle.None;
             richTextBoxLaporan.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             richTextBoxLaporan.Location = new Point(34, 530);
             richTextBoxLaporan.Name = "richTextBoxLaporan";
@@ -253,7 +243,6 @@
             Controls.Add(label5);
             Controls.Add(label1);
             Controls.Add(button1tambah);
-            Controls.Add(button2edit);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(paneltopdashboard);
@@ -276,7 +265,6 @@
         private Label label5;
         private Label label1;
         private Button button1tambah;
-        private Button button2edit;
         private Label label2;
         private DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Panel paneltopdashboard;

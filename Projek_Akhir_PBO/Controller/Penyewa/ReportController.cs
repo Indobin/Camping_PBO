@@ -22,7 +22,10 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
         public void Read()
         {
             //MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            string query = string.Format(@"SELECT * FROM laporan WHERE id_penyewa=@userId");
+            string query = string.Format(@"SELECT *
+                                        FROM laporan l
+                                        INNER JOIN peminjaman p on p.id_peminjaman = l.id_peminjaman
+                                        WHERE l.id_penyewa=@userId");
             using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
             {
                 conn.Open();
@@ -33,6 +36,8 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
                     ListLaporan.Clear();
                     while (reader.Read())
                     {
+                        DateTime tanggalPeminjaman = (DateTime)reader["tanggal_peminjaman"];
+                        int idPeminjaman = (int)reader["id_peminjaman"];
                         ReportsPy reportsPy = new ReportsPy();
                         reportsPy.id_laporan = (int)reader["id_laporan"];
                         reportsPy.tanggal_laporan = ((DateTime)reader["tanggallaporan"]).ToString("yyyy-MM-dd");
@@ -47,6 +52,7 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
                         }
                         reportsPy.status_laporan_bool = (bool)reader["statuslaporan"];
                         reportsPy.status_laporan = (bool)reader["statuslaporan"] ? "Terkirim" : "Proses";
+                        reportsPy.peminjaman = $"ID: {idPeminjaman} - Date: {tanggalPeminjaman:yyyy-MM-dd}";
                         ListLaporan.Add(reportsPy);
                     }
                 }
