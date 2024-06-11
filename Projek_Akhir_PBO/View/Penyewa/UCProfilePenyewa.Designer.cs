@@ -34,8 +34,14 @@
             juduldashboard = new Label();
             pictureBox1 = new PictureBox();
             textBoxUsername = new TextBox();
-            textBoxDeskripsi = new TextBox();
+            textBoxNoHP = new TextBox();
             ButtonEdit = new Button();
+            NamaPenyewa = new Label();
+            NoHP = new Label();
+            ButtonSave = new Button();
+            AlamatPenyewa = new Label();
+            textBoxAlamat = new TextBox();
+            label1 = new Label();
             paneltopdashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -60,7 +66,7 @@
             // 
             juduldashboard.AutoSize = true;
             juduldashboard.BackColor = Color.Transparent;
-            juduldashboard.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            juduldashboard.Font = new Font("Microsoft Sans Serif", 29.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             juduldashboard.ForeColor = Color.FromArgb(91, 80, 80);
             juduldashboard.ImageAlign = ContentAlignment.MiddleLeft;
             juduldashboard.Location = new Point(34, 41);
@@ -72,62 +78,133 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.icon_profil_removebg_preview;
-            pictureBox1.Location = new Point(485, 179);
+            pictureBox1.Location = new Point(502, 159);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(328, 257);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 46;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // textBoxUsername
             // 
-            textBoxUsername.BackColor = Color.FromArgb(245, 248, 241);
-            textBoxUsername.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBoxUsername.Location = new Point(484, 463);
+            textBoxUsername.BackColor = Color.White;
+            textBoxUsername.BorderStyle = BorderStyle.FixedSingle;
+            textBoxUsername.Font = new Font("Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxUsername.Location = new Point(489, 470);
             textBoxUsername.Margin = new Padding(0);
             textBoxUsername.Name = "textBoxUsername";
-            textBoxUsername.Size = new Size(329, 38);
+            textBoxUsername.Size = new Size(493, 43);
             textBoxUsername.TabIndex = 47;
-            textBoxUsername.TextAlign = HorizontalAlignment.Center;
             textBoxUsername.TextChanged += textBoxUsername_TextChanged;
             // 
-            // textBoxDeskripsi
+            // textBoxNoHP
             // 
-            textBoxDeskripsi.BackColor = Color.White;
-            textBoxDeskripsi.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxDeskripsi.Location = new Point(345, 547);
-            textBoxDeskripsi.Multiline = true;
-            textBoxDeskripsi.Name = "textBoxDeskripsi";
-            textBoxDeskripsi.Size = new Size(607, 189);
-            textBoxDeskripsi.TabIndex = 48;
-            textBoxDeskripsi.Text = "\r\n";
-            textBoxDeskripsi.TextChanged += textBox2_TextChanged;
+            textBoxNoHP.BackColor = Color.White;
+            textBoxNoHP.BorderStyle = BorderStyle.FixedSingle;
+            textBoxNoHP.Font = new Font("Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxNoHP.Location = new Point(489, 550);
+            textBoxNoHP.Multiline = true;
+            textBoxNoHP.Name = "textBoxNoHP";
+            textBoxNoHP.Size = new Size(493, 43);
+            textBoxNoHP.TabIndex = 48;
+            textBoxNoHP.Text = "\r\n";
+            textBoxNoHP.TextChanged += textBox2_TextChanged;
             // 
             // ButtonEdit
             // 
-            ButtonEdit.BackColor = Color.FromArgb(217, 217, 217);
-            ButtonEdit.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ButtonEdit.ForeColor = Color.FromArgb(14, 115, 116);
-            ButtonEdit.Location = new Point(1124, 160);
+            ButtonEdit.BackColor = Color.RoyalBlue;
+            ButtonEdit.FlatStyle = FlatStyle.Flat;
+            ButtonEdit.Font = new Font("Lufga", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonEdit.ForeColor = Color.White;
+            ButtonEdit.Location = new Point(502, 736);
             ButtonEdit.Name = "ButtonEdit";
-            ButtonEdit.Size = new Size(110, 40);
+            ButtonEdit.Size = new Size(114, 59);
             ButtonEdit.TabIndex = 49;
             ButtonEdit.Text = "EDIT";
             ButtonEdit.UseVisualStyleBackColor = false;
             ButtonEdit.Click += button1_Click;
             // 
+            // NamaPenyewa
+            // 
+            NamaPenyewa.Font = new Font("Lufga", 14.9999981F);
+            NamaPenyewa.Location = new Point(307, 480);
+            NamaPenyewa.Name = "NamaPenyewa";
+            NamaPenyewa.Size = new Size(176, 28);
+            NamaPenyewa.TabIndex = 50;
+            NamaPenyewa.Text = "Nama Penyewa :";
+            NamaPenyewa.Click += NamaPenyewa_Click;
+            // 
+            // NoHP
+            // 
+            NoHP.Font = new Font("Lufga", 14.9999981F);
+            NoHP.Location = new Point(310, 555);
+            NoHP.Name = "NoHP";
+            NoHP.Size = new Size(173, 28);
+            NoHP.TabIndex = 51;
+            NoHP.Text = "Nomor Telepon :";
+            // 
+            // ButtonSave
+            // 
+            ButtonSave.BackColor = Color.FromArgb(97, 191, 143);
+            ButtonSave.FlatStyle = FlatStyle.Flat;
+            ButtonSave.Font = new Font("Lufga", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonSave.ForeColor = Color.White;
+            ButtonSave.Location = new Point(691, 736);
+            ButtonSave.Name = "ButtonSave";
+            ButtonSave.Size = new Size(114, 59);
+            ButtonSave.TabIndex = 52;
+            ButtonSave.Text = "SAVE";
+            ButtonSave.UseVisualStyleBackColor = false;
+            ButtonSave.Click += button1_Click_1;
+            // 
+            // AlamatPenyewa
+            // 
+            AlamatPenyewa.Font = new Font("Lufga", 14.9999981F);
+            AlamatPenyewa.Location = new Point(310, 639);
+            AlamatPenyewa.Name = "AlamatPenyewa";
+            AlamatPenyewa.Size = new Size(173, 28);
+            AlamatPenyewa.TabIndex = 54;
+            AlamatPenyewa.Text = "Alamat                :";
+            // 
+            // textBoxAlamat
+            // 
+            textBoxAlamat.BackColor = Color.White;
+            textBoxAlamat.BorderStyle = BorderStyle.FixedSingle;
+            textBoxAlamat.Font = new Font("Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxAlamat.Location = new Point(489, 629);
+            textBoxAlamat.Multiline = true;
+            textBoxAlamat.Name = "textBoxAlamat";
+            textBoxAlamat.Size = new Size(493, 43);
+            textBoxAlamat.TabIndex = 55;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(657, 436);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 15);
+            label1.TabIndex = 56;
+            // 
             // UCProfilePenyewa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 248, 241);
+            BackColor = SystemColors.Control;
+            Controls.Add(label1);
+            Controls.Add(textBoxAlamat);
+            Controls.Add(AlamatPenyewa);
+            Controls.Add(ButtonSave);
+            Controls.Add(NoHP);
+            Controls.Add(NamaPenyewa);
             Controls.Add(ButtonEdit);
-            Controls.Add(textBoxDeskripsi);
+            Controls.Add(textBoxNoHP);
             Controls.Add(textBoxUsername);
             Controls.Add(pictureBox1);
             Controls.Add(paneltopdashboard);
             Name = "UCProfilePenyewa";
             Size = new Size(1277, 864);
+            Load += UCProfilePenyewa_Load;
             paneltopdashboard.ResumeLayout(false);
             paneltopdashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -141,7 +218,14 @@
         private Label juduldashboard;
         private PictureBox pictureBox1;
         private TextBox textBoxUsername;
-        private TextBox textBoxDeskripsi;
+        private TextBox textBoxNoHP;
         private Button ButtonEdit;
+        private Label NamaPenyewa;
+        private Label NoHP;
+        private Button ButtonSave;
+        private TextBox textBox1;
+        private TextBox textBoxAlamat;
+        private Label AlamatPenyewa;
+        private Label label1;
     }
 }

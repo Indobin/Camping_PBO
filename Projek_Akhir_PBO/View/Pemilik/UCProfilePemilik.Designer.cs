@@ -32,7 +32,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
             juduldashboard = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            textBoxNamePm = new TextBox();
+            pictureBox1 = new PictureBox();
+            textBoxNoPm = new TextBox();
+            textBoxAlamatPm = new TextBox();
+            ButtonEdit = new Button();
+            ButtonSave = new Button();
             paneltopdashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // paneltopdashboard
@@ -55,30 +68,195 @@
             // 
             juduldashboard.AutoSize = true;
             juduldashboard.BackColor = Color.Transparent;
-            juduldashboard.Font = new Font("Lufga", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            juduldashboard.Font = new Font("FSP DEMO - Lufga", 29.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             juduldashboard.ForeColor = Color.FromArgb(91, 80, 80);
             juduldashboard.ImageAlign = ContentAlignment.MiddleLeft;
             juduldashboard.Location = new Point(34, 41);
             juduldashboard.Name = "juduldashboard";
-            juduldashboard.Size = new Size(145, 52);
+            juduldashboard.Size = new Size(144, 52);
             juduldashboard.TabIndex = 20;
             juduldashboard.Text = "Profile";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("FSP DEMO - Lufga", 14.9999981F);
+            label2.Location = new Point(374, 506);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(146, 26);
+            label2.TabIndex = 64;
+            label2.Text = "Nama Pemilik";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("FSP DEMO - Lufga", 14.9999981F);
+            label1.Location = new Point(374, 580);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(146, 26);
+            label1.TabIndex = 65;
+            label1.Text = "No Hp Pemilik";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("FSP DEMO - Lufga", 14.9999981F);
+            label3.Location = new Point(436, 647);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(84, 26);
+            label3.TabIndex = 66;
+            label3.Text = "Alamat";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15F);
+            label4.Location = new Point(524, 502);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(16, 28);
+            label4.TabIndex = 67;
+            label4.Text = ":";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 15F);
+            label5.Location = new Point(524, 576);
+            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(16, 28);
+            label5.TabIndex = 68;
+            label5.Text = ":";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 15F);
+            label6.Location = new Point(524, 643);
+            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(16, 28);
+            label6.TabIndex = 69;
+            label6.Text = ":";
+            // 
+            // textBoxNamePm
+            // 
+            textBoxNamePm.BackColor = Color.White;
+            textBoxNamePm.Font = new Font("FSP DEMO - Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxNamePm.Location = new Point(542, 496);
+            textBoxNamePm.Margin = new Padding(0);
+            textBoxNamePm.Multiline = true;
+            textBoxNamePm.Name = "textBoxNamePm";
+            textBoxNamePm.Size = new Size(257, 43);
+            textBoxNamePm.TabIndex = 70;
+            textBoxNamePm.TextChanged += textBoxUsername_TextChanged;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.icon_profil_removebg_preview;
+            pictureBox1.Location = new Point(480, 154);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(328, 257);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 47;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // textBoxNoPm
+            // 
+            textBoxNoPm.BackColor = Color.White;
+            textBoxNoPm.Font = new Font("FSP DEMO - Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxNoPm.Location = new Point(542, 563);
+            textBoxNoPm.Margin = new Padding(0);
+            textBoxNoPm.Multiline = true;
+            textBoxNoPm.Name = "textBoxNoPm";
+            textBoxNoPm.Size = new Size(257, 43);
+            textBoxNoPm.TabIndex = 71;
+            // 
+            // textBoxAlamatPm
+            // 
+            textBoxAlamatPm.BackColor = Color.White;
+            textBoxAlamatPm.Font = new Font("FSP DEMO - Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxAlamatPm.Location = new Point(542, 637);
+            textBoxAlamatPm.Margin = new Padding(0);
+            textBoxAlamatPm.Multiline = true;
+            textBoxAlamatPm.Name = "textBoxAlamatPm";
+            textBoxAlamatPm.Size = new Size(257, 43);
+            textBoxAlamatPm.TabIndex = 72;
+            textBoxAlamatPm.TextChanged += textBoxAlamat_TextChanged;
+            // 
+            // ButtonEdit
+            // 
+            ButtonEdit.BackColor = Color.RoyalBlue;
+            ButtonEdit.Font = new Font("FSP DEMO - Lufga", 14.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonEdit.ForeColor = Color.White;
+            ButtonEdit.Location = new Point(480, 752);
+            ButtonEdit.Name = "ButtonEdit";
+            ButtonEdit.Size = new Size(114, 59);
+            ButtonEdit.TabIndex = 73;
+            ButtonEdit.Text = "EDIT";
+            ButtonEdit.UseVisualStyleBackColor = false;
+            ButtonEdit.Click += ButtonEdit_Click;
+            // 
+            // ButtonSave
+            // 
+            ButtonSave.BackColor = Color.FromArgb(97, 191, 143);
+            ButtonSave.Font = new Font("FSP DEMO - Lufga", 14.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonSave.ForeColor = Color.White;
+            ButtonSave.Location = new Point(694, 752);
+            ButtonSave.Name = "ButtonSave";
+            ButtonSave.Size = new Size(114, 59);
+            ButtonSave.TabIndex = 74;
+            ButtonSave.Text = "SAVE";
+            ButtonSave.UseVisualStyleBackColor = false;
+            ButtonSave.Click += ButtonSave_Click;
             // 
             // UCProfilePemilik
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(textBoxNamePm);
+            Controls.Add(ButtonSave);
+            Controls.Add(ButtonEdit);
+            Controls.Add(textBoxAlamatPm);
+            Controls.Add(textBoxNoPm);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label1);
+            Controls.Add(label2);
+            Controls.Add(pictureBox1);
             Controls.Add(paneltopdashboard);
             Name = "UCProfilePemilik";
             Size = new Size(1277, 864);
+            Load += UCProfilePemilik_Load_1;
             paneltopdashboard.ResumeLayout(false);
             paneltopdashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel paneltopdashboard;
         private Label juduldashboard;
+        private Label label2;
+        private Label label1;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private TextBox textBoxNamePm;
+        private PictureBox pictureBox1;
+        private TextBox textBoxNoPm;
+        private TextBox textBoxAlamatPm;
+        private Button ButtonEdit;
+        private Button ButtonSave;
     }
 }

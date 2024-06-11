@@ -16,6 +16,7 @@ namespace Projek_Akhir_PBO.View.Admin
     public partial class UCOwner : UserControl
     {
         private int _userId;
+        ReadListController readListController;
 
         public int UserId
         {
@@ -23,10 +24,14 @@ namespace Projek_Akhir_PBO.View.Admin
             set
             {
                 _userId = value;
+                LoadDataGrid();
                 //kategoriController.UserId = _userId;
                 // Load data or perform operations based on the new UserId value
             }
         }
+
+        ReadListController readListController;
+
         public UCOwner()
         {
             readListController = new ReadListController();
@@ -48,10 +53,29 @@ namespace Projek_Akhir_PBO.View.Admin
         private void UCOwner_Load(object sender, EventArgs e)
         {
             guna2DataGridView1.DataSource = table;
-            ShowListKategori();
+            ShowListOwner();
+            LoadDataGrid();
         }
-        public void ShowListKategori()
+        private void LoadDataGrid()
         {
+            readListController.Read();
+            DataTable table = new DataTable();
+            table.Columns.Add("ID", typeof(int));
+            table.Columns.Add("Nama Pemilik", typeof(string));
+            table.Columns.Add("Nomor Telepon", typeof(string));
+            table.Columns.Add("Alamat", typeof(string));
+            table.Columns.Add("Pendapatan", typeof(string));
+            foreach (var owner in readListController.ListOwner)
+            {
+                table.Rows.Add(owner.ID, owner.Nama_Pemilik, owner.No_Telepon_Pemilik
+                                , owner.Alamat_Pemilik, owner.Pendapatan);
+            }
+
+            guna2DataGridView1.DataSource = table;
+        }
+        public void ShowListOwner()
+        {
+            LoadDataGrid();
             readListController.Read();
             guna2DataGridView1.DataSource = null;
             guna2DataGridView1.DataSource = readListController.ListOwner;
