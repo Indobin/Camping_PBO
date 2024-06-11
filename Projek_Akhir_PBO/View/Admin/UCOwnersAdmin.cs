@@ -23,6 +23,7 @@ namespace Projek_Akhir_PBO.View.Admin
             set
             {
                 _userId = value;
+                LoadDataGrid();
                 //kategoriController.UserId = _userId;
                 // Load data or perform operations based on the new UserId value
             }
@@ -52,9 +53,28 @@ namespace Projek_Akhir_PBO.View.Admin
         {
             guna2DataGridView1.DataSource = table;
             ShowListOwner();
+            LoadDataGrid();
+        }
+        private void LoadDataGrid()
+        {
+            readListController.Read();
+            DataTable table = new DataTable();
+            table.Columns.Add("ID", typeof(int));
+            table.Columns.Add("Nama Pemilik", typeof(string));
+            table.Columns.Add("Nomor Telepon", typeof(string));
+            table.Columns.Add("Alamat", typeof(string));
+            table.Columns.Add("Pendapatan", typeof(string));
+            foreach (var owner in readListController.ListOwner)
+            {
+                table.Rows.Add(owner.ID, owner.Nama_Pemilik, owner.No_Telepon_Pemilik
+                                , owner.Alamat_Pemilik, owner.Pendapatan);
+            }
+
+            guna2DataGridView1.DataSource = table;
         }
         public void ShowListOwner()
         {
+            LoadDataGrid();
             readListController.Read();
             guna2DataGridView1.DataSource = null;
             guna2DataGridView1.DataSource = readListController.ListOwner;
