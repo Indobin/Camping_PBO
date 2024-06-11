@@ -29,7 +29,6 @@ namespace Projek_Akhir_PBO.View.Admin
             }
         }
 
-        ReadListController readListController;
 
         public UCOwner()
         {

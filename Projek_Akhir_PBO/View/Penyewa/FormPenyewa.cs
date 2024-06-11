@@ -41,7 +41,6 @@ namespace Projek_Akhir_PBO.View.Penyewa
 
         private void buttonhomepenyewa_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ucHomePenyewa1.Visible = true;
             ucTransactionsPenyewa1.Visible = false;
             ucHistoryPenyewa1.Visible = false;
