@@ -36,10 +36,6 @@
             label8 = new Label();
             paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
             juduldashboard = new Label();
-            ProductPanel = new FlowLayoutPanel();
-            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            namaalat = new Label();
-            deskripsialat = new Label();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -47,12 +43,6 @@
             panelItem = new FlowLayoutPanel();
             guna2Panel3.SuspendLayout();
             paneltopdashboard.SuspendLayout();
-            CategoryPanel.SuspendLayout();
-            guna2Panel1.SuspendLayout();
-            ProductPanel.SuspendLayout();
-            guna2ShadowPanel1.SuspendLayout();
-            guna2ShadowPanel2.SuspendLayout();
-            guna2ShadowPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel3
@@ -111,51 +101,6 @@
             juduldashboard.TabIndex = 20;
             juduldashboard.Text = "Home";
             // 
-            // ProductPanel
-            // 
-            ProductPanel.Controls.Add(guna2ShadowPanel1);
-            ProductPanel.Controls.Add(guna2ShadowPanel2);
-            ProductPanel.Controls.Add(guna2ShadowPanel3);
-            ProductPanel.Location = new Point(0, 176);
-            ProductPanel.Name = "ProductPanel";
-            ProductPanel.Size = new Size(1277, 688);
-            ProductPanel.TabIndex = 69;
-            // 
-            // guna2ShadowPanel1
-            // 
-            guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(namaalat);
-            guna2ShadowPanel1.Controls.Add(deskripsialat);
-            guna2ShadowPanel1.FillColor = Color.White;
-            guna2ShadowPanel1.Location = new Point(3, 3);
-            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            guna2ShadowPanel1.ShadowColor = Color.Black;
-            guna2ShadowPanel1.Size = new Size(251, 213);
-            guna2ShadowPanel1.TabIndex = 1;
-            // 
-            // namaalat
-            // 
-            namaalat.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            namaalat.ForeColor = Color.FromArgb(14, 115, 116);
-            namaalat.Location = new Point(14, 14);
-            namaalat.Name = "namaalat";
-            namaalat.Size = new Size(222, 31);
-            namaalat.TabIndex = 1;
-            namaalat.Text = "Nama Produk";
-            namaalat.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // deskripsialat
-            // 
-            deskripsialat.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            deskripsialat.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            deskripsialat.ForeColor = Color.FromArgb(14, 115, 116);
-            deskripsialat.Location = new Point(14, 45);
-            deskripsialat.Name = "deskripsialat";
-            deskripsialat.Size = new Size(222, 152);
-            deskripsialat.TabIndex = 0;
-            deskripsialat.Text = "Deskripsi";
-            deskripsialat.TextAlign = ContentAlignment.MiddleCenter;
-
             // button1
             // 
             button1.BackColor = Color.FromArgb(231, 237, 214);
@@ -218,7 +163,6 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(ProductPanel);
             Controls.Add(panelItem);
             Controls.Add(button4);
             Controls.Add(button1);
@@ -233,13 +177,6 @@
             guna2Panel3.PerformLayout();
             paneltopdashboard.ResumeLayout(false);
             paneltopdashboard.PerformLayout();
-            CategoryPanel.ResumeLayout(false);
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
-            ProductPanel.ResumeLayout(false);
-            guna2ShadowPanel1.ResumeLayout(false);
-            guna2ShadowPanel2.ResumeLayout(false);
-            guna2ShadowPanel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -248,11 +185,6 @@
         private Label label8;
         private Guna.UI2.WinForms.Guna2Panel paneltopdashboard;
         private Label juduldashboard;
-        private FlowLayoutPanel ProductPanel;
-        private Button button8;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Label namaalat;
-        private Label deskripsialat;
         private Button button1;
         private Button button2;
         private Button button3;
