@@ -1,4 +1,5 @@
 ﻿using Projek_Akhir_PBO.Controller.Admin;
+using Projek_Akhir_PBO.Controller.Pemilik;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace Projek_Akhir_PBO.View.Admin
             set
             {
                 _userId = value;
+                LoadDataGrid();
                 //kategoriController.UserId = _userId;
                 // Load data or perform operations based on the new UserId value
             }
@@ -38,13 +40,38 @@ namespace Projek_Akhir_PBO.View.Admin
         {
             guna2DataGridView1.DataSource = table;
             ShowListRenters();
+            LoadDataGrid();
+        }
+
+        private void LoadDataGrid()
+        {
+            listRentersController.Read();
+            DataTable table = new DataTable();
+            table.Columns.Add("Id", typeof(int));
+            table.Columns.Add("Nama Penyewa", typeof(string));
+            table.Columns.Add("Nomor Telepon", typeof(string));
+            table.Columns.Add("Alamat", typeof(string));
+            table.Columns.Add("Jumlah Peminjaman", typeof(long));
+            foreach (var renters in listRentersController.ListRenters)
+            {
+                table.Rows.Add(renters.ID, renters.Nama_Penyewa, renters.no_telepon_penyewa
+                                , renters.alamat_penyewa, renters.jumlah_peminjaman);
+            }
+
+            guna2DataGridView1.DataSource = table;
         }
 
         public void ShowListRenters()
         {
+            //LoadDataGrid();
             listRentersController.Read();
             guna2DataGridView1.DataSource = null;
             guna2DataGridView1.DataSource = listRentersController.ListRenters;
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

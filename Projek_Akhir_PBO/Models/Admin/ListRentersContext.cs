@@ -12,7 +12,8 @@ namespace Projek_Akhir_PBO.Models.Admin
         public string Nama_Penyewa { get; set; }
         public string no_telepon_penyewa { get; set; }
         public string alamat_penyewa { get; set; }
-     
+        public long jumlah_peminjaman { get; set; }
+
 
     }
 }
