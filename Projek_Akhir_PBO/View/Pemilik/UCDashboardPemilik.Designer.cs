@@ -52,7 +52,7 @@
             guna2ShadowPanel4.BackColor = Color.Transparent;
             guna2ShadowPanel4.Controls.Add(label4);
             guna2ShadowPanel4.FillColor = Color.White;
-            guna2ShadowPanel4.Location = new Point(952, 154);
+            guna2ShadowPanel4.Location = new Point(935, 153);
             guna2ShadowPanel4.Name = "guna2ShadowPanel4";
             guna2ShadowPanel4.Radius = 10;
             guna2ShadowPanel4.RightToLeft = RightToLeft.Yes;
@@ -80,7 +80,7 @@
             guna2ShadowPanel3.BackColor = Color.Transparent;
             guna2ShadowPanel3.Controls.Add(label3);
             guna2ShadowPanel3.FillColor = Color.White;
-            guna2ShadowPanel3.Location = new Point(646, 154);
+            guna2ShadowPanel3.Location = new Point(629, 153);
             guna2ShadowPanel3.Name = "guna2ShadowPanel3";
             guna2ShadowPanel3.Radius = 10;
             guna2ShadowPanel3.RightToLeft = RightToLeft.Yes;
@@ -108,7 +108,7 @@
             guna2ShadowPanel2.BackColor = Color.Transparent;
             guna2ShadowPanel2.Controls.Add(label2);
             guna2ShadowPanel2.FillColor = Color.White;
-            guna2ShadowPanel2.Location = new Point(340, 154);
+            guna2ShadowPanel2.Location = new Point(323, 153);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 10;
             guna2ShadowPanel2.RightToLeft = RightToLeft.Yes;
@@ -136,7 +136,7 @@
             guna2ShadowPanel1.BackColor = Color.Transparent;
             guna2ShadowPanel1.Controls.Add(label1);
             guna2ShadowPanel1.FillColor = Color.White;
-            guna2ShadowPanel1.Location = new Point(34, 154);
+            guna2ShadowPanel1.Location = new Point(17, 153);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 10;
             guna2ShadowPanel1.RightToLeft = RightToLeft.Yes;

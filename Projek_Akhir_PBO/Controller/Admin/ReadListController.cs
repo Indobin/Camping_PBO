@@ -12,7 +12,8 @@ namespace Projek_Akhir_PBO.Controller.Admin
     internal class ReadListController
     {
         public List<ReadListContext> ListOwner = new List<ReadListContext>();
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Database=Camping;CommandTimeout=10";
+        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Database=Camping;CommandTimeout=10";
+        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
         public void Read()
         {
             string query = string.Format(@"SELECT row_number(*) over() as nomor, id_pemilik, nama_pemilik, alamat_pemilik

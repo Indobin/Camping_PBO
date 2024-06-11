@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
             juduldashboard = new Label();
             paneltopdashboard.SuspendLayout();
@@ -43,11 +43,11 @@
             paneltopdashboard.Controls.Add(juduldashboard);
             paneltopdashboard.CustomBorderColor = Color.FromArgb(217, 224, 184);
             paneltopdashboard.CustomBorderThickness = new Padding(0, 0, 0, 1);
-            paneltopdashboard.CustomizableEdges = customizableEdges1;
+            paneltopdashboard.CustomizableEdges = customizableEdges3;
             paneltopdashboard.Dock = DockStyle.Top;
             paneltopdashboard.Location = new Point(0, 0);
             paneltopdashboard.Name = "paneltopdashboard";
-            paneltopdashboard.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            paneltopdashboard.ShadowDecoration.CustomizableEdges = customizableEdges4;
             paneltopdashboard.Size = new Size(1277, 131);
             paneltopdashboard.TabIndex = 45;
             // 

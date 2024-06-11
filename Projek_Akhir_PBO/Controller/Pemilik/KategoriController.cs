@@ -13,7 +13,8 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
     {
         private int _userId;
         public List<KategoriContext> ListKategori = new List<KategoriContext>();
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
         public int UserId
         {
             get { return _userId; }

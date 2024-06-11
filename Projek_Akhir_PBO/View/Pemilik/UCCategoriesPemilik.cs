@@ -29,7 +29,9 @@ namespace Projek_Akhir_PBO.View.Pemilik
         }
         private int idKategoriSelected = -1;
         //KategoriContext kategoriContext;
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
+
         KategoriController kategoriController;
         int index;
         public UCCategoriesPemilik()
@@ -109,7 +111,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
             index = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[index];
             idKategoriSelected = Convert.ToInt32(row.Cells[0].Value);
-            textBoxKategori.Text = row.Cells[1].Value.ToString(); 
+            textBoxKategori.Text = row.Cells[1].Value.ToString();
             string status = row.Cells[2].Value.ToString();
             comboBox1Status.SelectedItem = status;
         }
