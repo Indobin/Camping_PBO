@@ -27,6 +27,9 @@ namespace Projek_Akhir_PBO.View.Admin
                 // Load data or perform operations based on the new UserId value
             }
         }
+
+        ReadListController readListController;
+
         public UCOwner()
         {
             readListController = new ReadListController();

@@ -38,7 +38,8 @@ namespace Projek_Akhir_PBO
 
         private void Loginbutton_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(usernamebox.Text.Trim()) || string.IsNullOrEmpty(passwordbox.Text.Trim()))
+            if (string.IsNullOrEmpty(usernamebox.Text.Trim()) || string.IsNullOrEmpty(passwordbox.Text.Trim())
+                || string.IsNullOrEmpty(comboBox1.Text.Trim()))
             {
                 MessageBox.Show("Username dan password tidak boleh kosong", "Login Data",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);

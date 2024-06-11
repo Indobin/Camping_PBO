@@ -106,12 +106,14 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            index = e.RowIndex;
-            DataGridViewRow row = dataGridView1.Rows[index];
-            idKategoriSelected = Convert.ToInt32(row.Cells[0].Value);
-            textBoxKategori.Text = row.Cells[1].Value.ToString(); 
-            string status = row.Cells[2].Value.ToString();
-            comboBox1Status.SelectedItem = status;
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                idKategoriSelected = Convert.ToInt32(row.Cells[0].Value);
+                textBoxKategori.Text = row.Cells[1].Value.ToString();
+                string status = row.Cells[2].Value.ToString();
+                comboBox1Status.SelectedItem = status;
+            }
         }
 
         //private void button3hapus_Click(object sender, EventArgs e)
