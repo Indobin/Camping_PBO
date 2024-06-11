@@ -8,10 +8,11 @@ namespace Projek_Akhir_PBO.Models.Admin
 {
     public class ReadListContext
     {
-        public int id_pemilik { get; set; }
-        public string nama_pemilik { get; set; }
-        public string no_telepon_pemilik {get; set; }
-        public string alamat_pemilik { get; set; }
+        public int ID { get; set; }
+        public string Nama_Pemilik { get; set; }
+        public string No_Telepon_Pemilik {get; set; }
+        public string Alamat_Pemilik { get; set; }
+        public string Pendapatan { get; set; }
 
     }
     

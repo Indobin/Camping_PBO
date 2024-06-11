@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPemilik));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -45,6 +44,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPemilik));
             sidebardashboard = new Panel();
             buttonprofilepemilik = new Guna.UI2.WinForms.Guna2Button();
             buttonTransactionsPemilik = new Guna.UI2.WinForms.Guna2Button();
@@ -72,7 +72,6 @@
             // sidebardashboard
             // 
             sidebardashboard.BackColor = Color.FromArgb(14, 115, 116);
-            sidebardashboard.BackgroundImage = (Image)resources.GetObject("sidebardashboard.BackgroundImage");
             sidebardashboard.BorderStyle = BorderStyle.FixedSingle;
             sidebardashboard.Controls.Add(buttonprofilepemilik);
             sidebardashboard.Controls.Add(buttonTransactionsPemilik);
@@ -313,45 +312,57 @@
             // 
             // ucDashboardPemilik1
             // 
+            ucDashboardPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucDashboardPemilik1.Location = new Point(0, 0);
             ucDashboardPemilik1.Name = "ucDashboardPemilik1";
             ucDashboardPemilik1.Size = new Size(1277, 864);
             ucDashboardPemilik1.TabIndex = 5;
+            ucDashboardPemilik1.UserId = 0;
             // 
             // ucStockPemilik1
             // 
+            ucStockPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucStockPemilik1.Location = new Point(0, 0);
             ucStockPemilik1.Name = "ucStockPemilik1";
             ucStockPemilik1.Size = new Size(1277, 864);
             ucStockPemilik1.TabIndex = 4;
+            ucStockPemilik1.UserId = 0;
             // 
             // ucCategoriesPemilik1
             // 
+            ucCategoriesPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucCategoriesPemilik1.Location = new Point(0, 0);
             ucCategoriesPemilik1.Name = "ucCategoriesPemilik1";
             ucCategoriesPemilik1.Size = new Size(1277, 864);
             ucCategoriesPemilik1.TabIndex = 3;
+            ucCategoriesPemilik1.UserId = 0;
             // 
             // ucRentersPemilik1
             // 
+            ucRentersPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucRentersPemilik1.Location = new Point(0, 0);
             ucRentersPemilik1.Name = "ucRentersPemilik1";
             ucRentersPemilik1.Size = new Size(1277, 864);
             ucRentersPemilik1.TabIndex = 2;
+            ucRentersPemilik1.UserId = 0;
             // 
             // ucTransactionsPemilik1
             // 
+            ucTransactionsPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucTransactionsPemilik1.Location = new Point(0, 0);
             ucTransactionsPemilik1.Name = "ucTransactionsPemilik1";
             ucTransactionsPemilik1.Size = new Size(1277, 864);
             ucTransactionsPemilik1.TabIndex = 1;
+            ucTransactionsPemilik1.UserId = 0;
             // 
             // ucProfilePemilik1
             // 
+            ucProfilePemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucProfilePemilik1.Location = new Point(0, 0);
             ucProfilePemilik1.Name = "ucProfilePemilik1";
             ucProfilePemilik1.Size = new Size(1277, 864);
             ucProfilePemilik1.TabIndex = 0;
+            ucProfilePemilik1.UserId = 0;
             // 
             // FormPemilik
             // 
@@ -362,6 +373,7 @@
             Controls.Add(sidebardashboard);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormPemilik";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "GO-CAMP";
             sidebardashboard.ResumeLayout(false);
             panellogo.ResumeLayout(false);
