@@ -84,6 +84,8 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     cmd.Parameters.AddWithValue("@userId", _userId);
 
                     cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Alat camping berhasil ditambahkan.", "Tambah Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }   

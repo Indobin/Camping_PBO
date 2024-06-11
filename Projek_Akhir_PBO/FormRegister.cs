@@ -37,6 +37,15 @@ namespace Projek_Akhir_PBO
 
         private void btnRegister_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(usernamebox.Text.Trim()) || string.IsNullOrEmpty(passwordbox.Text.Trim())
+                || string.IsNullOrEmpty(namabox.Text.Trim()) || string.IsNullOrEmpty(konfirmasibox.Text.Trim())
+                || string.IsNullOrEmpty(alamatbox.Text.Trim()) || string.IsNullOrEmpty(notelpbox.Text.Trim())
+                || string.IsNullOrEmpty(sebagai.Text.Trim()))
+            {
+                MessageBox.Show("Datat tidak boleh ada yang kosong!", "Register Data",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string namapenyewa = namabox.Text;
             string alamat_penyewa = alamatbox.Text;
             string no_teleponpenyewa = notelpbox.Text;

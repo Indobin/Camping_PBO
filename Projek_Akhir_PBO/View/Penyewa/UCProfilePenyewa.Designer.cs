@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
             juduldashboard = new Label();
             pictureBox1 = new PictureBox();
@@ -54,11 +54,11 @@
             paneltopdashboard.Controls.Add(juduldashboard);
             paneltopdashboard.CustomBorderColor = Color.FromArgb(217, 224, 184);
             paneltopdashboard.CustomBorderThickness = new Padding(0, 0, 0, 1);
-            paneltopdashboard.CustomizableEdges = customizableEdges7;
+            paneltopdashboard.CustomizableEdges = customizableEdges1;
             paneltopdashboard.Dock = DockStyle.Top;
             paneltopdashboard.Location = new Point(0, 0);
             paneltopdashboard.Name = "paneltopdashboard";
-            paneltopdashboard.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            paneltopdashboard.ShadowDecoration.CustomizableEdges = customizableEdges2;
             paneltopdashboard.Size = new Size(1277, 131);
             paneltopdashboard.TabIndex = 45;
             // 
@@ -78,10 +78,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.icon_profil_removebg_preview;
-            pictureBox1.Location = new Point(495, 153);
+            pictureBox1.Location = new Point(502, 159);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(328, 257);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 46;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -89,22 +89,24 @@
             // textBoxUsername
             // 
             textBoxUsername.BackColor = Color.White;
+            textBoxUsername.BorderStyle = BorderStyle.FixedSingle;
             textBoxUsername.Font = new Font("Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxUsername.Location = new Point(566, 490);
+            textBoxUsername.Location = new Point(489, 470);
             textBoxUsername.Margin = new Padding(0);
             textBoxUsername.Name = "textBoxUsername";
-            textBoxUsername.Size = new Size(257, 43);
+            textBoxUsername.Size = new Size(493, 43);
             textBoxUsername.TabIndex = 47;
             textBoxUsername.TextChanged += textBoxUsername_TextChanged;
             // 
             // textBoxNoHP
             // 
             textBoxNoHP.BackColor = Color.White;
+            textBoxNoHP.BorderStyle = BorderStyle.FixedSingle;
             textBoxNoHP.Font = new Font("Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxNoHP.Location = new Point(566, 561);
+            textBoxNoHP.Location = new Point(489, 550);
             textBoxNoHP.Multiline = true;
             textBoxNoHP.Name = "textBoxNoHP";
-            textBoxNoHP.Size = new Size(257, 43);
+            textBoxNoHP.Size = new Size(493, 43);
             textBoxNoHP.TabIndex = 48;
             textBoxNoHP.Text = "\r\n";
             textBoxNoHP.TextChanged += textBox2_TextChanged;
@@ -115,7 +117,7 @@
             ButtonEdit.FlatStyle = FlatStyle.Flat;
             ButtonEdit.Font = new Font("Lufga", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButtonEdit.ForeColor = Color.White;
-            ButtonEdit.Location = new Point(479, 703);
+            ButtonEdit.Location = new Point(502, 736);
             ButtonEdit.Name = "ButtonEdit";
             ButtonEdit.Size = new Size(114, 59);
             ButtonEdit.TabIndex = 49;
@@ -126,21 +128,21 @@
             // NamaPenyewa
             // 
             NamaPenyewa.Font = new Font("Lufga", 14.9999981F);
-            NamaPenyewa.Location = new Point(387, 500);
+            NamaPenyewa.Location = new Point(307, 480);
             NamaPenyewa.Name = "NamaPenyewa";
             NamaPenyewa.Size = new Size(176, 28);
             NamaPenyewa.TabIndex = 50;
-            NamaPenyewa.Text = "Nama Penyewa:";
+            NamaPenyewa.Text = "Nama Penyewa :";
             NamaPenyewa.Click += NamaPenyewa_Click;
             // 
             // NoHP
             // 
             NoHP.Font = new Font("Lufga", 14.9999981F);
-            NoHP.Location = new Point(387, 571);
+            NoHP.Location = new Point(310, 555);
             NoHP.Name = "NoHP";
             NoHP.Size = new Size(173, 28);
             NoHP.TabIndex = 51;
-            NoHP.Text = "Nomor Telepon:";
+            NoHP.Text = "Nomor Telepon :";
             // 
             // ButtonSave
             // 
@@ -148,7 +150,7 @@
             ButtonSave.FlatStyle = FlatStyle.Flat;
             ButtonSave.Font = new Font("Lufga", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButtonSave.ForeColor = Color.White;
-            ButtonSave.Location = new Point(709, 703);
+            ButtonSave.Location = new Point(691, 736);
             ButtonSave.Name = "ButtonSave";
             ButtonSave.Size = new Size(114, 59);
             ButtonSave.TabIndex = 52;
@@ -159,26 +161,27 @@
             // AlamatPenyewa
             // 
             AlamatPenyewa.Font = new Font("Lufga", 14.9999981F);
-            AlamatPenyewa.Location = new Point(453, 633);
+            AlamatPenyewa.Location = new Point(310, 639);
             AlamatPenyewa.Name = "AlamatPenyewa";
-            AlamatPenyewa.Size = new Size(96, 28);
+            AlamatPenyewa.Size = new Size(173, 28);
             AlamatPenyewa.TabIndex = 54;
-            AlamatPenyewa.Text = "Alamat :";
+            AlamatPenyewa.Text = "Alamat                :";
             // 
             // textBoxAlamat
             // 
             textBoxAlamat.BackColor = Color.White;
+            textBoxAlamat.BorderStyle = BorderStyle.FixedSingle;
             textBoxAlamat.Font = new Font("Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxAlamat.Location = new Point(566, 623);
+            textBoxAlamat.Location = new Point(489, 629);
             textBoxAlamat.Multiline = true;
             textBoxAlamat.Name = "textBoxAlamat";
-            textBoxAlamat.Size = new Size(257, 45);
+            textBoxAlamat.Size = new Size(493, 43);
             textBoxAlamat.TabIndex = 55;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(633, 442);
+            label1.Location = new Point(657, 436);
             label1.Name = "label1";
             label1.Size = new Size(0, 15);
             label1.TabIndex = 56;
@@ -187,7 +190,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 248, 241);
+            BackColor = SystemColors.Control;
             Controls.Add(label1);
             Controls.Add(textBoxAlamat);
             Controls.Add(AlamatPenyewa);

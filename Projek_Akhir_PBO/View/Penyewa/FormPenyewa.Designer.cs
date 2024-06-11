@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPenyewa));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -41,9 +43,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             sidebardashboard = new Panel();
+            buttonReportsPy = new Guna.UI2.WinForms.Guna2Button();
             buttonlogoutpenyewa = new Guna.UI2.WinForms.Guna2Button();
             buttonprofilpeyewa = new Guna.UI2.WinForms.Guna2Button();
             buttohistorypenyewa = new Guna.UI2.WinForms.Guna2Button();
@@ -59,7 +60,6 @@
             ucProfilePenyewa1 = new UCProfilePenyewa();
             ucReportsPenyewa1 = new UCReportsPenyewa();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            buttonReportsPy = new Guna.UI2.WinForms.Guna2Button();
             sidebardashboard.SuspendLayout();
             panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LogoGoCamp).BeginInit();
@@ -84,6 +84,32 @@
             sidebardashboard.Name = "sidebardashboard";
             sidebardashboard.Size = new Size(256, 864);
             sidebardashboard.TabIndex = 40;
+            // 
+            // buttonReportsPy
+            // 
+            buttonReportsPy.BackColor = Color.Transparent;
+            buttonReportsPy.BorderRadius = 10;
+            buttonReportsPy.CustomizableEdges = customizableEdges1;
+            buttonReportsPy.DisabledState.BorderColor = Color.DarkGray;
+            buttonReportsPy.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonReportsPy.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonReportsPy.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonReportsPy.Dock = DockStyle.Top;
+            buttonReportsPy.FillColor = Color.FromArgb(14, 115, 116);
+            buttonReportsPy.Font = new Font("Lufga Medium", 13F);
+            buttonReportsPy.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonReportsPy.Image = Properties.Resources.profile;
+            buttonReportsPy.ImageAlign = HorizontalAlignment.Left;
+            buttonReportsPy.ImageOffset = new Point(32, 0);
+            buttonReportsPy.Location = new Point(0, 378);
+            buttonReportsPy.Name = "buttonReportsPy";
+            buttonReportsPy.Padding = new Padding(3, 2, 0, 0);
+            buttonReportsPy.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            buttonReportsPy.Size = new Size(254, 62);
+            buttonReportsPy.TabIndex = 11;
+            buttonReportsPy.Text = "          Reports";
+            buttonReportsPy.TextAlign = HorizontalAlignment.Left;
+            buttonReportsPy.Click += buttonReportsPy_Click;
             // 
             // buttonlogoutpenyewa
             // 
@@ -297,33 +323,8 @@
             ucReportsPenyewa1.Name = "ucReportsPenyewa1";
             ucReportsPenyewa1.Size = new Size(1277, 864);
             ucReportsPenyewa1.TabIndex = 0;
+            ucReportsPenyewa1.UserId = 0;
             ucReportsPenyewa1.Visible = false;
-            // 
-            // buttonReportsPy
-            // 
-            buttonReportsPy.BackColor = Color.Transparent;
-            buttonReportsPy.BorderRadius = 10;
-            buttonReportsPy.CustomizableEdges = customizableEdges1;
-            buttonReportsPy.DisabledState.BorderColor = Color.DarkGray;
-            buttonReportsPy.DisabledState.CustomBorderColor = Color.DarkGray;
-            buttonReportsPy.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            buttonReportsPy.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            buttonReportsPy.Dock = DockStyle.Top;
-            buttonReportsPy.FillColor = Color.FromArgb(14, 115, 116);
-            buttonReportsPy.Font = new Font("Lufga Medium", 13F);
-            buttonReportsPy.ForeColor = Color.FromArgb(193, 200, 207);
-            buttonReportsPy.Image = Properties.Resources.profile;
-            buttonReportsPy.ImageAlign = HorizontalAlignment.Left;
-            buttonReportsPy.ImageOffset = new Point(32, 0);
-            buttonReportsPy.Location = new Point(0, 378);
-            buttonReportsPy.Name = "buttonReportsPy";
-            buttonReportsPy.Padding = new Padding(3, 2, 0, 0);
-            buttonReportsPy.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            buttonReportsPy.Size = new Size(254, 62);
-            buttonReportsPy.TabIndex = 11;
-            buttonReportsPy.Text = "          Reports";
-            buttonReportsPy.TextAlign = HorizontalAlignment.Left;
-            buttonReportsPy.Click += buttonReportsPy_Click;
             // 
             // FormPenyewa
             // 
