@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Npgsql;
 using Projek_Akhir_PBO.Controller.Pemilik;
 using Projek_Akhir_PBO.Models.Pemilik;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Projek_Akhir_PBO.View.Penyewa
 {
@@ -135,7 +136,23 @@ namespace Projek_Akhir_PBO.View.Penyewa
 
         private void buttonPay_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(guna2TextBoxRent.Text.Trim(), out int nomor))
+            {
+                MessageBox.Show("lama sewa harus berupa angka", "Tambah Data",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(comboBoxEWallet.Text.Trim()) || string.IsNullOrEmpty(boxNoEWallet.Text.Trim()))
+            {
+                MessageBox.Show("Nomor e-wallet atau jenis e-wallet harus ada", "Tambah Data",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             InsertTransaction();
+            //string JenisEwallet = comboBoxEWallet.SelectedItem.ToString();
+            //string rent  = guna2TextBoxRent.Text;
+            //string ewalletnomor = boxNoEWallet.Text;
+            //InsertTransaction(JenisEwallet);
         }
 
         public void InsertTransaction()
@@ -147,60 +164,72 @@ namespace Projek_Akhir_PBO.View.Penyewa
                 {
                     try
                     {
+                        DialogResult result = MessageBox.Show("Do you want to add this item to the transaction?", "Confirmation",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         // Insert into pembayaran_ewallet
-                        string insertPembayaranEwalletQuery = @"
+                        if (result == DialogResult.Yes)
+                        {
+                            string insertPembayaranEwalletQuery = @"
                         INSERT INTO pembayaran_ewallet (nomor_ewallet, jenis_ewallet)
                         VALUES (@nomor_ewallet, @jenis_ewallet)
                         RETURNING id_ewallet";
 
-                        int idEwallet;
-                        using (var cmd = new NpgsqlCommand(insertPembayaranEwalletQuery, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@nomor_ewallet", boxNoEWallet.Text.Trim());
-                            cmd.Parameters.AddWithValue("@jenis_ewallet", comboBoxEWallet.Text.Trim());
-                            idEwallet = (int)cmd.ExecuteScalar();
-                        }
+                            int idEwallet;
+                            using (var cmd = new NpgsqlCommand(insertPembayaranEwalletQuery, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@nomor_ewallet", boxNoEWallet.Text.Trim());
+                                cmd.Parameters.AddWithValue("@jenis_ewallet", comboBoxEWallet.Text.Trim());
+                                idEwallet = (int)cmd.ExecuteScalar();
+                            }
 
-                        // Insert into peminjaman
-                        string insertPeminjamanQuery = @"
+                            // Insert into peminjaman
+                            string insertPeminjamanQuery = @"
                         INSERT INTO peminjaman (id_penyewa, tanggal_peminjaman, id_ewallet, status_pinjam)
                         VALUES (@UserId, @TanggalPinjam, @IdEwallet, @Status)
                         RETURNING id_peminjaman";
 
-                        int idPeminjaman;
-                        using (var cmd = new NpgsqlCommand(insertPeminjamanQuery, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@UserId", _userId);
-                            cmd.Parameters.AddWithValue("@TanggalPinjam", DateTime.Now);
-                            cmd.Parameters.AddWithValue("@IdEwallet", idEwallet);
-                            cmd.Parameters.AddWithValue("@Status", false);
-                            idPeminjaman = (int)cmd.ExecuteScalar();
-                        }
+                            int idPeminjaman;
+                            using (var cmd = new NpgsqlCommand(insertPeminjamanQuery, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@UserId", _userId);
+                                cmd.Parameters.AddWithValue("@TanggalPinjam", DateTime.Now);
+                                cmd.Parameters.AddWithValue("@IdEwallet", idEwallet);
+                                cmd.Parameters.AddWithValue("@Status", false);
+                                idPeminjaman = (int)cmd.ExecuteScalar();
+                            }
 
-                        // Insert into detail_peminjaman
-                        string insertDetailPeminjamanQuery = @"
+                            // Insert into detail_peminjaman
+                            string insertDetailPeminjamanQuery = @"
                         INSERT INTO detail_transaksi (id_peminjaman, id_alatcamping, lama_sewa, quantity)
                         VALUES (@IdPeminjaman, @IdAlatCamping, @LamaSewa, @qty)";
 
-                        foreach (DataGridViewRow row in datagridTransaction.Rows)
-                        {
-                            if (row.Cells["dgvId"].Value != null)
+                            foreach (DataGridViewRow row in datagridTransaction.Rows)
                             {
-                                using (var cmd = new NpgsqlCommand(insertDetailPeminjamanQuery, conn))
+                                if (row.Cells["dgvId"].Value != null)
                                 {
-                                    cmd.Parameters.AddWithValue("@IdPeminjaman", idPeminjaman);
-                                    cmd.Parameters.AddWithValue("@IdAlatCamping", Convert.ToInt32(row.Cells["dgvId"].Value));
-                                    cmd.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvQty"].Value));
-                                    cmd.Parameters.AddWithValue("@LamaSewa", int.Parse(guna2TextBoxRent.Text.Trim())); // Assuming 1 for now, adjust as needed
-                                    cmd.ExecuteNonQuery();
+                                    using (var cmd = new NpgsqlCommand(insertDetailPeminjamanQuery, conn))
+                                    {
+                                        cmd.Parameters.AddWithValue("@IdPeminjaman", idPeminjaman);
+                                        cmd.Parameters.AddWithValue("@IdAlatCamping", Convert.ToInt32(row.Cells["dgvId"].Value));
+                                        cmd.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvQty"].Value));
+                                        cmd.Parameters.AddWithValue("@LamaSewa", int.Parse(guna2TextBoxRent.Text.Trim())); // Assuming 1 for now, adjust as needed
+                                        cmd.ExecuteNonQuery();
+                                    }
                                 }
                             }
-                        }
 
-                        // Commit transaction
-                        transaction.Commit();
-                        clearAll();
-                        MessageBox.Show("");
+                            transaction.Commit();
+                            clearAll();
+                            MessageBox.Show("");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Transaction Cancelled", "Transaction",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                           
+                            return;
+                        }
+                       
                     }
                     catch (Exception ex)
                     {
