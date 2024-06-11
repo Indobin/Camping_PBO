@@ -32,31 +32,34 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             label8 = new Label();
-            guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label3 = new Label();
-            guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label4 = new Label();
-            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label2 = new Label();
-            guna2ShadowPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label5 = new Label();
-            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label1 = new Label();
             paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
             juduldashboard = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            CategoryPanel = new FlowLayoutPanel();
+            button8 = new Button();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            label2 = new Label();
+            ProductPanel = new FlowLayoutPanel();
+            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            namaalat = new Label();
+            deskripsialat = new Label();
+            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            label1 = new Label();
+            label3 = new Label();
+            guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            label4 = new Label();
+            label5 = new Label();
             guna2Panel3.SuspendLayout();
-            guna2ShadowPanel3.SuspendLayout();
-            guna2ShadowPanel4.SuspendLayout();
-            guna2ShadowPanel2.SuspendLayout();
-            guna2ShadowPanel5.SuspendLayout();
-            guna2ShadowPanel1.SuspendLayout();
             paneltopdashboard.SuspendLayout();
+            CategoryPanel.SuspendLayout();
+            guna2Panel1.SuspendLayout();
+            ProductPanel.SuspendLayout();
+            guna2ShadowPanel1.SuspendLayout();
+            guna2ShadowPanel2.SuspendLayout();
+            guna2ShadowPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel3
@@ -84,149 +87,6 @@
             label8.Size = new Size(63, 25);
             label8.TabIndex = 22;
             label8.Text = "Stove";
-            // 
-            // guna2ShadowPanel3
-            // 
-            guna2ShadowPanel3.BackColor = Color.Transparent;
-            guna2ShadowPanel3.Controls.Add(label3);
-            guna2ShadowPanel3.FillColor = Color.White;
-            guna2ShadowPanel3.Location = new Point(756, 227);
-            guna2ShadowPanel3.Name = "guna2ShadowPanel3";
-            guna2ShadowPanel3.Radius = 10;
-            guna2ShadowPanel3.RightToLeft = RightToLeft.Yes;
-            guna2ShadowPanel3.ShadowColor = Color.Black;
-            guna2ShadowPanel3.ShadowDepth = 5;
-            guna2ShadowPanel3.ShadowShift = 10;
-            guna2ShadowPanel3.Size = new Size(240, 200);
-            guna2ShadowPanel3.TabIndex = 58;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(14, 115, 116);
-            label3.ImageAlign = ContentAlignment.MiddleLeft;
-            label3.Location = new Point(82, 20);
-            label3.Name = "label3";
-            label3.Size = new Size(71, 25);
-            label3.TabIndex = 21;
-            label3.Text = "Carrier";
-            // 
-            // guna2ShadowPanel4
-            // 
-            guna2ShadowPanel4.BackColor = Color.Transparent;
-            guna2ShadowPanel4.Controls.Add(label4);
-            guna2ShadowPanel4.FillColor = Color.White;
-            guna2ShadowPanel4.Location = new Point(1000, 227);
-            guna2ShadowPanel4.Name = "guna2ShadowPanel4";
-            guna2ShadowPanel4.Radius = 10;
-            guna2ShadowPanel4.RightToLeft = RightToLeft.Yes;
-            guna2ShadowPanel4.ShadowColor = Color.Black;
-            guna2ShadowPanel4.ShadowDepth = 5;
-            guna2ShadowPanel4.ShadowShift = 10;
-            guna2ShadowPanel4.Size = new Size(240, 200);
-            guna2ShadowPanel4.TabIndex = 59;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(14, 115, 116);
-            label4.ImageAlign = ContentAlignment.MiddleLeft;
-            label4.Location = new Point(86, 20);
-            label4.Name = "label4";
-            label4.Size = new Size(63, 25);
-            label4.TabIndex = 21;
-            label4.Text = "Stove";
-            // 
-            // guna2ShadowPanel2
-            // 
-            guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(label2);
-            guna2ShadowPanel2.FillColor = Color.White;
-            guna2ShadowPanel2.Location = new Point(268, 227);
-            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            guna2ShadowPanel2.Radius = 10;
-            guna2ShadowPanel2.RightToLeft = RightToLeft.Yes;
-            guna2ShadowPanel2.ShadowColor = Color.Black;
-            guna2ShadowPanel2.ShadowDepth = 5;
-            guna2ShadowPanel2.ShadowShift = 10;
-            guna2ShadowPanel2.Size = new Size(240, 200);
-            guna2ShadowPanel2.TabIndex = 53;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(14, 115, 116);
-            label2.ImageAlign = ContentAlignment.MiddleLeft;
-            label2.Location = new Point(91, 20);
-            label2.Name = "label2";
-            label2.RightToLeft = RightToLeft.No;
-            label2.Size = new Size(52, 25);
-            label2.TabIndex = 21;
-            label2.Text = "Tent";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // guna2ShadowPanel5
-            // 
-            guna2ShadowPanel5.BackColor = Color.Transparent;
-            guna2ShadowPanel5.Controls.Add(label5);
-            guna2ShadowPanel5.FillColor = Color.White;
-            guna2ShadowPanel5.Location = new Point(512, 227);
-            guna2ShadowPanel5.Name = "guna2ShadowPanel5";
-            guna2ShadowPanel5.Radius = 10;
-            guna2ShadowPanel5.RightToLeft = RightToLeft.Yes;
-            guna2ShadowPanel5.ShadowColor = Color.Black;
-            guna2ShadowPanel5.ShadowDepth = 5;
-            guna2ShadowPanel5.ShadowShift = 10;
-            guna2ShadowPanel5.Size = new Size(240, 200);
-            guna2ShadowPanel5.TabIndex = 54;
-            guna2ShadowPanel5.Paint += guna2ShadowPanel5_Paint;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(14, 115, 116);
-            label5.ImageAlign = ContentAlignment.MiddleLeft;
-            label5.Location = new Point(82, 20);
-            label5.Name = "label5";
-            label5.Size = new Size(71, 25);
-            label5.TabIndex = 21;
-            label5.Text = "Carrier";
-            // 
-            // guna2ShadowPanel1
-            // 
-            guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(label1);
-            guna2ShadowPanel1.FillColor = Color.White;
-            guna2ShadowPanel1.Location = new Point(24, 227);
-            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            guna2ShadowPanel1.Radius = 10;
-            guna2ShadowPanel1.RightToLeft = RightToLeft.Yes;
-            guna2ShadowPanel1.ShadowColor = Color.Black;
-            guna2ShadowPanel1.ShadowDepth = 5;
-            guna2ShadowPanel1.ShadowShift = 10;
-            guna2ShadowPanel1.Size = new Size(240, 200);
-            guna2ShadowPanel1.TabIndex = 52;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(14, 115, 116);
-            label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(91, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(52, 25);
-            label1.TabIndex = 21;
-            label1.Text = "Tent";
             // 
             // paneltopdashboard
             // 
@@ -258,109 +118,211 @@
             juduldashboard.TabIndex = 20;
             juduldashboard.Text = "Home";
             // 
-            // button1
+            // CategoryPanel
             // 
-            button1.BackColor = Color.FromArgb(231, 237, 214);
-            button1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(140, 140, 140);
-            button1.Location = new Point(434, 159);
-            button1.Name = "button1";
-            button1.Size = new Size(110, 40);
-            button1.TabIndex = 61;
-            button1.Text = "Stove";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            CategoryPanel.Controls.Add(button8);
+            CategoryPanel.Controls.Add(guna2Panel1);
+            CategoryPanel.Location = new Point(0, 127);
+            CategoryPanel.Name = "CategoryPanel";
+            CategoryPanel.Size = new Size(1277, 62);
+            CategoryPanel.TabIndex = 68;
             // 
-            // button2
+            // button8
             // 
-            button2.BackColor = Color.FromArgb(220, 225, 189);
-            button2.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.WindowFrame;
-            button2.Location = new Point(24, 159);
-            button2.Name = "button2";
-            button2.Size = new Size(92, 40);
-            button2.TabIndex = 62;
-            button2.Text = "All";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            button8.BackColor = Color.FromArgb(220, 225, 189);
+            button8.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = SystemColors.WindowFrame;
+            button8.Location = new Point(3, 3);
+            button8.Name = "button8";
+            button8.Size = new Size(92, 40);
+            button8.TabIndex = 67;
+            button8.Text = "All";
+            button8.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // guna2Panel1
             // 
-            button3.BackColor = Color.FromArgb(231, 237, 214);
-            button3.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.FromArgb(140, 140, 140);
-            button3.Location = new Point(289, 159);
-            button3.Name = "button3";
-            button3.Size = new Size(110, 40);
-            button3.TabIndex = 63;
-            button3.Text = "Carrier";
-            button3.UseVisualStyleBackColor = false;
+            guna2Panel1.BackColor = Color.Transparent;
+            guna2Panel1.BorderRadius = 10;
+            guna2Panel1.Controls.Add(label2);
+            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.FillColor = Color.FromArgb(231, 237, 214);
+            guna2Panel1.Location = new Point(101, 3);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.Size = new Size(0, 0);
+            guna2Panel1.TabIndex = 65;
             // 
-            // button4
+            // label2
             // 
-            button4.BackColor = Color.FromArgb(231, 237, 214);
-            button4.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.FromArgb(140, 140, 140);
-            button4.Location = new Point(145, 159);
-            button4.Name = "button4";
-            button4.Size = new Size(110, 40);
-            button4.TabIndex = 64;
-            button4.Text = "Tent";
-            button4.UseVisualStyleBackColor = false;
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Microsoft Sans Serif", 15F);
+            label2.ForeColor = Color.FromArgb(140, 140, 140);
+            label2.ImageAlign = ContentAlignment.MiddleLeft;
+            label2.Location = new Point(23, 7);
+            label2.Name = "label2";
+            label2.Size = new Size(63, 25);
+            label2.TabIndex = 22;
+            label2.Text = "Stove";
+            // 
+            // ProductPanel
+            // 
+            ProductPanel.Controls.Add(guna2ShadowPanel1);
+            ProductPanel.Controls.Add(guna2ShadowPanel2);
+            ProductPanel.Controls.Add(guna2ShadowPanel3);
+            ProductPanel.Location = new Point(0, 176);
+            ProductPanel.Name = "ProductPanel";
+            ProductPanel.Size = new Size(1277, 688);
+            ProductPanel.TabIndex = 69;
+            // 
+            // guna2ShadowPanel1
+            // 
+            guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(namaalat);
+            guna2ShadowPanel1.Controls.Add(deskripsialat);
+            guna2ShadowPanel1.FillColor = Color.White;
+            guna2ShadowPanel1.Location = new Point(3, 3);
+            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            guna2ShadowPanel1.ShadowColor = Color.Black;
+            guna2ShadowPanel1.Size = new Size(251, 213);
+            guna2ShadowPanel1.TabIndex = 1;
+            // 
+            // namaalat
+            // 
+            namaalat.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            namaalat.ForeColor = Color.FromArgb(14, 115, 116);
+            namaalat.Location = new Point(14, 14);
+            namaalat.Name = "namaalat";
+            namaalat.Size = new Size(222, 31);
+            namaalat.TabIndex = 1;
+            namaalat.Text = "Nama Produk";
+            namaalat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // deskripsialat
+            // 
+            deskripsialat.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            deskripsialat.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            deskripsialat.ForeColor = Color.FromArgb(14, 115, 116);
+            deskripsialat.Location = new Point(14, 45);
+            deskripsialat.Name = "deskripsialat";
+            deskripsialat.Size = new Size(222, 152);
+            deskripsialat.TabIndex = 0;
+            deskripsialat.Text = "Deskripsi";
+            deskripsialat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // guna2ShadowPanel2
+            // 
+            guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(label1);
+            guna2ShadowPanel2.Controls.Add(label3);
+            guna2ShadowPanel2.FillColor = Color.White;
+            guna2ShadowPanel2.Location = new Point(260, 3);
+            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            guna2ShadowPanel2.ShadowColor = Color.Black;
+            guna2ShadowPanel2.Size = new Size(251, 213);
+            guna2ShadowPanel2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(14, 115, 116);
+            label1.Location = new Point(14, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(222, 31);
+            label1.TabIndex = 1;
+            label1.Text = "Nama Produk";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(14, 115, 116);
+            label3.Location = new Point(14, 45);
+            label3.Name = "label3";
+            label3.Size = new Size(222, 152);
+            label3.TabIndex = 0;
+            label3.Text = "Deskripsi";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // guna2ShadowPanel3
+            // 
+            guna2ShadowPanel3.BackColor = Color.Transparent;
+            guna2ShadowPanel3.Controls.Add(label4);
+            guna2ShadowPanel3.Controls.Add(label5);
+            guna2ShadowPanel3.FillColor = Color.White;
+            guna2ShadowPanel3.Location = new Point(517, 3);
+            guna2ShadowPanel3.Name = "guna2ShadowPanel3";
+            guna2ShadowPanel3.ShadowColor = Color.Black;
+            guna2ShadowPanel3.Size = new Size(251, 213);
+            guna2ShadowPanel3.TabIndex = 2;
+            // 
+            // label4
+            // 
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(14, 115, 116);
+            label4.Location = new Point(14, 14);
+            label4.Name = "label4";
+            label4.Size = new Size(222, 31);
+            label4.TabIndex = 1;
+            label4.Text = "Nama Produk";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(14, 115, 116);
+            label5.Location = new Point(14, 45);
+            label5.Name = "label5";
+            label5.Size = new Size(222, 152);
+            label5.TabIndex = 0;
+            label5.Text = "Deskripsi";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // UCHomePenyewa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button4);
-            Controls.Add(button1);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(ProductPanel);
+            Controls.Add(CategoryPanel);
             Controls.Add(guna2Panel3);
-            Controls.Add(guna2ShadowPanel3);
-            Controls.Add(guna2ShadowPanel4);
-            Controls.Add(guna2ShadowPanel2);
-            Controls.Add(guna2ShadowPanel5);
-            Controls.Add(guna2ShadowPanel1);
             Controls.Add(paneltopdashboard);
             Name = "UCHomePenyewa";
             Size = new Size(1277, 864);
             Load += UCHomePenyewa_Load;
             guna2Panel3.ResumeLayout(false);
             guna2Panel3.PerformLayout();
-            guna2ShadowPanel3.ResumeLayout(false);
-            guna2ShadowPanel3.PerformLayout();
-            guna2ShadowPanel4.ResumeLayout(false);
-            guna2ShadowPanel4.PerformLayout();
-            guna2ShadowPanel2.ResumeLayout(false);
-            guna2ShadowPanel2.PerformLayout();
-            guna2ShadowPanel5.ResumeLayout(false);
-            guna2ShadowPanel5.PerformLayout();
-            guna2ShadowPanel1.ResumeLayout(false);
-            guna2ShadowPanel1.PerformLayout();
             paneltopdashboard.ResumeLayout(false);
             paneltopdashboard.PerformLayout();
+            CategoryPanel.ResumeLayout(false);
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
+            ProductPanel.ResumeLayout(false);
+            guna2ShadowPanel1.ResumeLayout(false);
+            guna2ShadowPanel2.ResumeLayout(false);
+            guna2ShadowPanel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Label label8;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
-        private Label label3;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel4;
-        private Label label4;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Label label2;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel5;
-        private Label label5;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Label label1;
         private Guna.UI2.WinForms.Guna2Panel paneltopdashboard;
         private Label juduldashboard;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private FlowLayoutPanel CategoryPanel;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Label label2;
+        private FlowLayoutPanel ProductPanel;
+        private Button button8;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Label namaalat;
+        private Label deskripsialat;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
+        private Label label1;
+        private Label label3;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
+        private Label label4;
+        private Label label5;
     }
 }
