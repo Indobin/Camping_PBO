@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPenyewa));
+
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -43,6 +45,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+
             sidebardashboard = new Panel();
             buttonlogoutpenyewa = new Guna.UI2.WinForms.Guna2Button();
             buttonprofilpeyewa = new Guna.UI2.WinForms.Guna2Button();
@@ -69,7 +72,6 @@
             // sidebardashboard
             // 
             sidebardashboard.BackColor = Color.FromArgb(14, 115, 116);
-            sidebardashboard.BackgroundImage = (Image)resources.GetObject("sidebardashboard.BackgroundImage");
             sidebardashboard.BorderStyle = BorderStyle.FixedSingle;
             sidebardashboard.Controls.Add(buttonReportsPy);
             sidebardashboard.Controls.Add(buttonlogoutpenyewa);
@@ -260,6 +262,7 @@
             // 
             // ucHomePenyewa1
             // 
+            ucHomePenyewa1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucHomePenyewa1.Location = new Point(0, 0);
             ucHomePenyewa1.Name = "ucHomePenyewa1";
             ucHomePenyewa1.Size = new Size(1277, 864);
@@ -268,22 +271,26 @@
             // 
             // ucTransactionsPenyewa1
             // 
+            ucTransactionsPenyewa1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucTransactionsPenyewa1.Location = new Point(0, 0);
             ucTransactionsPenyewa1.Name = "ucTransactionsPenyewa1";
             ucTransactionsPenyewa1.Size = new Size(1277, 864);
-            ucTransactionsPenyewa1.TabIndex = 3;
+            ucTransactionsPenyewa1.TabIndex = 2;
             ucTransactionsPenyewa1.UserId = 0;
             // 
             // ucHistoryPenyewa1
             // 
+            ucHistoryPenyewa1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucHistoryPenyewa1.Location = new Point(0, 0);
             ucHistoryPenyewa1.Name = "ucHistoryPenyewa1";
             ucHistoryPenyewa1.Size = new Size(1277, 864);
-            ucHistoryPenyewa1.TabIndex = 2;
+            ucHistoryPenyewa1.TabIndex = 1;
             ucHistoryPenyewa1.UserId = 0;
             // 
             // ucProfilePenyewa1
             // 
+
+            ucProfilePenyewa1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucProfilePenyewa1.BackColor = Color.FromArgb(245, 248, 241);
             ucProfilePenyewa1.Location = new Point(0, 0);
             ucProfilePenyewa1.Name = "ucProfilePenyewa1";
@@ -334,6 +341,7 @@
             Controls.Add(sidebardashboard);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormPenyewa";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "GO-CAMP";
             sidebardashboard.ResumeLayout(false);
             panellogo.ResumeLayout(false);
