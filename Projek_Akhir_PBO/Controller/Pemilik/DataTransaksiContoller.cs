@@ -42,7 +42,15 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                         dataTransakasi.id_penyewa = (int)reader["id_penyewa"];
                         dataTransakasi.nama_penyewa = (string)reader["nama_penyewa"];
                         dataTransakasi.tanggal_peminjaman = (DateTime)reader["tanggal_peminjaman"];
-                        dataTransakasi.tanggalpengembalian = (DateTime)reader["tanggalpengembalian"];
+                        if (reader["tanggalpengembalian"] != DBNull.Value)
+                        {
+                            dataTransakasi.tanggalpengembalian = (DateTime)reader["tanggalpengembalian"];
+                        }
+                        else
+                        {
+                            dataTransakasi.tanggalpengembalian = null;
+                        }
+
                         Listdatatransaksi.Add(dataTransakasi);
                     }
                 }
