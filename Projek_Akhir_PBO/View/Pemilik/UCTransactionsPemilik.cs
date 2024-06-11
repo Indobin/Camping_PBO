@@ -21,13 +21,46 @@ namespace Projek_Akhir_PBO.View.Pemilik
             set
             {
                 _userId = value;
+                datatransaksiController.UserId = _userId;
+                LoadDataGrid();  // Panggil LoadDataGrid setelah UserId diatur
                 //kategoriController.UserId = _userId;
                 // Load data or perform operations based on the new UserId value
             }
         }
+
+        int index;
+        private int idDataTransaksiSelected = -1;
+        DataTransaksiContoller datatransaksiController;
+
         public UCTransactionsPemilik()
         {
+            datatransaksiController = new DataTransaksiContoller();
             InitializeComponent();
+        }
+
+        private void LoadDataGrid()
+        {
+            datatransaksiController.Read();
+            DataTable table = new DataTable();
+            table.Columns.Add("Id_penyewa", typeof(int));
+            table.Columns.Add("Nama Penyewa", typeof(string));
+            table.Columns.Add("Tanggal Peminjaman", typeof(DateTime));
+            table.Columns.Add("Tanggal Pengembalian", typeof(DateTime));
+            foreach (var datatransaksi in datatransaksiController.Listdatatransaksi)
+            {
+                table.Rows.Add(datatransaksi.id_penyewa, datatransaksi.nama_penyewa, datatransaksi.tanggal_peminjaman, datatransaksi.tanggalpengembalian);
+            }
+
+            dataGridView1.DataSource = table;
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UCTransactionsPemilik_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
