@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 using Projek_Akhir_PBO.Controller.Pemilik;
+using Projek_Akhir_PBO.Controller.Penyewa;
 using Projek_Akhir_PBO.Models.Pemilik;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -26,7 +27,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
             {
                 _userId = value;
                 rentersController.UserId = _userId;
-                LoadDataGrid();  // Panggil LoadDataGrid setelah UserId diatur
+                LoadDataGrid();  
             }
         }
 
@@ -42,18 +43,21 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private void LoadDataGrid()
         {
-            rentersController.Read(); 
+            rentersController.Read();
             DataTable table = new DataTable();
             table.Columns.Add("Id", typeof(int));
             table.Columns.Add("Nama Penyewa", typeof(string));
-            table.Columns.Add("Alamat", typeof(string));
-            table.Columns.Add("Nomor Telepon", typeof(string));
+            table.Columns.Add("Nomor E-wallet", typeof(string));
             table.Columns.Add("Tanggal Peminjaman", typeof(DateTime));
-            table.Columns.Add("Status", typeof(string));
+            table.Columns.Add("Status Peminjaman", typeof(string));
+            table.Columns.Add("Tanggal Pengembalian", typeof(DateTime));
+            table.Columns.Add("Status Pengembalian", typeof(string));
+            table.Columns.Add("Total Harga", typeof(int));
             foreach (var renters in rentersController.ListRenters)
             {
-                table.Rows.Add(renters.id_peminjaman, renters.nama_penyewa, renters.alamat_penyewa
-                                , renters.no_telepon_penyewa, renters.tanggal_peminjaman, renters.status);
+                table.Rows.Add(renters.id_peminjaman, renters.nama_penyewa, renters.nomor_ewallet, renters.tanggal_peminjaman, renters.status_pinjam_string
+                                , renters.tanggalpengembalian, renters.status_kembali_string,
+                                renters.total_harga_keseluruhan);
             }
 
             dataGridView1.DataSource = table;
@@ -61,61 +65,78 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            index = e.RowIndex;
-            if (index >= 0)
-            {
-                DataGridViewRow row = dataGridView1.Rows[index];
-                idRentersSelected = Convert.ToInt32(row.Cells[0].Value);
-                tbnama.Text = row.Cells[1].Value.ToString();
-                tbnotelp.Text = row.Cells[2].Value.ToString();
-                tbalamat.Text = row.Cells[3].Value.ToString();
-                tbtglpinjam.Text = row.Cells[4].Value.ToString();
-                string status = row.Cells[5].Value.ToString();
-                cbstatus.SelectedItem = status;
-
-                tbnama.Enabled = false;
-                tbnotelp.Enabled = false;
-                tbalamat.Enabled = false;
-                tbtglpinjam.Enabled = false;
-            }
+            
         }
 
         private void button1Clear_Click(object sender, EventArgs e)
         {
-            tbnama.Text = string.Empty;
-            tbalamat.Text = string.Empty;
-            tbnotelp.Text = string.Empty;
-            tbtglpinjam.Text = string.Empty;
-            cbstatus.SelectedIndex = -1;
+            tb1.Text = string.Empty;
+            tb4.Text = string.Empty;
+            tb2.Text = string.Empty;
+            tb3.Text = string.Empty;
+            cbpeminjaman.SelectedIndex = -1;
+            cbpengembalian.SelectedIndex = -1;
         }
 
         private void button2edit_Click(object sender, EventArgs e)
         {
             if (idRentersSelected == -1)
             {
-                MessageBox.Show("Pilih Id Peminjaman yang ingin di edit!", "Edit Data",
+                MessageBox.Show("Pilih peminjaman yang ingin di edit!", "Edit Data",
                      MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string status = cbstatus.SelectedItem.ToString();
-            bool status_pinjam = (status == "Proses") ? false : true;
+            string status_pinjam_string = cbpeminjaman.SelectedItem.ToString();
+            bool status_pinjam = (status_pinjam_string == "Proses") ? false : true;
             Renters renters = new Renters
             {
                 id_peminjaman = idRentersSelected,
-                nama_penyewa = tbnama.Text.Trim(),
-                alamat_penyewa = tbalamat.Text.Trim(),
-                no_telepon_penyewa = tbnotelp.Text.Trim(),
-                tanggal_peminjaman = DateTime.Parse(tbtglpinjam.Text.Trim()),
                 status_pinjam = status_pinjam
             };
-
-            rentersController.Edit(renters, status_pinjam);
-            MessageBox.Show("status peminjaman berhasil diedit.", "Edit Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            rentersController.UpdateStatusPinjam(renters);
             LoadDataGrid();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            index = e.RowIndex;
+            if (index >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[index];
+                idRentersSelected = Convert.ToInt32(row.Cells[0].Value);
+                tb1.Text = row.Cells[1].Value.ToString();
+                tb2.Text = row.Cells[2].Value.ToString();
+                tb4.Text = row.Cells[5].Value.ToString();
+                tb3.Text = row.Cells[3].Value.ToString();
+                string status_pinjam_string = row.Cells[4].Value.ToString();
+                string status_kembali_string = row.Cells[6].Value.ToString();
+                cbpeminjaman.SelectedItem = status_pinjam_string;
+                cbpengembalian.SelectedItem = status_kembali_string;
+
+                tb1.Enabled = false;
+                tb2.Enabled = false;
+                tb4.Enabled = false;
+                tb3.Enabled = false;
+
+                dataGridView2.Visible = true;
+                label3.Visible = true;
+                DataGridViewRow baris = dataGridView1.Rows[e.RowIndex];
+                idRentersSelected = Convert.ToInt32(row.Cells[0].Value);
+                var details = rentersController.GetDetailPeminjaman(idRentersSelected);
+                dataGridView2.Controls.Clear();
+                DataTable table2 = new DataTable();
+
+                table2.Columns.Add("Nama Barang", typeof(string));
+                table2.Columns.Add("Harga Barang", typeof(int));
+                table2.Columns.Add("Quantity", typeof(int));
+                table2.Columns.Add("Total Harga", typeof(string));
+                dataGridView2.DataSource = table2;
+
+                foreach (var detail in details)
+                {
+                    table2.Rows.Add(detail.NamaAlatCamping, detail.HargaAlatCamping,
+                        detail.Quantity, detail.Total_Harga);
+                }
+            }
         }
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -125,6 +146,33 @@ namespace Projek_Akhir_PBO.View.Pemilik
         private void paneltopdashboard_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (idRentersSelected == -1)
+            {
+                MessageBox.Show("Pilih peminjaman yang ingin di edit!", "Edit Data",
+                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string status_kembali_string = cbpengembalian.SelectedItem.ToString();
+            bool status_kembali = (status_kembali_string == "Proses") ? false : true;
+            string status_pinjam_string = cbpeminjaman.SelectedItem.ToString();
+            bool status_pinjam = (status_pinjam_string == "Proses") ? false : true;
+            Renters renters = new Renters
+            {
+                id_peminjaman = idRentersSelected,
+                status_pinjam = status_pinjam,
+                status_kembali = status_kembali
+            };
+
+            rentersController.UpdateStatusKembali(renters.id_peminjaman, status_kembali, renters.status_pinjam);
+            LoadDataGrid();
         }
     }
 }
