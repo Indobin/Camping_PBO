@@ -51,7 +51,9 @@ namespace Projek_Akhir_PBO.View.Penyewa
         }
         private void peminjamandata()
         {
-            string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+            //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+            string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=12345678;Database=GO-CAMP;CommandTimeout=10";
+
 
             string query = $"SELECT tanggal_peminjaman, id_peminjaman FROM peminjaman WHERE id_penyewa=@userId";
 
@@ -95,6 +97,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
             table.Columns.Add("Status", typeof(string));
             table.Columns.Add("Isi Laporan", typeof(string));
             table.Columns.Add("Isi Tanggapan", typeof(string));
+            table.Columns.Add("Nama Penyewa", typeof(string));
             foreach (var laporan in reportController.ListLaporan)
             {
                 table.Rows.Add(laporan.id_laporan, laporan.tanggal_laporan, laporan.status_laporan,

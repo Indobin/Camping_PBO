@@ -55,7 +55,7 @@
             paneltopdashboard.Margin = new Padding(6);
             paneltopdashboard.Name = "paneltopdashboard";
             paneltopdashboard.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            paneltopdashboard.Size = new Size(2190, 166);
+            paneltopdashboard.Size = new Size(2190, 262);
             paneltopdashboard.TabIndex = 44;
             // 
             // juduldashboard
@@ -65,7 +65,7 @@
             juduldashboard.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
             juduldashboard.ForeColor = Color.FromArgb(91, 80, 80);
             juduldashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            juduldashboard.Location = new Point(32, 34);
+            juduldashboard.Location = new Point(53, 97);
             juduldashboard.Margin = new Padding(6, 0, 6, 0);
             juduldashboard.Name = "juduldashboard";
             juduldashboard.Size = new Size(245, 79);
@@ -92,7 +92,6 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             guna2DataGridView1.ColumnHeadersHeight = 34;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -102,7 +101,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.White;
-            guna2DataGridView1.Location = new Point(412, 215);
+            guna2DataGridView1.Location = new Point(53, 304);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.ReadOnly = true;
             guna2DataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -117,7 +116,7 @@
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 82;
             guna2DataGridView1.RowTemplate.Height = 41;
-            guna2DataGridView1.Size = new Size(1234, 480);
+            guna2DataGridView1.Size = new Size(1449, 644);
             guna2DataGridView1.TabIndex = 45;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -130,7 +129,7 @@
             guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 34;
             guna2DataGridView1.ThemeStyle.ReadOnly = true;
             guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
