@@ -28,6 +28,9 @@ namespace Projek_Akhir_PBO.View.Admin
                 // Load data or perform operations based on the new UserId value
             }
         }
+
+        ReadListController readListController;
+
         public UCOwner()
         {
             readListController = new ReadListController();
@@ -49,9 +52,9 @@ namespace Projek_Akhir_PBO.View.Admin
         private void UCOwner_Load(object sender, EventArgs e)
         {
             guna2DataGridView1.DataSource = table;
-            ShowListKategori();
+            ShowListOwner();
         }
-        public void ShowListKategori()
+        public void ShowListOwner()
         {
             readListController.Read();
             guna2DataGridView1.DataSource = null;

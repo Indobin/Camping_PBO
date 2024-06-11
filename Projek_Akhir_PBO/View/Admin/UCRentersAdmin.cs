@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projek_Akhir_PBO.Controller.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,14 +25,26 @@ namespace Projek_Akhir_PBO.View.Admin
                 // Load data or perform operations based on the new UserId value
             }
         }
+
+        ListRentersController listRentersController;
         public UCRentersAdmin()
         {
+            listRentersController = new ListRentersController();
             InitializeComponent();
-        }
 
+        }
+        DataTable table = new DataTable();
         private void UCRentersAdmin_Load(object sender, EventArgs e)
         {
+            guna2DataGridView1.DataSource = table;
+            ShowListRenters();
+        }
 
+        public void ShowListRenters()
+        {
+            listRentersController.Read();
+            guna2DataGridView1.DataSource = null;
+            guna2DataGridView1.DataSource = listRentersController.ListRenters;
         }
     }
 }
