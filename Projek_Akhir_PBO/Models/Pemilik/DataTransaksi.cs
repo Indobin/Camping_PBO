@@ -11,6 +11,6 @@ namespace Projek_Akhir_PBO.Models.Pemilik
         public int id_penyewa { get; set; }
         public string nama_penyewa { get; set; }
         public DateTime tanggal_peminjaman { get; set; }
-        public DateTime tanggalpengembalian { get; set; }
+        public DateTime? tanggalpengembalian { get; set; }
     }
 }

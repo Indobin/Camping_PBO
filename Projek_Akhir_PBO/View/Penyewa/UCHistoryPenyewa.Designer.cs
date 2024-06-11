@@ -85,7 +85,7 @@
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridView1.Size = new Size(925, 223);
+            dataGridView1.Size = new Size(1211, 280);
             dataGridView1.TabIndex = 78;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -98,14 +98,14 @@
             dataGridView2.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView2.CausesValidation = false;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(34, 472);
+            dataGridView2.Location = new Point(34, 536);
             dataGridView2.Margin = new Padding(2);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.ReadOnly = true;
             dataGridView2.RowHeadersVisible = false;
             dataGridView2.RowHeadersWidth = 62;
             dataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridView2.Size = new Size(925, 223);
+            dataGridView2.Size = new Size(1211, 280);
             dataGridView2.TabIndex = 94;
             dataGridView2.Visible = false;
             // 
@@ -116,7 +116,7 @@
             label1.Font = new Font("Lufga", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(91, 80, 80);
             label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(34, 398);
+            label1.Location = new Point(34, 460);
             label1.Name = "label1";
             label1.Size = new Size(153, 52);
             label1.TabIndex = 21;

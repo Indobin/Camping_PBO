@@ -16,6 +16,7 @@ namespace Projek_Akhir_PBO.View.Admin
     public partial class UCOwner : UserControl
     {
         private int _userId;
+        ReadListController readListController;
 
         public int UserId
         {

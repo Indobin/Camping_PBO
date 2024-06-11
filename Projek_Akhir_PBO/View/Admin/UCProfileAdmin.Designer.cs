@@ -83,11 +83,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15F);
-            label2.Location = new Point(330, 491);
+            label2.Font = new Font("Lufga", 15F);
+            label2.Location = new Point(326, 498);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(127, 28);
+            label2.Size = new Size(140, 26);
             label2.TabIndex = 49;
             label2.Text = "Nama Admin";
             // 
@@ -97,8 +97,8 @@
             button2edit.FlatStyle = FlatStyle.Flat;
             button2edit.Font = new Font("Segoe UI", 20F);
             button2edit.ForeColor = Color.White;
-            button2edit.Location = new Point(502, 675);
-            button2edit.Margin = new Padding(2);
+            button2edit.Location = new Point(512, 696);
+            button2edit.Margin = new Padding(2, 2, 2, 2);
             button2edit.Name = "button2edit";
             button2edit.Size = new Size(114, 59);
             button2edit.TabIndex = 53;
@@ -109,11 +109,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15F);
-            label3.Location = new Point(387, 581);
+            label3.Font = new Font("Lufga", 15F);
+            label3.Location = new Point(326, 580);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(70, 28);
+            label3.Size = new Size(72, 26);
             label3.TabIndex = 54;
             label3.Text = "No Hp";
             // 
@@ -121,7 +121,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F);
-            label1.Location = new Point(470, 491);
+            label1.Location = new Point(470, 496);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(16, 28);
@@ -132,7 +132,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15F);
-            label4.Location = new Point(470, 581);
+            label4.Location = new Point(470, 576);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(16, 28);
@@ -141,6 +141,8 @@
             // 
             // guna2Nohp
             // 
+            guna2Nohp.BorderColor = Color.Black;
+            guna2Nohp.BorderRadius = 5;
             guna2Nohp.CustomizableEdges = customizableEdges3;
             guna2Nohp.DefaultText = "";
             guna2Nohp.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -148,21 +150,23 @@
             guna2Nohp.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2Nohp.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2Nohp.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2Nohp.Font = new Font("Segoe UI", 15F);
+            guna2Nohp.Font = new Font("Lufga", 20.2499962F);
             guna2Nohp.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2Nohp.Location = new Point(502, 569);
-            guna2Nohp.Margin = new Padding(5, 7, 5, 7);
+            guna2Nohp.Location = new Point(502, 573);
+            guna2Nohp.Margin = new Padding(12, 16, 12, 16);
             guna2Nohp.Name = "guna2Nohp";
             guna2Nohp.PasswordChar = '\0';
             guna2Nohp.PlaceholderForeColor = SystemColors.WindowText;
             guna2Nohp.PlaceholderText = "";
             guna2Nohp.SelectedText = "";
             guna2Nohp.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Nohp.Size = new Size(328, 49);
+            guna2Nohp.Size = new Size(493, 43);
             guna2Nohp.TabIndex = 59;
             // 
             // guna2nama
             // 
+            guna2nama.BorderColor = Color.Black;
+            guna2nama.BorderRadius = 5;
             guna2nama.CustomizableEdges = customizableEdges5;
             guna2nama.DefaultText = "";
             guna2nama.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -170,17 +174,17 @@
             guna2nama.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2nama.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2nama.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2nama.Font = new Font("Segoe UI", 15F);
+            guna2nama.Font = new Font("Lufga", 20.2499962F);
             guna2nama.ForeColor = SystemColors.WindowText;
             guna2nama.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2nama.Location = new Point(502, 480);
-            guna2nama.Margin = new Padding(5);
+            guna2nama.Location = new Point(502, 493);
+            guna2nama.Margin = new Padding(12, 12, 12, 12);
             guna2nama.Name = "guna2nama";
             guna2nama.PasswordChar = '\0';
             guna2nama.PlaceholderText = "";
             guna2nama.SelectedText = "";
             guna2nama.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2nama.Size = new Size(328, 49);
+            guna2nama.Size = new Size(493, 43);
             guna2nama.TabIndex = 60;
             // 
             // guna2ButtonSave
@@ -193,7 +197,7 @@
             guna2ButtonSave.FillColor = Color.FromArgb(97, 191, 143);
             guna2ButtonSave.Font = new Font("Segoe UI", 20F);
             guna2ButtonSave.ForeColor = Color.White;
-            guna2ButtonSave.Location = new Point(716, 675);
+            guna2ButtonSave.Location = new Point(695, 696);
             guna2ButtonSave.Name = "guna2ButtonSave";
             guna2ButtonSave.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2ButtonSave.Size = new Size(114, 59);
@@ -207,7 +211,7 @@
             pictureBox1.Location = new Point(502, 159);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(328, 257);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 62;
             pictureBox1.TabStop = false;
             // 
