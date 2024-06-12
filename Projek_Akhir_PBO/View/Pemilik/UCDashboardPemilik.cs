@@ -36,7 +36,10 @@ namespace Projek_Akhir_PBO.View.Pemilik
             Equipments();
             Revenue();
         }
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=Lannn3l4n;Database=Camping;CommandTimeout=10";
+        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=Lannn3l4n;Database=Camping;CommandTimeout=10";
+        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+
+
         public void Order()
         {
             string query = string.Format(@"select count(distinct pm.id_peminjaman) as total_order from pengembalian pb join peminjaman pm on pm.id_peminjaman = pb.id_peminjaman join detail_transaksi dt on dt.id_peminjaman = pm.id_peminjaman join alat_camping ac on ac.id_alatcamping = dt.id_alatcamping join pemilik pk on pk.id_pemilik = ac.id_pemilik where pm.status_pinjam = true and pb.status_kembali = true group by pm.id_peminjaman ;");

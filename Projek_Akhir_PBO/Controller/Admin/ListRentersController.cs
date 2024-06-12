@@ -11,7 +11,9 @@ namespace Projek_Akhir_PBO.Controller.Admin
     internal class ListRentersController
     {
         public List<ListRentersContext> ListRenters = new List<ListRentersContext>();
-        string conStr = "Server=localhost;Port=5432;User Id=postgres; Password=12345678 ;Database=GO-CAMP;CommandTimeout=10";
+        //string conStr = "Server=localhost;Port=5432;User Id=postgres; Password=12345678 ;Database=GO-CAMP;CommandTimeout=10";
+        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
+
         public void Read()
         {
             string query = string.Format(@"select p.id_penyewa, p.nama_penyewa, p.alamat_penyewa, p.no_telepon_penyewa, count(id_peminjaman) as jumlah_peminjaman

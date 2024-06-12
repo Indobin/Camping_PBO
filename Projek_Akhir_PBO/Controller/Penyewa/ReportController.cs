@@ -13,7 +13,9 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
     {
         private int _userId;
         public List<ReportsPy> ListLaporan = new List<ReportsPy>();
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
+
         public int UserId
         {
             get { return _userId; }
