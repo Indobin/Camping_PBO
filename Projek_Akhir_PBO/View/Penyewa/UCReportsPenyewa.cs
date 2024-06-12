@@ -12,6 +12,7 @@ using Projek_Akhir_PBO.Controller.Pemilik;
 using Projek_Akhir_PBO.Controller.Penyewa;
 using Projek_Akhir_PBO.Models.Pemilik;
 using Projek_Akhir_PBO.Models.Penyewa;
+using Projek_Akhir_PBO.Tools;
 
 
 namespace Projek_Akhir_PBO.View.Penyewa
@@ -36,7 +37,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
         {
             reportController = new ReportController();
             InitializeComponent();
-            //datapeminjaman();
+  
 
         }
         public class ComboBoxItem
@@ -51,37 +52,34 @@ namespace Projek_Akhir_PBO.View.Penyewa
         }
         private void peminjamandata()
         {
-            //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-            string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
-
+            
 
             string query = $"SELECT tanggal_peminjaman, id_peminjaman FROM peminjaman WHERE id_penyewa=@userId";
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                try
-                {
-                    conn.Open();
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                try { 
+                    db.Open();
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                     {
                         cmd.Parameters.AddWithValue("@userId", _userId);
-                        using (NpgsqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            guna2ComboBoxPeminjaman.Items.Clear();
-                            while (reader.Read())
+                            using (NpgsqlDataReader reader = cmd.ExecuteReader())
                             {
-                                DateTime tanggalPeminjaman = (DateTime)reader["tanggal_peminjaman"];
-                                int idPeminjaman = (int)reader["id_peminjaman"];
-                                guna2ComboBoxPeminjaman.Items.Add(new ComboBoxItem
+                                guna2ComboBoxPeminjaman.Items.Clear();
+                                while (reader.Read())
                                 {
-                                    //Text = ((DateTime)reader["tanggal_peminjaman"]).ToString("yyyy-MM-dd"),
-                                    //Value = (int)reader["id_peminjaman"]
-                                    Text = $"ID: {idPeminjaman} - Date: {tanggalPeminjaman:yyyy-MM-dd}",
-                                    Value = idPeminjaman
-                                });
+                                    DateTime tanggalPeminjaman = (DateTime)reader["tanggal_peminjaman"];
+                                    int idPeminjaman = (int)reader["id_peminjaman"];
+                                    guna2ComboBoxPeminjaman.Items.Add(new ComboBoxItem
+                                    {
+                                        //Text = ((DateTime)reader["tanggal_peminjaman"]).ToString("yyyy-MM-dd"),
+                                        //Value = (int)reader["id_peminjaman"]
+                                        Text = $"ID: {idPeminjaman} - Date: {tanggalPeminjaman:yyyy-MM-dd}",
+                                        Value = idPeminjaman
+                                    });
+                                }
                             }
-                        }
-                    }
+                     }
                 }
                 catch (Exception ex)
                 {

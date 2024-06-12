@@ -1,5 +1,6 @@
 ﻿using Npgsql;
 using Projek_Akhir_PBO.Models.Admin;
+using Projek_Akhir_PBO.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,7 @@ namespace Projek_Akhir_PBO.Controller.Admin
     internal class ListRentersController
     {
         public List<ListRentersContext> ListRenters = new List<ListRentersContext>();
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres; Password=12345678 ;Database=GO-CAMP;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
+  
 
         public void Read()
         {
@@ -21,10 +21,10 @@ namespace Projek_Akhir_PBO.Controller.Admin
                                             join peminjaman pm on pm.id_penyewa=p.id_penyewa
                                             group by p.id_penyewa, p.nama_penyewa, p.alamat_penyewa, p.no_telepon_penyewa");
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     cmd.CommandText = query;
                     NpgsqlDataReader reader = cmd.ExecuteReader();

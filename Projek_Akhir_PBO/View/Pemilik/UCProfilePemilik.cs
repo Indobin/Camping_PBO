@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ using Npgsql;
 using Projek_Akhir_PBO.Controller.Pemilik;
 using Projek_Akhir_PBO.Models.Pemilik;
 using Projek_Akhir_PBO.Models.Penyewa;
+using Projek_Akhir_PBO.Tools;
 
 namespace Projek_Akhir_PBO.View.Pemilik
 {
@@ -26,8 +28,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
             set
             {
                 _userId = value;
-                //kategoriController.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
+              
             }
         }
         public UCProfilePemilik()
@@ -35,10 +36,6 @@ namespace Projek_Akhir_PBO.View.Pemilik
             InitializeComponent();
             disabledProfile();
         }
-
-        //string conStr = "Server=localhost;Port=5432;UserId=postgres;Password=spensaganomor1;Database=Camping;CommandTimeout=10";
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;UserId=postgres;Password=321;Database=Camping;CommandTimeout=10";
 
         public void disabledProfile()
         {
@@ -63,33 +60,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
         {
-            //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=spensaganomor1;Database=Camping;CommandTimeout=10";
-            //string query = "SELECT nama_penyewa FROM penyewa ";
-
-            //using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
-            //{
-            //    try
-            //    {
-            //        conn.Open();
-            //        using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
-            //        {
-            //            cmd.CommandText = query;
-            //            NpgsqlDataReader reader = cmd.ExecuteReader();
-            //            if (reader.Read())
-            //            {
-            //                textBoxUsername.Text = reader["nama_pemilik"].ToString();
-            //            }
-            //            else
-            //            {
-            //                MessageBox.Show("Profil pengguna tidak ditemukan.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            }
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -117,10 +88,10 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
             try
             {
-                using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+                using (var db = new DBConnection())
                 {
-                    conn.Open();
-                    using (NpgsqlCommand checkCmd = new NpgsqlCommand(cekQuery, conn))
+                    db.Open();
+                    using (NpgsqlCommand checkCmd = new NpgsqlCommand(cekQuery, db.Connection))
                     {
                         checkCmd.Parameters.AddWithValue("@nama_pemilik", textBoxNamePm.Text.Trim());
                         checkCmd.Parameters.AddWithValue("@userId", UserId);
@@ -133,7 +104,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
                             return;
                         }
                     }
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(updateQuery, conn))
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(updateQuery, db.Connection))
                     {
                         cmd.Parameters.AddWithValue("@nama_pemilik", textBoxNamePm.Text.Trim());
                         cmd.Parameters.AddWithValue("@userId", UserId);
@@ -178,10 +149,10 @@ namespace Projek_Akhir_PBO.View.Pemilik
         private void UCProfilePemilik_Load_1(object sender, EventArgs e)
         {
             string selectQuery = "SELECT nama_pemilik, no_telepon_pemilik, alamat_pemilik FROM pemilik WHERE id_pemilik = @userId";
-            using (var conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (var cmd = new NpgsqlCommand(selectQuery, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(selectQuery, db.Connection))
                 {
                     cmd.Parameters.AddWithValue("@userId", _userId);
 
@@ -198,8 +169,6 @@ namespace Projek_Akhir_PBO.View.Pemilik
                             textBoxNoPm.Text = profilePm.no_telepon_pemilik;
                             textBoxAlamatPm.Text = profilePm.alamat_pemilik;
 
-                            //namaadmin = reader["namaadmin"].ToString();
-                            //no_hp = reader["no_hp"].ToString();
                         }
                     }
                 }

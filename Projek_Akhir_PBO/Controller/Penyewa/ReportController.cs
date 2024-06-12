@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using Npgsql;
 
 using Projek_Akhir_PBO.Models.Penyewa;
+using Projek_Akhir_PBO.Tools;
 
 namespace Projek_Akhir_PBO.Controller.Penyewa
 {
@@ -13,9 +15,7 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
     {
         private int _userId;
         public List<ReportsPy> ListLaporan = new List<ReportsPy>();
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
-
+       
         public int UserId
         {
             get { return _userId; }
@@ -28,10 +28,10 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
                                         FROM laporan l
                                         INNER JOIN peminjaman p on p.id_peminjaman = l.id_peminjaman
                                         WHERE l.id_penyewa=@userId");
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand data = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand data = new NpgsqlCommand(query, db.Connection))
                 {
                     data.Parameters.AddWithValue("@userId", _userId);
                     NpgsqlDataReader reader = data.ExecuteReader();
@@ -62,12 +62,11 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
         }
         public void Tambah(ReportsPy reportsPy, int idPeminjaman, int idAdmin)
         {
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            string checkQuery = "SELECT COUNT(*) FROM laporan WHERE id_peminjaman = @id_peminjaman";
+            using (var db = new DBConnection())
             {
-                conn.Open();
-
-                string checkQuery = "SELECT COUNT(*) FROM laporan WHERE id_peminjaman = @id_peminjaman";
-                using (NpgsqlCommand checkCmd = new NpgsqlCommand(checkQuery, conn))
+                db.Open();
+                using (NpgsqlCommand checkCmd = new NpgsqlCommand(checkQuery, db.Connection))
                 {
                     checkCmd.Parameters.AddWithValue("@id_peminjaman", idPeminjaman);
                     int count = Convert.ToInt32(checkCmd.ExecuteScalar());
@@ -80,7 +79,7 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
 
                 string insertQuery = "INSERT INTO laporan (isi_laporan, tanggallaporan, statuslaporan, id_penyewa, id_admin, id_peminjaman) " +
                     "VALUES (@isi_laporan, @tanggal_laporan,@status,@id_penyewa, @id_admin, @id_peminjaman)";
-                using (NpgsqlCommand insertCmd = new NpgsqlCommand(insertQuery, conn))
+                using (NpgsqlCommand insertCmd = new NpgsqlCommand(insertQuery, db.Connection))
                 {
                     insertCmd.Parameters.AddWithValue("@isi_laporan", reportsPy.isi_laporan);
                     insertCmd.Parameters.AddWithValue("@tanggal_laporan", DateTime.Now);

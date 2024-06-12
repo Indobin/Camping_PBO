@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Npgsql;
 using Projek_Akhir_PBO.Controller.Pemilik;
 using Projek_Akhir_PBO.Models.Pemilik;
+using Projek_Akhir_PBO.Tools;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Projek_Akhir_PBO.View.Pemilik
@@ -26,10 +27,10 @@ namespace Projek_Akhir_PBO.View.Pemilik
             {
                 _userId = value;
                 stockController.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
+              
             }
         }
-        int index;
+       
         private int idBarangSelected = -1;
         StockController stockController;
         public UCStockPemilik()
@@ -134,34 +135,32 @@ namespace Projek_Akhir_PBO.View.Pemilik
         {
 
         }
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
+        
 
         private void datakategori()
         {
             string query = "SELECT namakategori, id_kategori FROM kategori_alat_camping WHERE id_pemilik=@userId AND dihentikan=false";
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                try
-                {
-                    conn.Open();
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                try{ 
+                    db.Open();
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                     {
                         cmd.Parameters.AddWithValue("@userId", _userId);
-                        using (NpgsqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
+                            using (NpgsqlDataReader reader = cmd.ExecuteReader())
                             {
-                                guna2ComboBoxKategori.Items.Add(new ComboBoxItem
+                                while (reader.Read())
                                 {
-                                    Text = reader["namakategori"].ToString(),
-                                    Value = (int)reader["id_kategori"]
-                                });
+                                    guna2ComboBoxKategori.Items.Add(new ComboBoxItem
+                                    {
+                                        Text = reader["namakategori"].ToString(),
+                                        Value = (int)reader["id_kategori"]
+                                    });
+                                }
                             }
                         }
                     }
-                }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);

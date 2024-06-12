@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using Projek_Akhir_PBO.Models.Pemilik;
+using Projek_Akhir_PBO.Tools;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Projek_Akhir_PBO.Controller.Pemilik
@@ -13,8 +15,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
     {
         private int _userId;
         public List<KategoriContext> ListKategori = new List<KategoriContext>();
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
+
         public int UserId
         {
             get { return _userId; }
@@ -25,10 +26,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
             string query = string.Format(@"SELECT row_number(*) over() as nomor, id_kategori, namakategori, dihentikan 
                                 FROM kategori_alat_camping WHERE id_pemilik=@userId ORDER BY id_kategori ASC;");
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     cmd.Parameters.AddWithValue("@userId", _userId);
                     //cmd.CommandText = query;
@@ -55,10 +56,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
 
             try
             {
-                using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+                using (var db = new DBConnection())
                 {
-                    conn.Open();
-                    using (NpgsqlCommand cmdcek = new NpgsqlCommand(cekQuery, conn))
+                    db.Open();
+                    using (NpgsqlCommand cmdcek = new NpgsqlCommand(cekQuery, db.Connection))
                     {
 
                         cmdcek.Parameters.AddWithValue("@namakategori", Namakategori.Trim());
@@ -73,7 +74,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                         }
 
                     }
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(insertQuery, conn))
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(insertQuery, db.Connection))
                     {
                         
                         cmd.Parameters.AddWithValue("@namakategori", Namakategori.Trim());
@@ -115,10 +116,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
 
             try
             {
-                using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+                using (var db = new DBConnection())
                 {
-                    conn.Open();
-                    using (NpgsqlCommand checkCmd = new NpgsqlCommand(cekQuery, conn))
+                    db.Open();
+                    using (NpgsqlCommand checkCmd = new NpgsqlCommand(cekQuery, db.Connection))
                     {
                         checkCmd.Parameters.AddWithValue("@namakategori", namaKategori.Trim());
                         checkCmd.Parameters.AddWithValue("@id", idkategori);
@@ -131,7 +132,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                             return;
                         }
                     }
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(updateQuery, conn))
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(updateQuery, db.Connection))
                     {
                         cmd.Parameters.AddWithValue("@namakategori", namaKategori.Trim());
                         cmd.Parameters.AddWithValue("@id", idkategori);

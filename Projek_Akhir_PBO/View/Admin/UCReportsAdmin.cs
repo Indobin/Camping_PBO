@@ -27,7 +27,7 @@ namespace Projek_Akhir_PBO.View.Admin
             {
                 _userId = value;
                 laporanController.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
+             
             }
         }
         LaporanController laporanController;
@@ -92,9 +92,6 @@ namespace Projek_Akhir_PBO.View.Admin
 
             laporanController.UpdateTanggapan(reports, idLaporanSelected, richTextBoxLaporan.Text.Trim());
 
-            //richTextTanggapan.Clear();
-
-            //idLaporanSelected = 0;
             DataLaporanAdmin();
         }
 
@@ -132,7 +129,7 @@ namespace Projek_Akhir_PBO.View.Admin
                 }
                 guna2TextBox1.Text = row.Cells["Peminjaman"].Value.ToString();
 
-                // Cari dan set nilai yang sesuai di ComboBox
+            
 
             }
         }

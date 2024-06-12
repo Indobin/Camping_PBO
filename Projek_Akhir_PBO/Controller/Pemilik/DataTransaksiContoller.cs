@@ -1,5 +1,6 @@
 ﻿using Npgsql;
 using Projek_Akhir_PBO.Models.Pemilik;
+using Projek_Akhir_PBO.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
     {
         private int _userId;
         public List<DataTransaksi> Listdatatransaksi = new List<DataTransaksi>();
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=spensaganomor1;Database=Camping;CommandTimeout=10";
-
+        
         public int UserId
         {
             get { return _userId; }
@@ -28,10 +28,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                             join pengembalian pg on p.id_peminjaman = pg.id_peminjaman
                             Order By py.id_penyewa;";
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+             using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand data = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand data = new NpgsqlCommand(query, db.Connection))
                 {
                     data.Parameters.AddWithValue("@userId", _userId);
                     NpgsqlDataReader reader = data.ExecuteReader();

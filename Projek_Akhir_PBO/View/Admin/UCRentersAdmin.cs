@@ -23,8 +23,6 @@ namespace Projek_Akhir_PBO.View.Admin
             {
                 _userId = value;
                 LoadDataGrid();
-                //kategoriController.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
             }
         }
 

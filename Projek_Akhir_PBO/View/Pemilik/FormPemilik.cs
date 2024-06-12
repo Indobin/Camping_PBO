@@ -40,7 +40,6 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private void buttondashboardPemilik_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ucDashboardPemilik1.Visible = true;
             ucStockPemilik1.Visible = false;
             ucCategoriesPemilik1.Visible = false;

@@ -48,8 +48,6 @@ namespace Projek_Akhir_PBO
             string selectedTable = comboBox1.SelectedItem.ToString();
             string username = usernamebox.Text;
             string password = passwordbox.Text;
-            //LoginController loginController = new LoginController();
-            //loginController.HandleLogin(selectedTable, username, password, this);
             LoginController loginController = new LoginController();
             var (result, userId) = loginController.AuthLogin(selectedTable, username, password);
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Npgsql;
 using Projek_Akhir_PBO.Models.Pemilik;
 using Projek_Akhir_PBO.Models.Penyewa;
+using Projek_Akhir_PBO.Tools;
 
 namespace Projek_Akhir_PBO.Controller.Pemilik
 {
@@ -13,8 +14,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
     {
         private int _userId;
         public List<Renters> ListRenters = new List<Renters>();
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-
+       
         public int UserId
         {
             get { return _userId; }
@@ -38,10 +38,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                              p.status_pinjam, peng.tanggalpengembalian, peng.status_kembali, dt.lama_sewa
                              ORDER BY p.tanggal_peminjaman ASC;";
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand data = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand data = new NpgsqlCommand(query, db.Connection))
                 {
                     data.Parameters.AddWithValue("@userId", _userId);
                     NpgsqlDataReader reader = data.ExecuteReader();
@@ -84,10 +84,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
             if (renters.status_pinjam)
             {
                 string query = @"UPDATE peminjaman SET status_pinjam = @status_pinjam WHERE id_peminjaman = @id_peminjaman";
-                using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+                using (var db = new DBConnection())
                 {
-                    conn.Open();
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                    db.Open();
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                     {
                         cmd.Parameters.AddWithValue("@status_pinjam", renters.status_pinjam);
                         cmd.Parameters.AddWithValue("@id_peminjaman", renters.id_peminjaman);
@@ -108,10 +108,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                 if (status_kembali)
                 {
                     string query = @"UPDATE pengembalian SET status_kembali = @status_kembali, tanggalpengembalian = @tanggalpengembalian WHERE id_peminjaman = @id_peminjaman";
-                    using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+                    using (var db = new DBConnection())
                     {
-                        conn.Open();
-                        using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                        db.Open();
+                        using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                         {
                             cmd.Parameters.AddWithValue("@status_kembali", status_kembali);
                             cmd.Parameters.AddWithValue("@tanggalpengembalian", DateTime.Now);
@@ -140,10 +140,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
 
             List<RentersDetail> details = new List<RentersDetail>();
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     cmd.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
                     NpgsqlDataReader reader = cmd.ExecuteReader();

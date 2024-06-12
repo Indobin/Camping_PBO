@@ -41,7 +41,6 @@ namespace Projek_Akhir_PBO.View.Admin
 
         private void buttondashboardadmin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ucDashboardAdmini1.Visible = true;
             ucOwner1.Visible = false;
             ucRentersAdmin1.Visible = false;

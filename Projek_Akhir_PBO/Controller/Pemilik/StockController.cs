@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using Projek_Akhir_PBO.Models.Pemilik;
+using Projek_Akhir_PBO.Tools;
 
 namespace Projek_Akhir_PBO.Controller.Pemilik
 {
@@ -12,8 +13,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
     {
         private int _userId;
         public List<Stock> ListStock = new List<Stock>();
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
+        
         public int UserId
         {
             get { return _userId; }
@@ -26,10 +26,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                                             JOIN kategori_alat_camping k on a.id_kategori=k.id_kategori
                                             WHERE a.id_pemilik = @userId
                                             ORDER BY id_alatcamping ASC;");
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr)) 
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using(NpgsqlCommand data = new NpgsqlCommand(query,conn))
+                db.Open();
+                using (NpgsqlCommand data = new NpgsqlCommand(query, db.Connection))
                 {
                     data.Parameters.AddWithValue("@userId", _userId);
                     NpgsqlDataReader reader = data.ExecuteReader();
@@ -56,10 +56,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
             string query = string.Format(@"INSERT INTO alat_camping(namaalatcamping,hargaalatcamping,jumlahalatcamping,
                                            deskripsi, dihentikan, id_pemilik, id_kategori)
                                             VALUES (@nama_alat, @harga, @jumlah, @deskripsi, @dihentikan, @userId, @id_kategori)");
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmdcek = new NpgsqlCommand(cek, conn))
+                db.Open();
+                using (NpgsqlCommand cmdcek = new NpgsqlCommand(query, db.Connection))
                 {
 
                     cmdcek.Parameters.AddWithValue("@nama_alat", nama_alat);
@@ -74,7 +74,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     }
 
                 }
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     cmd.Parameters.AddWithValue("@nama_alat", stock.namaalatcamping);
                     cmd.Parameters.AddWithValue("@harga", stock.hargaalatcamping);
@@ -96,10 +96,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
             string query = string.Format(@"UPDATE alat_camping SET namaalatcamping=@nama_alat, hargaalatcamping=@harga,
                                            jumlahalatcamping=@jumlah, deskripsi=@deskripsi, dihentikan=@dihentikan, id_kategori=@id_kategori
                                             WHERE id_alatcamping=@idBarang");
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmdcek = new NpgsqlCommand(cek, conn))
+                db.Open();
+                using (NpgsqlCommand cmdcek = new NpgsqlCommand(query, db.Connection))
                 {
 
                     cmdcek.Parameters.AddWithValue("@nama_alat", nama_alat);
@@ -114,7 +114,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     }
 
                 }
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     cmd.Parameters.AddWithValue("@nama_alat", stock.namaalatcamping);
                     cmd.Parameters.AddWithValue("@harga", stock.hargaalatcamping);

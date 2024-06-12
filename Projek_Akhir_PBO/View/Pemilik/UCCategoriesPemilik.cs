@@ -24,13 +24,11 @@ namespace Projek_Akhir_PBO.View.Pemilik
             {
                 _userId = value;
                 kategoriController.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
+             
             }
         }
         private int idKategoriSelected = -1;
-        //KategoriContext kategoriContext;
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
+      
 
         KategoriController kategoriController;
         int index;
@@ -118,10 +116,6 @@ namespace Projek_Akhir_PBO.View.Pemilik
             }
         }
 
-        //private void button3hapus_Click(object sender, EventArgs e)
-        //{
-        //    kategoriController.Hapus(idKategoriSelected, textBoxKategori.Text);
-        //    ShowListKategori();
-        //}
+      
     }
 }

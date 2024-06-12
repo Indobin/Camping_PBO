@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Npgsql;
 using Projek_Akhir_PBO.Controller.Admin;
 using Projek_Akhir_PBO.Controller.Pemilik;
+using Projek_Akhir_PBO.Tools;
 
 namespace Projek_Akhir_PBO.View.Admin
 {
@@ -23,8 +24,6 @@ namespace Projek_Akhir_PBO.View.Admin
             set
             {
                 _userId = value;
-                //kategoriController.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
             }
         }
         public UCDashboardAdmini()
@@ -36,19 +35,15 @@ namespace Projek_Akhir_PBO.View.Admin
             Rentals();
         }
 
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
-
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=12345678;Database=GO-CAMP;CommandTimeout=10";
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+       
 
         public void Owners()
         {
             string query = string.Format(@"SELECT COUNT(id_pemilik) FROM pemilik;");
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     NpgsqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
@@ -63,10 +58,10 @@ namespace Projek_Akhir_PBO.View.Admin
         public void Renters()
         {
             string query = string.Format(@"SELECT COUNT(id_penyewa) FROM penyewa;");
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     NpgsqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
@@ -81,10 +76,10 @@ namespace Projek_Akhir_PBO.View.Admin
         public void Rentals()
         {
             string query = string.Format(@"SELECT COUNT(id_peminjaman) FROM peminjaman WHERE status_pinjam=true ;");
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     NpgsqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
