@@ -165,7 +165,7 @@
             guna2TextBoxRent.Font = new Font("Lufga Medium", 15F, FontStyle.Bold);
             guna2TextBoxRent.ForeColor = Color.FromArgb(74, 75, 67);
             guna2TextBoxRent.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBoxRent.Location = new Point(142, 417);
+            guna2TextBoxRent.Location = new Point(142, 437);
             guna2TextBoxRent.Margin = new Padding(11, 9, 11, 9);
             guna2TextBoxRent.Name = "guna2TextBoxRent";
             guna2TextBoxRent.PasswordChar = '\0';
@@ -185,7 +185,7 @@
             label2.Font = new Font("Lufga", 15F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(91, 80, 80);
             label2.ImageAlign = ContentAlignment.MiddleLeft;
-            label2.Location = new Point(32, 427);
+            label2.Location = new Point(32, 447);
             label2.Name = "label2";
             label2.RightToLeft = RightToLeft.No;
             label2.Size = new Size(102, 26);
@@ -210,7 +210,7 @@
             boxNoEWallet.Font = new Font("Lufga Medium", 15F, FontStyle.Bold);
             boxNoEWallet.ForeColor = Color.FromArgb(74, 75, 67);
             boxNoEWallet.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            boxNoEWallet.Location = new Point(142, 551);
+            boxNoEWallet.Location = new Point(142, 558);
             boxNoEWallet.Margin = new Padding(11, 9, 11, 9);
             boxNoEWallet.Name = "boxNoEWallet";
             boxNoEWallet.PasswordChar = '\0';
@@ -229,7 +229,7 @@
             lblNo.Font = new Font("Lufga", 15F, FontStyle.Bold);
             lblNo.ForeColor = Color.FromArgb(91, 80, 80);
             lblNo.ImageAlign = ContentAlignment.MiddleLeft;
-            lblNo.Location = new Point(32, 561);
+            lblNo.Location = new Point(32, 568);
             lblNo.Name = "lblNo";
             lblNo.RightToLeft = RightToLeft.No;
             lblNo.Size = new Size(101, 26);
@@ -258,7 +258,7 @@
             comboBoxEWallet.Items.AddRange(new object[] { "OVO", "DANA", "GOPAY" });
             comboBoxEWallet.ItemsAppearance.Font = new Font("Lufga Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             comboBoxEWallet.ItemsAppearance.ForeColor = Color.FromArgb(91, 80, 80);
-            comboBoxEWallet.Location = new Point(142, 491);
+            comboBoxEWallet.Location = new Point(142, 498);
             comboBoxEWallet.Margin = new Padding(0);
             comboBoxEWallet.Name = "comboBoxEWallet";
             comboBoxEWallet.ShadowDecoration.BorderRadius = 0;
@@ -323,7 +323,7 @@
             eWallet.Font = new Font("Lufga", 15F, FontStyle.Bold);
             eWallet.ForeColor = Color.FromArgb(91, 80, 80);
             eWallet.ImageAlign = ContentAlignment.MiddleLeft;
-            eWallet.Location = new Point(32, 500);
+            eWallet.Location = new Point(32, 507);
             eWallet.Name = "eWallet";
             eWallet.RightToLeft = RightToLeft.No;
             eWallet.Size = new Size(101, 26);
@@ -432,7 +432,7 @@
             datagridTransaction.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             datagridTransaction.RowHeadersVisible = false;
             datagridTransaction.RowTemplate.Height = 35;
-            datagridTransaction.Size = new Size(444, 329);
+            datagridTransaction.Size = new Size(444, 340);
             datagridTransaction.TabIndex = 0;
             datagridTransaction.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(235, 235, 235);
             datagridTransaction.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);

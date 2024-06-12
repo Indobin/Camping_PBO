@@ -102,23 +102,25 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Lufga", 15F);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(689, 514);
+            label1.Location = new Point(49, 630);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(110, 26);
+            label1.Size = new Size(160, 26);
             label1.TabIndex = 60;
-            label1.Text = "Status      :";
+            label1.Text = "Status                :";
             // 
             // button1tambah
             // 
+            button1tambah.Anchor = AnchorStyles.None;
             button1tambah.BackColor = Color.FromArgb(97, 191, 143);
             button1tambah.FlatStyle = FlatStyle.Flat;
             button1tambah.Font = new Font("Lufga", 20.25F);
             button1tambah.ForeColor = Color.White;
-            button1tambah.Location = new Point(866, 714);
+            button1tambah.Location = new Point(915, 741);
             button1tambah.Margin = new Padding(2);
             button1tambah.Name = "button1tambah";
             button1tambah.Size = new Size(114, 59);
@@ -129,11 +131,12 @@
             // 
             // button2edit
             // 
+            button2edit.Anchor = AnchorStyles.None;
             button2edit.BackColor = Color.RoyalBlue;
             button2edit.FlatStyle = FlatStyle.Flat;
             button2edit.Font = new Font("Lufga", 20.25F);
             button2edit.ForeColor = Color.White;
-            button2edit.Location = new Point(705, 714);
+            button2edit.Location = new Point(754, 741);
             button2edit.Margin = new Padding(2);
             button2edit.Name = "button2edit";
             button2edit.Size = new Size(114, 59);
@@ -144,9 +147,10 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Lufga", 15F);
-            label2.Location = new Point(48, 444);
+            label2.Location = new Point(48, 501);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(160, 26);
@@ -166,7 +170,7 @@
             dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CausesValidation = false;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -205,38 +209,41 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1203, 253);
+            dataGridView1.Size = new Size(1203, 313);
             dataGridView1.TabIndex = 54;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // Stok
             // 
+            Stok.Anchor = AnchorStyles.None;
             Stok.AutoSize = true;
             Stok.Font = new Font("Lufga", 15F);
-            Stok.Location = new Point(689, 588);
+            Stok.Location = new Point(49, 692);
             Stok.Margin = new Padding(2, 0, 2, 0);
             Stok.Name = "Stok";
-            Stok.Size = new Size(109, 26);
+            Stok.Size = new Size(159, 26);
             Stok.TabIndex = 61;
-            Stok.Text = "Stok          :";
+            Stok.Text = "Stok                    :";
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Lufga", 15F);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(689, 440);
+            label4.Location = new Point(49, 756);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(112, 26);
+            label4.Size = new Size(157, 26);
             label4.TabIndex = 63;
-            label4.Text = "Kategori   :";
+            label4.Text = "Kategori            :";
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Lufga", 15F);
-            label5.Location = new Point(49, 519);
+            label5.Location = new Point(49, 566);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(161, 26);
@@ -245,21 +252,21 @@
             // 
             // label3
             // 
-            label3.AutoSize = true;
+            label3.Anchor = AnchorStyles.None;
             label3.Font = new Font("Lufga", 15F);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(49, 596);
+            label3.Location = new Point(653, 496);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(159, 26);
+            label3.Size = new Size(191, 26);
             label3.TabIndex = 68;
             label3.Text = "Deskripsi           :";
             // 
             // guna2ComboBoxStatus
             // 
+            guna2ComboBoxStatus.Anchor = AnchorStyles.None;
             guna2ComboBoxStatus.BackColor = Color.Transparent;
-            guna2ComboBoxStatus.BorderColor = Color.FromArgb(97, 191, 143);
-            guna2ComboBoxStatus.BorderRadius = 10;
+            guna2ComboBoxStatus.BorderColor = Color.FromArgb(213, 218, 223);
             guna2ComboBoxStatus.CustomizableEdges = customizableEdges3;
             guna2ComboBoxStatus.DrawMode = DrawMode.OwnerDrawFixed;
             guna2ComboBoxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -269,16 +276,15 @@
             guna2ComboBoxStatus.ForeColor = Color.Black;
             guna2ComboBoxStatus.ItemHeight = 30;
             guna2ComboBoxStatus.Items.AddRange(new object[] { "Aktif", "Tidak Aktif" });
-            guna2ComboBoxStatus.Location = new Point(823, 508);
+            guna2ComboBoxStatus.Location = new Point(238, 624);
             guna2ComboBoxStatus.Name = "guna2ComboBoxStatus";
             guna2ComboBoxStatus.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ComboBoxStatus.Size = new Size(328, 36);
+            guna2ComboBoxStatus.Size = new Size(348, 36);
             guna2ComboBoxStatus.TabIndex = 69;
             // 
             // guna2nama
             // 
-            guna2nama.BorderColor = Color.FromArgb(97, 191, 143);
-            guna2nama.BorderRadius = 10;
+            guna2nama.Anchor = AnchorStyles.None;
             guna2nama.CustomizableEdges = customizableEdges5;
             guna2nama.DefaultText = "";
             guna2nama.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -289,7 +295,7 @@
             guna2nama.Font = new Font("Lufga", 15F);
             guna2nama.ForeColor = Color.Black;
             guna2nama.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2nama.Location = new Point(238, 439);
+            guna2nama.Location = new Point(238, 496);
             guna2nama.Margin = new Padding(22, 34, 22, 34);
             guna2nama.Name = "guna2nama";
             guna2nama.PasswordChar = '\0';
@@ -301,8 +307,7 @@
             // 
             // guna2Harga
             // 
-            guna2Harga.BorderColor = Color.FromArgb(97, 191, 143);
-            guna2Harga.BorderRadius = 10;
+            guna2Harga.Anchor = AnchorStyles.None;
             guna2Harga.CustomizableEdges = customizableEdges7;
             guna2Harga.DefaultText = "";
             guna2Harga.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -313,7 +318,7 @@
             guna2Harga.Font = new Font("Lufga", 15F);
             guna2Harga.ForeColor = Color.Black;
             guna2Harga.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2Harga.Location = new Point(238, 514);
+            guna2Harga.Location = new Point(238, 561);
             guna2Harga.Margin = new Padding(22, 34, 22, 34);
             guna2Harga.Name = "guna2Harga";
             guna2Harga.PasswordChar = '\0';
@@ -326,9 +331,9 @@
             // 
             // guna2ComboBoxKategori
             // 
+            guna2ComboBoxKategori.Anchor = AnchorStyles.None;
             guna2ComboBoxKategori.BackColor = Color.Transparent;
-            guna2ComboBoxKategori.BorderColor = Color.FromArgb(97, 191, 143);
-            guna2ComboBoxKategori.BorderRadius = 10;
+            guna2ComboBoxKategori.BorderColor = Color.FromArgb(213, 218, 223);
             guna2ComboBoxKategori.CustomizableEdges = customizableEdges9;
             guna2ComboBoxKategori.DrawMode = DrawMode.OwnerDrawFixed;
             guna2ComboBoxKategori.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -337,17 +342,16 @@
             guna2ComboBoxKategori.Font = new Font("Lufga", 15F);
             guna2ComboBoxKategori.ForeColor = Color.Black;
             guna2ComboBoxKategori.ItemHeight = 30;
-            guna2ComboBoxKategori.Location = new Point(823, 434);
+            guna2ComboBoxKategori.Location = new Point(238, 752);
             guna2ComboBoxKategori.Name = "guna2ComboBoxKategori";
             guna2ComboBoxKategori.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2ComboBoxKategori.Size = new Size(328, 36);
+            guna2ComboBoxKategori.Size = new Size(348, 36);
             guna2ComboBoxKategori.TabIndex = 72;
             guna2ComboBoxKategori.SelectedIndexChanged += guna2ComboBoxKategori_SelectedIndexChanged;
             // 
             // guna2Stok
             // 
-            guna2Stok.BorderColor = Color.FromArgb(97, 191, 143);
-            guna2Stok.BorderRadius = 10;
+            guna2Stok.Anchor = AnchorStyles.None;
             guna2Stok.CustomizableEdges = customizableEdges11;
             guna2Stok.DefaultText = "";
             guna2Stok.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -358,14 +362,14 @@
             guna2Stok.Font = new Font("Lufga", 15F);
             guna2Stok.ForeColor = Color.Black;
             guna2Stok.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2Stok.Location = new Point(823, 580);
+            guna2Stok.Location = new Point(238, 686);
             guna2Stok.Margin = new Padding(22, 32, 22, 32);
             guna2Stok.Name = "guna2Stok";
             guna2Stok.PasswordChar = '\0';
             guna2Stok.PlaceholderText = "";
             guna2Stok.SelectedText = "";
             guna2Stok.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Stok.Size = new Size(328, 38);
+            guna2Stok.Size = new Size(348, 36);
             guna2Stok.TabIndex = 73;
             // 
             // guna2Deskripsi
@@ -391,20 +395,22 @@
             // 
             // richTextDeskripsi
             // 
+            richTextDeskripsi.Anchor = AnchorStyles.None;
             richTextDeskripsi.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            richTextDeskripsi.Location = new Point(238, 596);
+            richTextDeskripsi.Location = new Point(837, 496);
             richTextDeskripsi.Name = "richTextDeskripsi";
-            richTextDeskripsi.Size = new Size(348, 215);
+            richTextDeskripsi.Size = new Size(400, 193);
             richTextDeskripsi.TabIndex = 76;
             richTextDeskripsi.Text = "";
             // 
             // button1Clear
             // 
+            button1Clear.Anchor = AnchorStyles.None;
             button1Clear.BackColor = Color.Red;
             button1Clear.FlatStyle = FlatStyle.Flat;
             button1Clear.Font = new Font("Lufga", 20.25F);
             button1Clear.ForeColor = Color.White;
-            button1Clear.Location = new Point(1027, 714);
+            button1Clear.Location = new Point(1123, 741);
             button1Clear.Margin = new Padding(2);
             button1Clear.Name = "button1Clear";
             button1Clear.Size = new Size(114, 59);
@@ -415,6 +421,7 @@
             // 
             // buttonRefresh
             // 
+            buttonRefresh.Anchor = AnchorStyles.None;
             buttonRefresh.BackColor = Color.Transparent;
             buttonRefresh.BackgroundImage = (Image)resources.GetObject("buttonRefresh.BackgroundImage");
             buttonRefresh.BackgroundImageLayout = ImageLayout.Zoom;
@@ -422,10 +429,10 @@
             buttonRefresh.FlatStyle = FlatStyle.Flat;
             buttonRefresh.Font = new Font("Lufga", 20.25F);
             buttonRefresh.ForeColor = Color.Transparent;
-            buttonRefresh.Location = new Point(1170, 434);
+            buttonRefresh.Location = new Point(612, 750);
             buttonRefresh.Margin = new Padding(2);
             buttonRefresh.Name = "buttonRefresh";
-            buttonRefresh.Size = new Size(37, 38);
+            buttonRefresh.Size = new Size(40, 36);
             buttonRefresh.TabIndex = 78;
             buttonRefresh.UseVisualStyleBackColor = false;
             buttonRefresh.Click += buttonRefresh_Click;

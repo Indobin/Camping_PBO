@@ -31,6 +31,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPemilik));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -44,7 +45,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPemilik));
             sidebardashboard = new Panel();
             buttonprofilepemilik = new Guna.UI2.WinForms.Guna2Button();
             buttonTransactionsPemilik = new Guna.UI2.WinForms.Guna2Button();
@@ -92,6 +92,7 @@
             // 
             buttonprofilepemilik.BackColor = Color.Transparent;
             buttonprofilepemilik.BorderRadius = 10;
+            buttonprofilepemilik.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttonprofilepemilik.CustomizableEdges = customizableEdges1;
             buttonprofilepemilik.DisabledState.BorderColor = Color.DarkGray;
             buttonprofilepemilik.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -99,18 +100,21 @@
             buttonprofilepemilik.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttonprofilepemilik.Dock = DockStyle.Top;
             buttonprofilepemilik.FillColor = Color.FromArgb(14, 115, 116);
+            buttonprofilepemilik.FocusedColor = Color.FromArgb(97, 191, 143);
             buttonprofilepemilik.Font = new Font("Lufga Medium", 13F);
-            buttonprofilepemilik.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonprofilepemilik.ForeColor = Color.White;
+            buttonprofilepemilik.HoverState.FillColor = Color.FromArgb(97, 191, 143);
             buttonprofilepemilik.Image = Properties.Resources.profile;
             buttonprofilepemilik.ImageAlign = HorizontalAlignment.Left;
             buttonprofilepemilik.ImageOffset = new Point(32, 0);
             buttonprofilepemilik.Location = new Point(0, 440);
             buttonprofilepemilik.Name = "buttonprofilepemilik";
             buttonprofilepemilik.Padding = new Padding(3, 2, 0, 0);
+            buttonprofilepemilik.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttonprofilepemilik.ShadowDecoration.CustomizableEdges = customizableEdges2;
             buttonprofilepemilik.Size = new Size(254, 62);
             buttonprofilepemilik.TabIndex = 8;
-            buttonprofilepemilik.Text = "          Profile";
+            buttonprofilepemilik.Text = "           Profile";
             buttonprofilepemilik.TextAlign = HorizontalAlignment.Left;
             buttonprofilepemilik.Click += buttonprofilepemilik_Click;
             // 
@@ -118,6 +122,7 @@
             // 
             buttonTransactionsPemilik.BackColor = Color.Transparent;
             buttonTransactionsPemilik.BorderRadius = 10;
+            buttonTransactionsPemilik.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttonTransactionsPemilik.CustomizableEdges = customizableEdges3;
             buttonTransactionsPemilik.DisabledState.BorderColor = Color.DarkGray;
             buttonTransactionsPemilik.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -125,13 +130,18 @@
             buttonTransactionsPemilik.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttonTransactionsPemilik.Dock = DockStyle.Top;
             buttonTransactionsPemilik.FillColor = Color.FromArgb(14, 115, 116);
+            buttonTransactionsPemilik.FocusedColor = Color.FromArgb(97, 191, 143);
             buttonTransactionsPemilik.Font = new Font("Lufga Medium", 13F);
-            buttonTransactionsPemilik.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonTransactionsPemilik.ForeColor = Color.White;
+            buttonTransactionsPemilik.HoverState.FillColor = Color.FromArgb(97, 191, 143);
+            buttonTransactionsPemilik.Image = (Image)resources.GetObject("buttonTransactionsPemilik.Image");
             buttonTransactionsPemilik.ImageAlign = HorizontalAlignment.Left;
-            buttonTransactionsPemilik.ImageOffset = new Point(32, 0);
+            buttonTransactionsPemilik.ImageOffset = new Point(30, 0);
+            buttonTransactionsPemilik.ImageSize = new Size(25, 25);
             buttonTransactionsPemilik.Location = new Point(0, 378);
             buttonTransactionsPemilik.Name = "buttonTransactionsPemilik";
-            buttonTransactionsPemilik.Padding = new Padding(3, 2, 0, 0);
+            buttonTransactionsPemilik.Padding = new Padding(0, 2, 0, 0);
+            buttonTransactionsPemilik.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttonTransactionsPemilik.ShadowDecoration.CustomizableEdges = customizableEdges4;
             buttonTransactionsPemilik.Size = new Size(254, 62);
             buttonTransactionsPemilik.TabIndex = 12;
@@ -143,6 +153,7 @@
             // 
             buttonrentersPemilik.BackColor = Color.Transparent;
             buttonrentersPemilik.BorderRadius = 10;
+            buttonrentersPemilik.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttonrentersPemilik.CustomizableEdges = customizableEdges5;
             buttonrentersPemilik.DisabledState.BorderColor = Color.DarkGray;
             buttonrentersPemilik.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -150,22 +161,28 @@
             buttonrentersPemilik.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttonrentersPemilik.Dock = DockStyle.Top;
             buttonrentersPemilik.FillColor = Color.FromArgb(14, 115, 116);
+            buttonrentersPemilik.FocusedColor = Color.FromArgb(97, 191, 143);
             buttonrentersPemilik.Font = new Font("Lufga Medium", 13F);
-            buttonrentersPemilik.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonrentersPemilik.ForeColor = Color.White;
+            buttonrentersPemilik.HoverState.FillColor = Color.FromArgb(97, 191, 143);
+            buttonrentersPemilik.Image = (Image)resources.GetObject("buttonrentersPemilik.Image");
             buttonrentersPemilik.ImageAlign = HorizontalAlignment.Left;
-            buttonrentersPemilik.ImageOffset = new Point(32, 0);
+            buttonrentersPemilik.ImageOffset = new Point(27, 0);
+            buttonrentersPemilik.ImageSize = new Size(30, 30);
             buttonrentersPemilik.Location = new Point(0, 316);
             buttonrentersPemilik.Name = "buttonrentersPemilik";
             buttonrentersPemilik.Padding = new Padding(3, 2, 0, 0);
+            buttonrentersPemilik.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttonrentersPemilik.ShadowDecoration.CustomizableEdges = customizableEdges6;
             buttonrentersPemilik.Size = new Size(254, 62);
             buttonrentersPemilik.TabIndex = 11;
-            buttonrentersPemilik.Text = "          Renters";
+            buttonrentersPemilik.Text = "        Renters";
             buttonrentersPemilik.TextAlign = HorizontalAlignment.Left;
             buttonrentersPemilik.Click += buttonrentersPemilik_Click;
             // 
             // buttonlogoutpemilik
             // 
+            buttonlogoutpemilik.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             buttonlogoutpemilik.BorderRadius = 10;
             buttonlogoutpemilik.CustomizableEdges = customizableEdges7;
             buttonlogoutpemilik.DisabledState.BorderColor = Color.DarkGray;
@@ -187,6 +204,7 @@
             // 
             buttoncategoriesPemilik.BackColor = Color.Transparent;
             buttoncategoriesPemilik.BorderRadius = 10;
+            buttoncategoriesPemilik.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttoncategoriesPemilik.CustomizableEdges = customizableEdges9;
             buttoncategoriesPemilik.DisabledState.BorderColor = Color.DarkGray;
             buttoncategoriesPemilik.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -194,14 +212,18 @@
             buttoncategoriesPemilik.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttoncategoriesPemilik.Dock = DockStyle.Top;
             buttoncategoriesPemilik.FillColor = Color.FromArgb(14, 115, 116);
+            buttoncategoriesPemilik.FocusedColor = Color.FromArgb(97, 191, 143);
             buttoncategoriesPemilik.Font = new Font("Lufga Medium", 13F);
-            buttoncategoriesPemilik.ForeColor = Color.FromArgb(193, 200, 207);
+            buttoncategoriesPemilik.ForeColor = Color.White;
+            buttoncategoriesPemilik.HoverState.FillColor = Color.FromArgb(97, 191, 143);
+            buttoncategoriesPemilik.Image = (Image)resources.GetObject("buttoncategoriesPemilik.Image");
             buttoncategoriesPemilik.ImageAlign = HorizontalAlignment.Left;
-            buttoncategoriesPemilik.ImageOffset = new Point(29, 0);
-            buttoncategoriesPemilik.ImageSize = new Size(23, 20);
+            buttoncategoriesPemilik.ImageOffset = new Point(32, 0);
+            buttoncategoriesPemilik.ImageSize = new Size(21, 21);
             buttoncategoriesPemilik.Location = new Point(0, 254);
             buttoncategoriesPemilik.Name = "buttoncategoriesPemilik";
-            buttoncategoriesPemilik.Padding = new Padding(3, 1, 0, 0);
+            buttoncategoriesPemilik.Padding = new Padding(2, 1, 0, 0);
+            buttoncategoriesPemilik.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttoncategoriesPemilik.ShadowDecoration.CustomizableEdges = customizableEdges10;
             buttoncategoriesPemilik.Size = new Size(254, 62);
             buttoncategoriesPemilik.TabIndex = 10;
@@ -213,6 +235,7 @@
             // 
             buttonstocksPemilik.BackColor = Color.Transparent;
             buttonstocksPemilik.BorderRadius = 10;
+            buttonstocksPemilik.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttonstocksPemilik.CustomizableEdges = customizableEdges11;
             buttonstocksPemilik.DisabledState.BorderColor = Color.DarkGray;
             buttonstocksPemilik.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -220,17 +243,22 @@
             buttonstocksPemilik.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttonstocksPemilik.Dock = DockStyle.Top;
             buttonstocksPemilik.FillColor = Color.FromArgb(14, 115, 116);
+            buttonstocksPemilik.FocusedColor = Color.FromArgb(97, 191, 143);
             buttonstocksPemilik.Font = new Font("Lufga Medium", 13F);
-            buttonstocksPemilik.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonstocksPemilik.ForeColor = Color.White;
+            buttonstocksPemilik.HoverState.FillColor = Color.FromArgb(97, 191, 143);
+            buttonstocksPemilik.Image = (Image)resources.GetObject("buttonstocksPemilik.Image");
             buttonstocksPemilik.ImageAlign = HorizontalAlignment.Left;
-            buttonstocksPemilik.ImageOffset = new Point(30, 0);
+            buttonstocksPemilik.ImageOffset = new Point(28, 0);
+            buttonstocksPemilik.ImageSize = new Size(28, 28);
             buttonstocksPemilik.Location = new Point(0, 192);
             buttonstocksPemilik.Name = "buttonstocksPemilik";
             buttonstocksPemilik.Padding = new Padding(3, 2, 0, 0);
+            buttonstocksPemilik.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttonstocksPemilik.ShadowDecoration.CustomizableEdges = customizableEdges12;
             buttonstocksPemilik.Size = new Size(254, 62);
             buttonstocksPemilik.TabIndex = 9;
-            buttonstocksPemilik.Text = "          Stocks";
+            buttonstocksPemilik.Text = "        Stocks";
             buttonstocksPemilik.TextAlign = HorizontalAlignment.Left;
             buttonstocksPemilik.Click += buttonstocksPemilik_Click;
             // 
@@ -239,21 +267,25 @@
             buttondashboardPemilik.BackColor = Color.Transparent;
             buttondashboardPemilik.BorderColor = Color.Transparent;
             buttondashboardPemilik.BorderRadius = 10;
+            buttondashboardPemilik.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttondashboardPemilik.CustomizableEdges = customizableEdges13;
             buttondashboardPemilik.DisabledState.BorderColor = Color.DarkGray;
             buttondashboardPemilik.DisabledState.CustomBorderColor = Color.DarkGray;
             buttondashboardPemilik.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             buttondashboardPemilik.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttondashboardPemilik.Dock = DockStyle.Top;
-            buttondashboardPemilik.FillColor = Color.FromArgb(97, 191, 143);
+            buttondashboardPemilik.FillColor = Color.FromArgb(14, 115, 116);
+            buttondashboardPemilik.FocusedColor = Color.FromArgb(97, 191, 143);
             buttondashboardPemilik.Font = new Font("Lufga Medium", 13F);
             buttondashboardPemilik.ForeColor = Color.White;
+            buttondashboardPemilik.HoverState.FillColor = Color.FromArgb(97, 191, 143);
             buttondashboardPemilik.Image = Properties.Resources.home;
             buttondashboardPemilik.ImageAlign = HorizontalAlignment.Left;
             buttondashboardPemilik.ImageOffset = new Point(32, -1);
             buttondashboardPemilik.Location = new Point(0, 130);
             buttondashboardPemilik.Name = "buttondashboardPemilik";
             buttondashboardPemilik.Padding = new Padding(3, 1, 0, 0);
+            buttondashboardPemilik.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttondashboardPemilik.ShadowDecoration.CustomizableEdges = customizableEdges14;
             buttondashboardPemilik.Size = new Size(254, 62);
             buttondashboardPemilik.TabIndex = 7;
@@ -312,55 +344,55 @@
             // 
             // ucDashboardPemilik1
             // 
-            ucDashboardPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ucDashboardPemilik1.Dock = DockStyle.Fill;
             ucDashboardPemilik1.Location = new Point(0, 0);
             ucDashboardPemilik1.Name = "ucDashboardPemilik1";
-            ucDashboardPemilik1.Size = new Size(1277, 864);
+            ucDashboardPemilik1.Size = new Size(1280, 864);
             ucDashboardPemilik1.TabIndex = 5;
             ucDashboardPemilik1.UserId = 0;
             // 
             // ucStockPemilik1
             // 
-            ucStockPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ucStockPemilik1.Dock = DockStyle.Fill;
             ucStockPemilik1.Location = new Point(0, 0);
             ucStockPemilik1.Name = "ucStockPemilik1";
-            ucStockPemilik1.Size = new Size(1277, 864);
+            ucStockPemilik1.Size = new Size(1280, 864);
             ucStockPemilik1.TabIndex = 4;
             ucStockPemilik1.UserId = 0;
             // 
             // ucCategoriesPemilik1
             // 
-            ucCategoriesPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ucCategoriesPemilik1.Dock = DockStyle.Fill;
             ucCategoriesPemilik1.Location = new Point(0, 0);
             ucCategoriesPemilik1.Name = "ucCategoriesPemilik1";
-            ucCategoriesPemilik1.Size = new Size(1277, 864);
+            ucCategoriesPemilik1.Size = new Size(1280, 864);
             ucCategoriesPemilik1.TabIndex = 3;
             ucCategoriesPemilik1.UserId = 0;
             // 
             // ucRentersPemilik1
             // 
-            ucRentersPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ucRentersPemilik1.Dock = DockStyle.Fill;
             ucRentersPemilik1.Location = new Point(0, 0);
             ucRentersPemilik1.Name = "ucRentersPemilik1";
-            ucRentersPemilik1.Size = new Size(1277, 864);
+            ucRentersPemilik1.Size = new Size(1280, 864);
             ucRentersPemilik1.TabIndex = 2;
             ucRentersPemilik1.UserId = 0;
             // 
             // ucTransactionsPemilik1
             // 
-            ucTransactionsPemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ucTransactionsPemilik1.Dock = DockStyle.Fill;
             ucTransactionsPemilik1.Location = new Point(0, 0);
             ucTransactionsPemilik1.Name = "ucTransactionsPemilik1";
-            ucTransactionsPemilik1.Size = new Size(1277, 864);
+            ucTransactionsPemilik1.Size = new Size(1280, 864);
             ucTransactionsPemilik1.TabIndex = 1;
             ucTransactionsPemilik1.UserId = 0;
             // 
             // ucProfilePemilik1
             // 
-            ucProfilePemilik1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ucProfilePemilik1.Dock = DockStyle.Fill;
             ucProfilePemilik1.Location = new Point(0, 0);
             ucProfilePemilik1.Name = "ucProfilePemilik1";
-            ucProfilePemilik1.Size = new Size(1277, 864);
+            ucProfilePemilik1.Size = new Size(1280, 864);
             ucProfilePemilik1.TabIndex = 0;
             ucProfilePemilik1.UserId = 0;
             // 

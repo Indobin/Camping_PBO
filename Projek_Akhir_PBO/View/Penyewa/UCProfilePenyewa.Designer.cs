@@ -66,17 +66,18 @@
             // 
             juduldashboard.AutoSize = true;
             juduldashboard.BackColor = Color.Transparent;
-            juduldashboard.Font = new Font("Microsoft Sans Serif", 29.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            juduldashboard.Font = new Font("Lufga", 30F, FontStyle.Bold);
             juduldashboard.ForeColor = Color.FromArgb(91, 80, 80);
             juduldashboard.ImageAlign = ContentAlignment.MiddleLeft;
             juduldashboard.Location = new Point(34, 41);
             juduldashboard.Name = "juduldashboard";
-            juduldashboard.Size = new Size(141, 46);
+            juduldashboard.Size = new Size(145, 52);
             juduldashboard.TabIndex = 20;
             juduldashboard.Text = "Profile";
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = Properties.Resources.icon_profil_removebg_preview;
             pictureBox1.Location = new Point(502, 159);
             pictureBox1.Name = "pictureBox1";
@@ -88,34 +89,39 @@
             // 
             // textBoxUsername
             // 
+            textBoxUsername.Anchor = AnchorStyles.None;
             textBoxUsername.BackColor = Color.White;
             textBoxUsername.BorderStyle = BorderStyle.FixedSingle;
-            textBoxUsername.Font = new Font("Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxUsername.Font = new Font("Lufga", 17F);
+            textBoxUsername.ForeColor = Color.Black;
             textBoxUsername.Location = new Point(489, 470);
-            textBoxUsername.Margin = new Padding(0);
+            textBoxUsername.Multiline = true;
             textBoxUsername.Name = "textBoxUsername";
-            textBoxUsername.Size = new Size(493, 43);
+            textBoxUsername.Size = new Size(493, 40);
             textBoxUsername.TabIndex = 47;
             textBoxUsername.TextChanged += textBoxUsername_TextChanged;
             // 
             // textBoxNoHP
             // 
+            textBoxNoHP.Anchor = AnchorStyles.None;
             textBoxNoHP.BackColor = Color.White;
             textBoxNoHP.BorderStyle = BorderStyle.FixedSingle;
-            textBoxNoHP.Font = new Font("Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxNoHP.Font = new Font("Lufga", 17F);
+            textBoxNoHP.ForeColor = Color.Black;
             textBoxNoHP.Location = new Point(489, 550);
             textBoxNoHP.Multiline = true;
             textBoxNoHP.Name = "textBoxNoHP";
-            textBoxNoHP.Size = new Size(493, 43);
+            textBoxNoHP.Size = new Size(493, 40);
             textBoxNoHP.TabIndex = 48;
             textBoxNoHP.Text = "\r\n";
             textBoxNoHP.TextChanged += textBox2_TextChanged;
             // 
             // ButtonEdit
             // 
+            ButtonEdit.Anchor = AnchorStyles.None;
             ButtonEdit.BackColor = Color.RoyalBlue;
             ButtonEdit.FlatStyle = FlatStyle.Flat;
-            ButtonEdit.Font = new Font("Lufga", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonEdit.Font = new Font("Lufga", 15F);
             ButtonEdit.ForeColor = Color.White;
             ButtonEdit.Location = new Point(502, 736);
             ButtonEdit.Name = "ButtonEdit";
@@ -127,8 +133,10 @@
             // 
             // NamaPenyewa
             // 
-            NamaPenyewa.Font = new Font("Lufga", 14.9999981F);
-            NamaPenyewa.Location = new Point(307, 480);
+            NamaPenyewa.Anchor = AnchorStyles.None;
+            NamaPenyewa.Font = new Font("Lufga Medium", 15F);
+            NamaPenyewa.ForeColor = Color.FromArgb(91, 80, 80);
+            NamaPenyewa.Location = new Point(307, 477);
             NamaPenyewa.Name = "NamaPenyewa";
             NamaPenyewa.Size = new Size(176, 28);
             NamaPenyewa.TabIndex = 50;
@@ -137,8 +145,10 @@
             // 
             // NoHP
             // 
-            NoHP.Font = new Font("Lufga", 14.9999981F);
-            NoHP.Location = new Point(310, 555);
+            NoHP.Anchor = AnchorStyles.None;
+            NoHP.Font = new Font("Lufga Medium", 15F);
+            NoHP.ForeColor = Color.FromArgb(91, 80, 80);
+            NoHP.Location = new Point(307, 557);
             NoHP.Name = "NoHP";
             NoHP.Size = new Size(173, 28);
             NoHP.TabIndex = 51;
@@ -146,11 +156,12 @@
             // 
             // ButtonSave
             // 
+            ButtonSave.Anchor = AnchorStyles.None;
             ButtonSave.BackColor = Color.FromArgb(97, 191, 143);
             ButtonSave.FlatStyle = FlatStyle.Flat;
-            ButtonSave.Font = new Font("Lufga", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonSave.Font = new Font("Lufga", 15F);
             ButtonSave.ForeColor = Color.White;
-            ButtonSave.Location = new Point(691, 736);
+            ButtonSave.Location = new Point(716, 736);
             ButtonSave.Name = "ButtonSave";
             ButtonSave.Size = new Size(114, 59);
             ButtonSave.TabIndex = 52;
@@ -160,8 +171,10 @@
             // 
             // AlamatPenyewa
             // 
-            AlamatPenyewa.Font = new Font("Lufga", 14.9999981F);
-            AlamatPenyewa.Location = new Point(310, 639);
+            AlamatPenyewa.Anchor = AnchorStyles.None;
+            AlamatPenyewa.Font = new Font("Lufga Medium", 15F);
+            AlamatPenyewa.ForeColor = Color.FromArgb(91, 80, 80);
+            AlamatPenyewa.Location = new Point(307, 634);
             AlamatPenyewa.Name = "AlamatPenyewa";
             AlamatPenyewa.Size = new Size(173, 28);
             AlamatPenyewa.TabIndex = 54;
@@ -169,17 +182,20 @@
             // 
             // textBoxAlamat
             // 
+            textBoxAlamat.Anchor = AnchorStyles.None;
             textBoxAlamat.BackColor = Color.White;
             textBoxAlamat.BorderStyle = BorderStyle.FixedSingle;
-            textBoxAlamat.Font = new Font("Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxAlamat.Location = new Point(489, 629);
+            textBoxAlamat.Font = new Font("Lufga", 17F);
+            textBoxAlamat.ForeColor = Color.Black;
+            textBoxAlamat.Location = new Point(489, 628);
             textBoxAlamat.Multiline = true;
             textBoxAlamat.Name = "textBoxAlamat";
-            textBoxAlamat.Size = new Size(493, 43);
+            textBoxAlamat.Size = new Size(493, 40);
             textBoxAlamat.TabIndex = 55;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Location = new Point(657, 436);
             label1.Name = "label1";

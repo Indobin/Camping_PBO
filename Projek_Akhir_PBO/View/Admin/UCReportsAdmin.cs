@@ -27,7 +27,7 @@ namespace Projek_Akhir_PBO.View.Admin
             {
                 _userId = value;
                 laporanController.UserId = _userId;
-             
+
             }
         }
         LaporanController laporanController;
@@ -97,7 +97,7 @@ namespace Projek_Akhir_PBO.View.Admin
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+
         }
 
         private void button1Clear_Click(object sender, EventArgs e)
@@ -129,10 +129,11 @@ namespace Projek_Akhir_PBO.View.Admin
                 }
                 guna2TextBox1.Text = row.Cells["Peminjaman"].Value.ToString();
 
-            
+
 
             }
         }
+
     }
 
 }

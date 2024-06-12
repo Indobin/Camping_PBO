@@ -90,7 +90,7 @@
             // 
             // buttonlogoutadm
             // 
-            buttonlogoutadm.Anchor = AnchorStyles.Bottom;
+            buttonlogoutadm.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             buttonlogoutadm.BorderRadius = 10;
             buttonlogoutadm.CustomizableEdges = customizableEdges1;
             buttonlogoutadm.DisabledState.BorderColor = Color.DarkGray;
@@ -111,22 +111,25 @@
             // buttonprofiladmin
             // 
             buttonprofiladmin.BackColor = Color.Transparent;
+            buttonprofiladmin.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttonprofiladmin.CustomizableEdges = customizableEdges3;
             buttonprofiladmin.DisabledState.BorderColor = Color.DarkGray;
             buttonprofiladmin.DisabledState.CustomBorderColor = Color.DarkGray;
-            buttonprofiladmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonprofiladmin.DisabledState.FillColor = Color.FromArgb(97, 191, 143);
             buttonprofiladmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttonprofiladmin.Dock = DockStyle.Top;
             buttonprofiladmin.FillColor = Color.FromArgb(14, 115, 116);
             buttonprofiladmin.Font = new Font("Lufga Medium", 13F);
-            buttonprofiladmin.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonprofiladmin.ForeColor = Color.White;
+            buttonprofiladmin.HoverState.FillColor = Color.FromArgb(97, 191, 143);
             buttonprofiladmin.Image = Properties.Resources.profile;
             buttonprofiladmin.ImageAlign = HorizontalAlignment.Left;
             buttonprofiladmin.ImageOffset = new Point(35, 0);
-            buttonprofiladmin.ImageSize = new Size(25, 25);
             buttonprofiladmin.Location = new Point(0, 378);
             buttonprofiladmin.Name = "buttonprofiladmin";
-            buttonprofiladmin.Padding = new Padding(0, 3, 0, 0);
+            buttonprofiladmin.Padding = new Padding(5, 3, 0, 0);
+            buttonprofiladmin.PressedColor = Color.FromArgb(97, 191, 143);
+            buttonprofiladmin.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttonprofiladmin.ShadowDecoration.CustomizableEdges = customizableEdges4;
             buttonprofiladmin.Size = new Size(254, 62);
             buttonprofiladmin.TabIndex = 8;
@@ -137,21 +140,26 @@
             // buttonlaporan
             // 
             buttonlaporan.BackColor = Color.Transparent;
+            buttonlaporan.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttonlaporan.CustomizableEdges = customizableEdges5;
             buttonlaporan.DisabledState.BorderColor = Color.DarkGray;
             buttonlaporan.DisabledState.CustomBorderColor = Color.DarkGray;
-            buttonlaporan.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonlaporan.DisabledState.FillColor = Color.FromArgb(97, 191, 143);
             buttonlaporan.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttonlaporan.Dock = DockStyle.Top;
             buttonlaporan.FillColor = Color.FromArgb(14, 115, 116);
+            buttonlaporan.FocusedColor = Color.FromArgb(97, 191, 143);
             buttonlaporan.Font = new Font("Lufga Medium", 13F);
-            buttonlaporan.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonlaporan.ForeColor = Color.White;
+            buttonlaporan.HoverState.FillColor = Color.FromArgb(97, 191, 143);
+            buttonlaporan.Image = (Image)resources.GetObject("buttonlaporan.Image");
             buttonlaporan.ImageAlign = HorizontalAlignment.Left;
-            buttonlaporan.ImageOffset = new Point(35, 0);
+            buttonlaporan.ImageOffset = new Point(30, 0);
             buttonlaporan.ImageSize = new Size(25, 25);
             buttonlaporan.Location = new Point(0, 316);
             buttonlaporan.Name = "buttonlaporan";
-            buttonlaporan.Padding = new Padding(0, 3, 0, 0);
+            buttonlaporan.PressedColor = Color.FromArgb(97, 191, 143);
+            buttonlaporan.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttonlaporan.ShadowDecoration.CustomizableEdges = customizableEdges6;
             buttonlaporan.Size = new Size(254, 62);
             buttonlaporan.TabIndex = 10;
@@ -162,25 +170,30 @@
             // buttonowners
             // 
             buttonowners.BackColor = Color.Transparent;
+            buttonowners.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttonowners.CustomizableEdges = customizableEdges7;
             buttonowners.DisabledState.BorderColor = Color.DarkGray;
             buttonowners.DisabledState.CustomBorderColor = Color.DarkGray;
-            buttonowners.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonowners.DisabledState.FillColor = Color.FromArgb(97, 191, 143);
             buttonowners.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttonowners.Dock = DockStyle.Top;
             buttonowners.FillColor = Color.FromArgb(14, 115, 116);
             buttonowners.Font = new Font("Lufga Medium", 13F);
-            buttonowners.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonowners.ForeColor = Color.White;
+            buttonowners.HoverState.FillColor = Color.FromArgb(97, 191, 143);
+            buttonowners.Image = (Image)resources.GetObject("buttonowners.Image");
             buttonowners.ImageAlign = HorizontalAlignment.Left;
-            buttonowners.ImageOffset = new Point(35, 0);
-            buttonowners.ImageSize = new Size(25, 25);
+            buttonowners.ImageOffset = new Point(27, -1);
+            buttonowners.ImageSize = new Size(30, 30);
             buttonowners.Location = new Point(0, 192);
             buttonowners.Name = "buttonowners";
             buttonowners.Padding = new Padding(0, 3, 0, 0);
+            buttonowners.PressedColor = Color.FromArgb(97, 191, 143);
+            buttonowners.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttonowners.ShadowDecoration.CustomizableEdges = customizableEdges8;
             buttonowners.Size = new Size(254, 62);
             buttonowners.TabIndex = 9;
-            buttonowners.Text = "          Owners";
+            buttonowners.Text = "         Owners";
             buttonowners.TextAlign = HorizontalAlignment.Left;
             buttonowners.Click += buttonowners_Click;
             // 
@@ -189,21 +202,25 @@
             buttondashboardadmin.BackColor = Color.Transparent;
             buttondashboardadmin.BorderColor = Color.Transparent;
             buttondashboardadmin.BorderRadius = 10;
+            buttondashboardadmin.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttondashboardadmin.CustomizableEdges = customizableEdges9;
             buttondashboardadmin.DisabledState.BorderColor = Color.DarkGray;
             buttondashboardadmin.DisabledState.CustomBorderColor = Color.DarkGray;
-            buttondashboardadmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttondashboardadmin.DisabledState.FillColor = Color.FromArgb(97, 191, 143);
             buttondashboardadmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttondashboardadmin.Dock = DockStyle.Top;
-            buttondashboardadmin.FillColor = Color.FromArgb(97, 191, 143);
+            buttondashboardadmin.FillColor = Color.FromArgb(14, 115, 116);
             buttondashboardadmin.Font = new Font("Lufga Medium", 13F);
             buttondashboardadmin.ForeColor = Color.White;
+            buttondashboardadmin.HoverState.FillColor = Color.FromArgb(97, 191, 143);
             buttondashboardadmin.Image = Properties.Resources.home;
             buttondashboardadmin.ImageAlign = HorizontalAlignment.Left;
             buttondashboardadmin.ImageOffset = new Point(32, -1);
             buttondashboardadmin.Location = new Point(0, 130);
             buttondashboardadmin.Name = "buttondashboardadmin";
             buttondashboardadmin.Padding = new Padding(3, 1, 0, 0);
+            buttondashboardadmin.PressedColor = Color.FromArgb(97, 191, 143);
+            buttondashboardadmin.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttondashboardadmin.ShadowDecoration.CustomizableEdges = customizableEdges10;
             buttondashboardadmin.Size = new Size(254, 62);
             buttondashboardadmin.TabIndex = 7;
@@ -244,25 +261,30 @@
             // buttonrenters
             // 
             buttonrenters.BackColor = Color.Transparent;
+            buttonrenters.CheckedState.FillColor = Color.FromArgb(97, 191, 143);
             buttonrenters.CustomizableEdges = customizableEdges13;
             buttonrenters.DisabledState.BorderColor = Color.DarkGray;
             buttonrenters.DisabledState.CustomBorderColor = Color.DarkGray;
-            buttonrenters.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonrenters.DisabledState.FillColor = Color.FromArgb(97, 191, 143);
             buttonrenters.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             buttonrenters.Dock = DockStyle.Top;
             buttonrenters.FillColor = Color.FromArgb(14, 115, 116);
             buttonrenters.Font = new Font("Lufga Medium", 13F);
-            buttonrenters.ForeColor = Color.FromArgb(193, 200, 207);
+            buttonrenters.ForeColor = Color.White;
+            buttonrenters.HoverState.FillColor = Color.FromArgb(97, 191, 143);
+            buttonrenters.Image = (Image)resources.GetObject("buttonrenters.Image");
             buttonrenters.ImageAlign = HorizontalAlignment.Left;
-            buttonrenters.ImageOffset = new Point(35, 0);
-            buttonrenters.ImageSize = new Size(25, 25);
+            buttonrenters.ImageOffset = new Point(27, 0);
+            buttonrenters.ImageSize = new Size(30, 30);
             buttonrenters.Location = new Point(0, 254);
             buttonrenters.Name = "buttonrenters";
             buttonrenters.Padding = new Padding(0, 3, 0, 0);
+            buttonrenters.PressedColor = Color.FromArgb(97, 191, 143);
+            buttonrenters.ShadowDecoration.Color = Color.FromArgb(97, 191, 143);
             buttonrenters.ShadowDecoration.CustomizableEdges = customizableEdges14;
             buttonrenters.Size = new Size(254, 62);
             buttonrenters.TabIndex = 11;
-            buttonrenters.Text = "          Renters";
+            buttonrenters.Text = "         Renters";
             buttonrenters.TextAlign = HorizontalAlignment.Left;
             buttonrenters.Click += buttonrenters_Click;
             // 
@@ -319,6 +341,7 @@
             // 
             ucOwner1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ucOwner1.Location = new Point(0, 0);
+            ucOwner1.Margin = new Padding(4, 3, 4, 3);
             ucOwner1.Name = "ucOwner1";
             ucOwner1.Size = new Size(1277, 864);
             ucOwner1.TabIndex = 41;
