@@ -27,10 +27,10 @@ namespace Projek_Akhir_PBO.View.Pemilik
             {
                 _userId = value;
                 stockController.UserId = _userId;
-              
+
             }
         }
-       
+
         private int idBarangSelected = -1;
         StockController stockController;
         public UCStockPemilik()
@@ -135,7 +135,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
         {
 
         }
-        
+
 
         private void datakategori()
         {
@@ -143,24 +143,25 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
             using (var db = new DBConnection())
             {
-                try{ 
+                try
+                {
                     db.Open();
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                     {
                         cmd.Parameters.AddWithValue("@userId", _userId);
-                            using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                        using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
                             {
-                                while (reader.Read())
+                                guna2ComboBoxKategori.Items.Add(new ComboBoxItem
                                 {
-                                    guna2ComboBoxKategori.Items.Add(new ComboBoxItem
-                                    {
-                                        Text = reader["namakategori"].ToString(),
-                                        Value = (int)reader["id_kategori"]
-                                    });
-                                }
+                                    Text = reader["namakategori"].ToString(),
+                                    Value = (int)reader["id_kategori"]
+                                });
                             }
                         }
                     }
+                }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
@@ -265,7 +266,14 @@ namespace Projek_Akhir_PBO.View.Pemilik
                 }
                 richTextDeskripsi.Text = row.Cells[6].Value.ToString();
             }
-           
+
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            guna2ComboBoxKategori.Items.Clear();
+            datakategori();
+            DataAlat();
         }
     }
 }
