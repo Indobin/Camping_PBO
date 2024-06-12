@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ using Npgsql;
 using Projek_Akhir_PBO.Controller.Admin;
 using Projek_Akhir_PBO.Controller.Pemilik;
 using Projek_Akhir_PBO.Models.Admin;
+using Projek_Akhir_PBO.Tools;
 namespace Projek_Akhir_PBO.View.Admin
 {
     public partial class UCProfileAdmin : UserControl
@@ -24,8 +26,7 @@ namespace Projek_Akhir_PBO.View.Admin
             set
             {
                 _userId = value;
-                //profileControllerA.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
+              
             }
         }
 
@@ -36,9 +37,7 @@ namespace Projek_Akhir_PBO.View.Admin
             InitializeComponent();
             disabledProfile();
         }
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
-
+       
         public void disabledProfile()
         {
             guna2nama.Enabled = false;
@@ -47,7 +46,6 @@ namespace Projek_Akhir_PBO.View.Admin
 
         private void button2edit_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show($"User ID: {_userId}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             guna2nama.Enabled = true;
             guna2Nohp.Enabled = true;
 
@@ -56,10 +54,10 @@ namespace Projek_Akhir_PBO.View.Admin
         private void UCProfileAdmin_Load(object sender, EventArgs e)
         {
             string selectQuery = "SELECT nama_admin, no_telepon_admin FROM admin WHERE id_admin = @userId";
-            using (var conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (var cmd = new NpgsqlCommand(selectQuery, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(selectQuery, db.Connection))
                 {
                     cmd.Parameters.AddWithValue("@userId", _userId);
 
@@ -101,10 +99,10 @@ namespace Projek_Akhir_PBO.View.Admin
 
             try
             {
-                using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+                using (var db = new DBConnection())
                 {
-                    conn.Open();
-                    using (NpgsqlCommand checkCmd = new NpgsqlCommand(cekQuery, conn))
+                    db.Open();
+                    using (NpgsqlCommand checkCmd = new NpgsqlCommand(cekQuery, db.Connection))
                     {
                         checkCmd.Parameters.AddWithValue("@nama_admin", guna2nama.Text.Trim());
                         checkCmd.Parameters.AddWithValue("@userId", UserId);
@@ -117,7 +115,7 @@ namespace Projek_Akhir_PBO.View.Admin
                             return;
                         }
                     }
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(updateQuery, conn))
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(updateQuery, db.Connection))
                     {
                         cmd.Parameters.AddWithValue("@nama_admin", guna2nama.Text.Trim());
                         cmd.Parameters.AddWithValue("@userId", UserId);

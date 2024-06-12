@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using Projek_Akhir_PBO.Models.Admin;
 using Projek_Akhir_PBO.Models.Penyewa;
+using Projek_Akhir_PBO.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,6 @@ namespace Projek_Akhir_PBO.Controller.Admin
     {
         private int _userId;
         public List<LaporanContext> Laporan = new List<LaporanContext>();
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres; Password=12345678; Database=GO-CAMP; CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
 
 
         public int UserId
@@ -25,12 +24,12 @@ namespace Projek_Akhir_PBO.Controller.Admin
         }
         public void Read()
         {
-            string query = @"select * from penyewa p join laporan l on l.id_penyewa=p.id_penyewa join peminjaman pem on pem.id_peminjaman = l.id_peminjaman"; 
+            string query = @"select * from penyewa p join laporan l on l.id_penyewa=p.id_penyewa join peminjaman pem on pem.id_peminjaman = l.id_peminjaman";
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     NpgsqlDataReader reader = cmd.ExecuteReader();
                     Laporan.Clear();
@@ -64,10 +63,10 @@ namespace Projek_Akhir_PBO.Controller.Admin
         {
             string query = @"UPDATE laporan SET isi_tanggapan = @isi_tanggapan WHERE id_laporan = @id_laporan";
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     cmd.Parameters.AddWithValue("@isi_tanggapan", reports.isi_tanggapan);
                     

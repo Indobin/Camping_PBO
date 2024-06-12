@@ -22,13 +22,10 @@ namespace Projek_Akhir_PBO.View.Pemilik
             {
                 _userId = value;
                 datatransaksiController.UserId = _userId;
-                LoadDataGrid();  // Panggil LoadDataGrid setelah UserId diatur
-                //kategoriController.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
+                LoadDataGrid();  
             }
         }
 
-        int index;
         private int idDataTransaksiSelected = -1;
         DataTransaksiContoller datatransaksiController;
 

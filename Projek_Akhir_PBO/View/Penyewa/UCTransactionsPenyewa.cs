@@ -11,14 +11,14 @@ using System.Windows.Forms;
 using Npgsql;
 using Projek_Akhir_PBO.Controller.Pemilik;
 using Projek_Akhir_PBO.Models.Pemilik;
+using Projek_Akhir_PBO.Tools;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Projek_Akhir_PBO.View.Penyewa
 {
     public partial class UCTransactionsPenyewa : UserControl
     {
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
-
+       
         private int _userId;
 
         public int UserId
@@ -27,8 +27,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
             set
             {
                 _userId = value;
-                //kategoriController.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
+              
             }
         }
         public UCTransactionsPenyewa()
@@ -101,13 +100,12 @@ namespace Projek_Akhir_PBO.View.Penyewa
 
         private void LoadProducts()
         {
-            //string query = "select ac.id_alatcamping, ac.namaalatcamping, ac.jumlahalatcamping, kac.namakategori, ac.hargaalatcamping from alat_camping ac join kategori_alat_camping kac on (ac.id_kategori = kac.id_kategori) where ac.dihentikan = false and ac.jumlahalatcamping > 0";
+            
             string query = "select * from alat_camping ac join kategori_alat_camping kac on (ac.id_kategori=kac.id_kategori)";
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     using (NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd))
                     {
@@ -149,14 +147,12 @@ namespace Projek_Akhir_PBO.View.Penyewa
                 return;
             }
             InsertTransaction();
-            //string JenisEwallet = comboBoxEWallet.SelectedItem.ToString();
-            //string rent  = guna2TextBoxRent.Text;
-            //string ewalletnomor = boxNoEWallet.Text;
-            //InsertTransaction(JenisEwallet);
+            
         }
 
         public void InsertTransaction()
         {
+            string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
             using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
             {
                 conn.Open();
@@ -166,7 +162,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
                     {
                         DialogResult result = MessageBox.Show("Do you want to add this item to the transaction?", "Confirmation",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        // Insert into pembayaran_ewallet
+                     
                         if (result == DialogResult.Yes)
                         {
                             string insertPembayaranEwalletQuery = @"
@@ -182,7 +178,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
                                 idEwallet = (int)cmd.ExecuteScalar();
                             }
 
-                            // Insert into peminjaman
+                            
                             string insertPeminjamanQuery = @"
                         INSERT INTO peminjaman (id_penyewa, tanggal_peminjaman, id_ewallet, status_pinjam)
                         VALUES (@UserId, @TanggalPinjam, @IdEwallet, @Status)
@@ -198,7 +194,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
                                 idPeminjaman = (int)cmd.ExecuteScalar();
                             }
 
-                            // Insert into detail_peminjaman
+
                             string insertDetailPeminjamanQuery = @"
                         INSERT INTO detail_transaksi (id_peminjaman, id_alatcamping, lama_sewa, quantity)
                         VALUES (@IdPeminjaman, @IdAlatCamping, @LamaSewa, @qty)";

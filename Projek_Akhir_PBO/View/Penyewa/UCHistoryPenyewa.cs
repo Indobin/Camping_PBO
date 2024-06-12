@@ -67,10 +67,9 @@ namespace Projek_Akhir_PBO.View.Penyewa
                 dataGridView2.Visible = true;
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 idhistorySelected = Convert.ToInt32(row.Cells[0].Value);
-                //labelStatus.Text = row.Cells[2].Value.ToString();
+         
                 var details = historyController.GetDetailPeminjaman(idhistorySelected);
-                //listViewDetails.Items.Clear();
-                //guna2Panel1.Controls.Clear();
+         
                 dataGridView2.Controls.Clear();
                 DataTable table2 = new DataTable();
 

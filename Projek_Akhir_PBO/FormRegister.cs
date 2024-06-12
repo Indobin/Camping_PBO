@@ -59,7 +59,7 @@ namespace Projek_Akhir_PBO
 
             if (password == konfirmasi)
             {
-                using (NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Username=postgres;Password=tiarahmadina;Database=Camping"))
+                using (NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Username=postgres;Password=321;Database=Camping"))
                 {
                     if (selectedTable == "Penyewa")
                     {

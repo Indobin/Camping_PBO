@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 using Projek_Akhir_PBO.Controller.Pemilik;
+using Projek_Akhir_PBO.Tools;
 
 namespace Projek_Akhir_PBO.View.Penyewa
 {
     public partial class UCHomePenyewa : UserControl
     {
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
-
+        
         private int _userId;
 
         public int UserId
@@ -24,8 +24,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
             set
             {
                 _userId = value;
-                //kategoriController.UserId = _userId;
-                // Load data or perform operations based on the new UserId value
+               
             }
         }
         public UCHomePenyewa()
@@ -55,13 +54,12 @@ namespace Projek_Akhir_PBO.View.Penyewa
 
         private void LoadProducts()
         {
-            //string query = "select ac.id_alatcamping, ac.namaalatcamping, ac.jumlahalatcamping, kac.namakategori, ac.hargaalatcamping from alat_camping ac join kategori_alat_camping kac on (ac.id_kategori = kac.id_kategori) where ac.dihentikan = false and ac.jumlahalatcamping > 0";
+            
             string query = "select * from alat_camping ac join kategori_alat_camping kac on (ac.id_kategori=kac.id_kategori)";
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     using (NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd))
                     {

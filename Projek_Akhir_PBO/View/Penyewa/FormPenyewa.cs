@@ -14,7 +14,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
 
     public partial class FormPenyewa : Form
     {
-        FormLogin formloggin;
+      
         private int _userId;
         public FormPenyewa(int userId)
         {

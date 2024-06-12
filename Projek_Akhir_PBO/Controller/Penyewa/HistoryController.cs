@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Npgsql;
 using Projek_Akhir_PBO.Models.Pemilik;
 using Projek_Akhir_PBO.Models.Penyewa;
+using Projek_Akhir_PBO.Tools;
 using static Projek_Akhir_PBO.Models.Penyewa.HistoryDetailPy;
 
 namespace Projek_Akhir_PBO.Controller.Penyewa
@@ -14,9 +15,7 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
     {
         private int _userId;
         public List<HistoryPy> ListHistory = new List<HistoryPy>();
-        //string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
-        string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
-
+       
         public int UserId
         {
             get { return _userId; }
@@ -37,10 +36,10 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
         GROUP BY pem.id_peminjaman,
                     pem.tanggal_peminjaman, pem.status_pinjam, pe.nomor_ewallet,
                     peng.tanggalpengembalian, dt.lama_sewa, peng.status_kembali;");
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand data = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand data = new NpgsqlCommand(query, db.Connection))
                 {
                     data.Parameters.AddWithValue("@userId", _userId);
                     NpgsqlDataReader reader = data.ExecuteReader();
@@ -89,10 +88,10 @@ namespace Projek_Akhir_PBO.Controller.Penyewa
 
             List<DetailPeminjaman> details = new List<DetailPeminjaman>();
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
                     cmd.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
                     NpgsqlDataReader reader = cmd.ExecuteReader();
