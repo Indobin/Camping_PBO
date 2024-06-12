@@ -61,12 +61,12 @@
             // 
             juduldashboard.AutoSize = true;
             juduldashboard.BackColor = Color.Transparent;
-            juduldashboard.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            juduldashboard.Font = new Font("Lufga", 30F, FontStyle.Bold);
             juduldashboard.ForeColor = Color.FromArgb(91, 80, 80);
             juduldashboard.ImageAlign = ContentAlignment.MiddleLeft;
             juduldashboard.Location = new Point(34, 41);
             juduldashboard.Name = "juduldashboard";
-            juduldashboard.Size = new Size(261, 46);
+            juduldashboard.Size = new Size(267, 52);
             juduldashboard.TabIndex = 20;
             juduldashboard.Text = "Transactions";
             // 
@@ -75,16 +75,17 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CausesValidation = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(34, 218);
+            dataGridView1.Location = new Point(34, 197);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(1205, 206);
+            dataGridView1.Size = new Size(1205, 285);
             dataGridView1.TabIndex = 46;
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -94,42 +95,45 @@
             dataGridView2.AllowUserToAddRows = false;
             dataGridView2.AllowUserToDeleteRows = false;
             dataGridView2.AllowUserToResizeRows = false;
+            dataGridView2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView2.BorderStyle = BorderStyle.Fixed3D;
+            dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.CausesValidation = false;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(34, 556);
+            dataGridView2.Location = new Point(34, 550);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.ReadOnly = true;
             dataGridView2.RowHeadersVisible = false;
-            dataGridView2.Size = new Size(1205, 206);
+            dataGridView2.Size = new Size(1205, 285);
             dataGridView2.TabIndex = 47;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Lufga SemiBold", 20.25F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(91, 80, 80);
             label1.ImageAlign = ContentAlignment.MiddleLeft;
             label1.Location = new Point(34, 149);
             label1.Name = "label1";
-            label1.Size = new Size(301, 46);
+            label1.Size = new Size(209, 35);
             label1.TabIndex = 48;
             label1.Text = "Data Transaksi";
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Lufga SemiBold", 20.25F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(91, 80, 80);
             label2.ImageAlign = ContentAlignment.MiddleLeft;
-            label2.Location = new Point(34, 483);
+            label2.Location = new Point(34, 502);
             label2.Name = "label2";
-            label2.Size = new Size(333, 46);
+            label2.Size = new Size(228, 35);
             label2.TabIndex = 49;
             label2.Text = "Detail Transaksi:";
             // 

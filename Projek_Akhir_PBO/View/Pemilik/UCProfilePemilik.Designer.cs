@@ -68,53 +68,57 @@
             // 
             juduldashboard.AutoSize = true;
             juduldashboard.BackColor = Color.Transparent;
-            juduldashboard.Font = new Font("FSP DEMO - Lufga", 29.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            juduldashboard.Font = new Font("Lufga", 30F, FontStyle.Bold);
             juduldashboard.ForeColor = Color.FromArgb(91, 80, 80);
             juduldashboard.ImageAlign = ContentAlignment.MiddleLeft;
             juduldashboard.Location = new Point(34, 41);
             juduldashboard.Name = "juduldashboard";
-            juduldashboard.Size = new Size(144, 52);
+            juduldashboard.Size = new Size(145, 52);
             juduldashboard.TabIndex = 20;
             juduldashboard.Text = "Profile";
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Font = new Font("FSP DEMO - Lufga", 14.9999981F);
-            label2.Location = new Point(374, 506);
+            label2.Font = new Font("Microsoft Sans Serif", 14.9999981F);
+            label2.Location = new Point(346, 504);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(146, 26);
+            label2.Size = new Size(131, 25);
             label2.TabIndex = 64;
             label2.Text = "Nama Pemilik";
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Font = new Font("FSP DEMO - Lufga", 14.9999981F);
-            label1.Location = new Point(374, 580);
+            label1.Font = new Font("Microsoft Sans Serif", 14.9999981F);
+            label1.Location = new Point(346, 570);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(146, 26);
+            label1.Size = new Size(134, 25);
             label1.TabIndex = 65;
             label1.Text = "No Hp Pemilik";
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Font = new Font("FSP DEMO - Lufga", 14.9999981F);
-            label3.Location = new Point(436, 647);
+            label3.Font = new Font("Microsoft Sans Serif", 14.9999981F);
+            label3.Location = new Point(346, 645);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(84, 26);
+            label3.Size = new Size(73, 25);
             label3.TabIndex = 66;
             label3.Text = "Alamat";
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15F);
-            label4.Location = new Point(524, 502);
+            label4.Location = new Point(484, 501);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(16, 28);
@@ -123,9 +127,10 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15F);
-            label5.Location = new Point(524, 576);
+            label5.Location = new Point(484, 567);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(16, 28);
@@ -134,9 +139,10 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15F);
-            label6.Location = new Point(524, 643);
+            label6.Location = new Point(483, 642);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
             label6.Size = new Size(16, 28);
@@ -145,18 +151,20 @@
             // 
             // textBoxNamePm
             // 
+            textBoxNamePm.Anchor = AnchorStyles.None;
             textBoxNamePm.BackColor = Color.White;
-            textBoxNamePm.Font = new Font("FSP DEMO - Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxNamePm.Location = new Point(542, 496);
+            textBoxNamePm.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxNamePm.Location = new Point(510, 495);
             textBoxNamePm.Margin = new Padding(0);
             textBoxNamePm.Multiline = true;
             textBoxNamePm.Name = "textBoxNamePm";
-            textBoxNamePm.Size = new Size(257, 43);
+            textBoxNamePm.Size = new Size(396, 43);
             textBoxNamePm.TabIndex = 70;
             textBoxNamePm.TextChanged += textBoxUsername_TextChanged;
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = Properties.Resources.icon_profil_removebg_preview;
             pictureBox1.Location = new Point(480, 154);
             pictureBox1.Name = "pictureBox1";
@@ -168,33 +176,36 @@
             // 
             // textBoxNoPm
             // 
+            textBoxNoPm.Anchor = AnchorStyles.None;
             textBoxNoPm.BackColor = Color.White;
-            textBoxNoPm.Font = new Font("FSP DEMO - Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxNoPm.Location = new Point(542, 563);
+            textBoxNoPm.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxNoPm.Location = new Point(510, 566);
             textBoxNoPm.Margin = new Padding(0);
             textBoxNoPm.Multiline = true;
             textBoxNoPm.Name = "textBoxNoPm";
-            textBoxNoPm.Size = new Size(257, 43);
+            textBoxNoPm.Size = new Size(396, 43);
             textBoxNoPm.TabIndex = 71;
             // 
             // textBoxAlamatPm
             // 
+            textBoxAlamatPm.Anchor = AnchorStyles.None;
             textBoxAlamatPm.BackColor = Color.White;
-            textBoxAlamatPm.Font = new Font("FSP DEMO - Lufga", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxAlamatPm.Location = new Point(542, 637);
+            textBoxAlamatPm.Font = new Font("Microsoft Sans Serif", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxAlamatPm.Location = new Point(510, 636);
             textBoxAlamatPm.Margin = new Padding(0);
             textBoxAlamatPm.Multiline = true;
             textBoxAlamatPm.Name = "textBoxAlamatPm";
-            textBoxAlamatPm.Size = new Size(257, 43);
+            textBoxAlamatPm.Size = new Size(396, 43);
             textBoxAlamatPm.TabIndex = 72;
             textBoxAlamatPm.TextChanged += textBoxAlamat_TextChanged;
             // 
             // ButtonEdit
             // 
+            ButtonEdit.Anchor = AnchorStyles.None;
             ButtonEdit.BackColor = Color.RoyalBlue;
-            ButtonEdit.Font = new Font("FSP DEMO - Lufga", 14.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonEdit.Font = new Font("Microsoft Sans Serif", 14.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButtonEdit.ForeColor = Color.White;
-            ButtonEdit.Location = new Point(480, 752);
+            ButtonEdit.Location = new Point(483, 735);
             ButtonEdit.Name = "ButtonEdit";
             ButtonEdit.Size = new Size(114, 59);
             ButtonEdit.TabIndex = 73;
@@ -204,10 +215,11 @@
             // 
             // ButtonSave
             // 
+            ButtonSave.Anchor = AnchorStyles.None;
             ButtonSave.BackColor = Color.FromArgb(97, 191, 143);
-            ButtonSave.Font = new Font("FSP DEMO - Lufga", 14.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ButtonSave.Font = new Font("Microsoft Sans Serif", 14.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ButtonSave.ForeColor = Color.White;
-            ButtonSave.Location = new Point(694, 752);
+            ButtonSave.Location = new Point(697, 735);
             ButtonSave.Name = "ButtonSave";
             ButtonSave.Size = new Size(114, 59);
             ButtonSave.TabIndex = 74;

@@ -96,12 +96,12 @@
             // 
             juduldashboard.AutoSize = true;
             juduldashboard.BackColor = Color.Transparent;
-            juduldashboard.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            juduldashboard.Font = new Font("Lufga", 30F, FontStyle.Bold);
             juduldashboard.ForeColor = Color.FromArgb(91, 80, 80);
             juduldashboard.ImageAlign = ContentAlignment.MiddleLeft;
             juduldashboard.Location = new Point(34, 41);
             juduldashboard.Name = "juduldashboard";
-            juduldashboard.Size = new Size(166, 46);
+            juduldashboard.Size = new Size(166, 52);
             juduldashboard.TabIndex = 20;
             juduldashboard.Text = "Renters";
             // 
@@ -215,46 +215,46 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 15F);
+            label5.Font = new Font("Lufga", 14F);
             label5.Location = new Point(473, 445);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(214, 25);
+            label5.Size = new Size(219, 24);
             label5.TabIndex = 85;
             label5.Text = "Tanggal Pengembalian";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 15F);
+            label4.Font = new Font("Lufga", 14F);
             label4.ForeColor = Color.Black;
             label4.Location = new Point(473, 386);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(197, 25);
+            label4.Size = new Size(202, 24);
             label4.TabIndex = 84;
             label4.Text = "Tanggal Peminjaman";
             // 
             // Stok
             // 
             Stok.AutoSize = true;
-            Stok.Font = new Font("Microsoft Sans Serif", 15F);
+            Stok.Font = new Font("Lufga", 14F);
             Stok.Location = new Point(83, 445);
             Stok.Margin = new Padding(2, 0, 2, 0);
             Stok.Name = "Stok";
-            Stok.Size = new Size(150, 25);
+            Stok.Size = new Size(152, 24);
             Stok.TabIndex = 83;
             Stok.Text = "Nomor E-Wallet";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 15F);
+            label1.Font = new Font("Lufga", 14F);
             label1.ForeColor = Color.Black;
             label1.Location = new Point(1036, 146);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(181, 25);
+            label1.Size = new Size(190, 24);
             label1.TabIndex = 82;
             label1.Text = "Status Peminjaman";
             // 
@@ -276,11 +276,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 15F);
+            label2.Font = new Font("Lufga", 14F);
             label2.Location = new Point(83, 385);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(150, 25);
+            label2.Size = new Size(156, 24);
             label2.TabIndex = 79;
             label2.Text = "Nama Penyewa";
             // 
@@ -367,12 +367,12 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Lufga SemiBold", 24.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(91, 80, 80);
             label3.ImageAlign = ContentAlignment.MiddleLeft;
             label3.Location = new Point(83, 529);
             label3.Name = "label3";
-            label3.Size = new Size(149, 46);
+            label3.Size = new Size(129, 43);
             label3.TabIndex = 95;
             label3.Text = "Details";
             label3.Click += label3_Click;
@@ -455,12 +455,12 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 15F);
+            label6.Font = new Font("Lufga", 14F);
             label6.ForeColor = Color.Black;
             label6.Location = new Point(1036, 306);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(198, 25);
+            label6.Size = new Size(207, 24);
             label6.TabIndex = 97;
             label6.Text = "Status Pengembalian";
             // 

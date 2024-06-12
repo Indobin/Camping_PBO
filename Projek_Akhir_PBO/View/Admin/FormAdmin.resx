@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="LogoGoCamp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="LogoGoCamp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -211,36 +208,66 @@
         uPcH3JKEPsXbddoUi3i3eHc95XfxLdGkpEvxruz7n+m70113/R1KugSZI1gQQwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="GO_CAMP.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonlogoutadm.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonprofiladmin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonlaporan.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonowners.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttondashboardadmin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="panellogo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="sidebardashboard.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonrenters.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="buttonlaporan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAAVpJREFUWEftmIFtwjAQRTNCR+gIjNANugIblA3oCN2gI3QERmGEjhD+s89RiBxi
+        k7PUQp70pZCcv3/sIyJ0G63o+/5N+q7Qqw1tAxNItfxK7YLJ/BCmiRPlVmUq6mBvFuuRGSvDdiUxEZyt
+        5CbUxfL+Uxr73LdyGniU5qgNleNoZWVowFLveISC8hVTMUucCMtt+uKEqA1FLyaPK28rXYbiOCYw3I2O
+        6Q2ggU8FSgyNruPxLriGqqVpKM4TrFY7s/AP5QF+0TawhZoFv2gbeNxG/5OhdtL+Do09tkYvAr9oG3DZ
+        Pgy5dkvDgzKHrruHKmn0k5Vn0fXnCPXC5yVZeRarSTxoo3uAX7QNuGzf3MOzODi1UqJpoxe/QqnWPdSH
+        xO/uqd6tZBHVbo1eBH7RNvD/Q/EtS/xI0/8I1gi/RFUontw0cEuKXmiv0CCWmTfi3N2uFb6ubfGMdN0F
+        5XxwJWt29RAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="buttonowners.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        zYv5Q5BBAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonrenters.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAAYRJREFUWEftl9txwjAQRV0CJVACJdBB6CCUkBLSQdIBdEA6oARKSAkpwTk3WnmE
+        bY0lWfoIw5nZQY/d9cVeS1b35CHo+36PnbBrpilma2nWYwnX8IOtF0SS4186h0S9J9oZC7laynKUxOXq
+        TzaUBP56rGPebLoMEngxRxtKAv85MWJnLvkQXFvMN7YxtzwIrC1GfJhbHgS2ECMO5poOQa3EfJlrOgSV
+        itlgqo8Y+a+6glxsXAxzW0x+uvhFfZuawJxft+qLYVxCxncg+sYw3lTMwU1PiPk3FRNuFyEv5nIH403F
+        qFC1EYboMc3WDePtxAjmfAEL/UaXfObaislBeVy6RxbDmB7PJ3bDVCfe1J/9wmOsvhj6c+vLmEkh028i
+        ZkmI5+6i9OuKob20CY4Z3i7a1cXEVt0YwwJIu7qYpR05RPFD3dCuXzOlKI9LVyZGnwQi63QQgzz+CFMk
+        xv8TkXNumrPwLPVql8iDQC1sNTlb6jJIoDukR6YaKjXd2b2lfPKf6bpfrR3P0r48qTwAAAAASUVORK5C
+        YII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA

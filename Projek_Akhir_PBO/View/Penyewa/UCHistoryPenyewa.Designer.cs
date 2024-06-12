@@ -74,6 +74,7 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.CausesValidation = false;
@@ -85,7 +86,7 @@
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridView1.Size = new Size(1211, 280);
+            dataGridView1.Size = new Size(1211, 303);
             dataGridView1.TabIndex = 78;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -94,6 +95,7 @@
             dataGridView2.AllowUserToAddRows = false;
             dataGridView2.AllowUserToDeleteRows = false;
             dataGridView2.AllowUserToResizeRows = false;
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView2.CausesValidation = false;
@@ -111,14 +113,15 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Lufga", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Lufga SemiBold", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(91, 80, 80);
             label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(34, 460);
+            label1.Location = new Point(34, 483);
             label1.Name = "label1";
-            label1.Size = new Size(153, 52);
+            label1.Size = new Size(105, 35);
             label1.TabIndex = 21;
             label1.Text = "Details";
             // 

@@ -275,5 +275,10 @@ namespace Projek_Akhir_PBO.View.Pemilik
             datakategori();
             DataAlat();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

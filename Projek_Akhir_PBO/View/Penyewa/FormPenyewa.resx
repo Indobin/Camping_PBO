@@ -117,34 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="sidebardashboard.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonReportsPy.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonlogoutpenyewa.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonprofilpeyewa.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttohistorypenyewa.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttontransactionpenyewa.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonhomepenyewa.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="panellogo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="LogoGoCamp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonReportsPy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAVpJREFUWEftmIFtwjAQRTNCR+gIjNANugIblA3oCN2gI3QERmGEjhD+s89RiBxi
+        k7PUQp70pZCcv3/sIyJ0G63o+/5N+q7Qqw1tAxNItfxK7YLJ/BCmiRPlVmUq6mBvFuuRGSvDdiUxEZyt
+        5CbUxfL+Uxr73LdyGniU5qgNleNoZWVowFLveISC8hVTMUucCMtt+uKEqA1FLyaPK28rXYbiOCYw3I2O
+        6Q2ggU8FSgyNruPxLriGqqVpKM4TrFY7s/AP5QF+0TawhZoFv2gbeNxG/5OhdtL+Do09tkYvAr9oG3DZ
+        Pgy5dkvDgzKHrruHKmn0k5Vn0fXnCPXC5yVZeRarSTxoo3uAX7QNuGzf3MOzODi1UqJpoxe/QqnWPdSH
+        xO/uqd6tZBHVbo1eBH7RNvD/Q/EtS/xI0/8I1gi/RFUontw0cEuKXmiv0CCWmTfi3N2uFb6ubfGMdN0F
+        5XxwJWt29RAAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="LogoGoCamp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAAA2CAYAAABkxd/2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -235,15 +220,6 @@
         uPcH3JKEPsXbddoUi3i3eHc95XfxLdGkpEvxruz7n+m70113/R1KugSZI1gQQwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="GO_CAMP.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA
