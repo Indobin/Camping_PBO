@@ -46,6 +46,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCStockPemilik));
             paneltopdashboard = new Guna.UI2.WinForms.Guna2Panel();
             juduldashboard = new Label();
             label1 = new Label();
@@ -65,6 +66,7 @@
             guna2Deskripsi = new Guna.UI2.WinForms.Guna2TextBox();
             richTextDeskripsi = new RichTextBox();
             button1Clear = new Button();
+            buttonRefresh = new Button();
             paneltopdashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -411,10 +413,28 @@
             button1Clear.UseVisualStyleBackColor = false;
             button1Clear.Click += button1Clear_Click;
             // 
+            // buttonRefresh
+            // 
+            buttonRefresh.BackColor = Color.Transparent;
+            buttonRefresh.BackgroundImage = (Image)resources.GetObject("buttonRefresh.BackgroundImage");
+            buttonRefresh.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonRefresh.FlatAppearance.BorderSize = 0;
+            buttonRefresh.FlatStyle = FlatStyle.Flat;
+            buttonRefresh.Font = new Font("Lufga", 20.25F);
+            buttonRefresh.ForeColor = Color.Transparent;
+            buttonRefresh.Location = new Point(1170, 434);
+            buttonRefresh.Margin = new Padding(2);
+            buttonRefresh.Name = "buttonRefresh";
+            buttonRefresh.Size = new Size(37, 38);
+            buttonRefresh.TabIndex = 78;
+            buttonRefresh.UseVisualStyleBackColor = false;
+            buttonRefresh.Click += buttonRefresh_Click;
+            // 
             // UCStockPemilik
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(buttonRefresh);
             Controls.Add(button1Clear);
             Controls.Add(richTextDeskripsi);
             Controls.Add(guna2Deskripsi);
@@ -464,5 +484,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2Deskripsi;
         private RichTextBox richTextDeskripsi;
         private Button button1Clear;
+        private Button buttonRefresh;
     }
 }
