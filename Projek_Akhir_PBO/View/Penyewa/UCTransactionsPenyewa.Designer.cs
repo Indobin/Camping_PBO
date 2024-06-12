@@ -175,6 +175,7 @@
             guna2TextBoxRent.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBoxRent.Size = new Size(287, 43);
             guna2TextBoxRent.TabIndex = 59;
+            guna2TextBoxRent.TextChanged += guna2TextBoxRent_TextChanged;
             // 
             // label2
             // 

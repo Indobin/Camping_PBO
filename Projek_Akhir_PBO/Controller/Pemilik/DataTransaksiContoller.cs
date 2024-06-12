@@ -58,23 +58,23 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                 }
             }
         }
-        public List<DetailPeminjamanDT> GetDetailPeminjamanDT(int idPenyewa)
+        public List<DetailPeminjamanDT> GetDetailPeminjamanDT(int idPeminjaman)
         {
             string query = @"SELECT ac.namaalatcamping, dt.quantity, ac.hargaalatcamping, (dt.quantity * ac.hargaalatcamping) as Total_Harga
                      FROM detail_transaksi dt
                      JOIN alat_camping ac ON dt.id_alatcamping = ac.id_alatcamping
 					 join peminjaman pem on pem.id_peminjaman = dt.id_peminjaman
 					 join penyewa p on p.id_penyewa = pem.id_penyewa
-					 where p.id_penyewa = @idPenyewa"
+					 where pem.id_peminjaman = @id_peminjaman"
             ;
             List<DetailPeminjamanDT> details = new List<DetailPeminjamanDT>();
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
+            using (var db = new DBConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
-                    cmd.Parameters.AddWithValue("@idPenyewa", idPenyewa);
+                    cmd.Parameters.AddWithValue("@id_peminjaman", idPeminjaman);
                     NpgsqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {

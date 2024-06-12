@@ -18,7 +18,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
 {
     public partial class UCTransactionsPenyewa : UserControl
     {
-       
+
         private int _userId;
 
         public int UserId
@@ -27,7 +27,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
             set
             {
                 _userId = value;
-              
+
             }
         }
         public UCTransactionsPenyewa()
@@ -35,6 +35,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
             InitializeComponent();
             itemPanel.Controls.Clear();
             LoadProducts();
+            guna2TextBoxRent.TextChanged += guna2TextBoxRent_TextChanged;
         }
 
         private void UCTransactionsPenyewa_Load(object sender, EventArgs e)
@@ -91,7 +92,11 @@ namespace Projek_Akhir_PBO.View.Penyewa
             {
                 if (item.Cells["dgvAmount"].Value != null)
                 {
-                    tot += double.Parse(item.Cells["dgvAmount"].Value.ToString());
+                    //tot += double.Parse(item.Cells["dgvAmount"].Value.ToString());
+                    int qty = Convert.ToInt32(item.Cells["dgvQty"].Value);
+                    double price = Convert.ToDouble(item.Cells["dgvPrice"].Value);
+                    int rentalDuration = int.TryParse(guna2TextBoxRent.Text.Trim(), out int duration) ? duration : 1;
+                    tot += qty * price * rentalDuration;
                 }
             }
 
@@ -100,7 +105,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
 
         private void LoadProducts()
         {
-            
+
             string query = "select * from alat_camping ac join kategori_alat_camping kac on (ac.id_kategori=kac.id_kategori)";
             using (var db = new DBConnection())
             {
@@ -147,7 +152,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
                 return;
             }
             InsertTransaction();
-            
+
         }
 
         public void InsertTransaction()
@@ -162,7 +167,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
                     {
                         DialogResult result = MessageBox.Show("Do you want to add this item to the transaction?", "Confirmation",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                     
+
                         if (result == DialogResult.Yes)
                         {
                             string insertPembayaranEwalletQuery = @"
@@ -178,7 +183,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
                                 idEwallet = (int)cmd.ExecuteScalar();
                             }
 
-                            
+
                             string insertPeminjamanQuery = @"
                         INSERT INTO peminjaman (id_penyewa, tanggal_peminjaman, id_ewallet, status_pinjam)
                         VALUES (@UserId, @TanggalPinjam, @IdEwallet, @Status)
@@ -222,10 +227,10 @@ namespace Projek_Akhir_PBO.View.Penyewa
                         {
                             MessageBox.Show("Transaction Cancelled", "Transaction",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-                           
+
                             return;
                         }
-                       
+
                     }
                     catch (Exception ex)
                     {
@@ -253,5 +258,9 @@ namespace Projek_Akhir_PBO.View.Penyewa
             lblTotal.Text = string.Empty;
         }
 
+        private void guna2TextBoxRent_TextChanged(object sender, EventArgs e)
+        {
+            GetTotal();
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                              LEFT JOIN pengembalian peng ON p.id_peminjaman = peng.id_peminjaman
                              JOIN pembayaran_ewallet pe ON p.id_ewallet = pe.id_ewallet
                              JOIN pemilik pem ON pem.id_pemilik = ac.id_pemilik
-                             WHERE pem.id_pemilik = @userId
+                             WHERE pem.id_pemilik = @userId and peng.status_kembali = false
                              GROUP BY p.id_peminjaman, r.nama_penyewa, pe.nomor_ewallet, p.tanggal_peminjaman, 
                              p.status_pinjam, peng.tanggalpengembalian, peng.status_kembali, dt.lama_sewa
                              ORDER BY p.tanggal_peminjaman ASC;";
