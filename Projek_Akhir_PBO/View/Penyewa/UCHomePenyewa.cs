@@ -31,6 +31,54 @@ namespace Projek_Akhir_PBO.View.Penyewa
         {
             InitializeComponent();
             LoadProducts();
+
+            AddCategory();
+        }
+
+        private void AddCategory()
+        {
+            string query = "select * from alat_camping";
+            using (var db = new DBConnection())
+            {
+                db.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
+                {
+                    using (NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        panelkategori.Controls.Clear();
+
+                        if (dt.Rows.Count > 0)
+                        {
+                            foreach (DataRow dr in dt.Rows)
+                            {
+                                Guna.UI2.WinForms.Guna2Button b = new Guna.UI2.WinForms.Guna2Button();
+                                b.FillColor = Color.FromArgb(220, 225, 189);
+                                b.Size = new Size(180, 45);
+                                b.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+                                b.Text = dr["namaalatcamping"].ToString();
+
+
+                                b.Click += new EventHandler(b_click);
+
+                                panelkategori.Controls.Add(b);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void b_click(object sender, EventArgs e)
+        {
+            Guna.UI2.WinForms.Guna2Button b = (Guna.UI2.WinForms.Guna2Button)sender;
+            foreach (var item in panelItem.Controls)
+            {
+                var pro = (UCItemHome)item;
+                pro.Visible = pro.namaalatcamping.ToLower().Contains(b.Text.Trim().ToLower());
+            }
         }
 
         private void AddItems(string id, string name, string cat, string price, string desc)
