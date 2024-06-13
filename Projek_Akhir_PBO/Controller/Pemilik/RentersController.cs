@@ -52,17 +52,17 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                         renters.id_peminjaman = (int)reader["id_peminjaman"];
                         renters.nama_penyewa = (string)reader["nama_penyewa"];
                         renters.nomor_ewallet = (string)reader["nomor_ewallet"];
-                        renters.tanggal_peminjaman = (DateTime)reader["tanggal_peminjaman"];
+                        renters.tanggal_peminjaman = ((DateTime)reader["tanggal_peminjaman"]).ToString("yyyy-MM-dd");
                         renters.status_pinjam = (bool)reader["status_pinjam"];
                         renters.status_pinjam_string = (bool)reader["status_pinjam"] ? "Terkirim" : "Proses";
                         renters.total_harga_keseluruhan = (long)reader["total_harga_keseluruhan"];
                         if (reader["tanggalpengembalian"] != DBNull.Value)
                         {
-                            renters.tanggalpengembalian = (DateTime?)reader["tanggalpengembalian"];
+                            renters.tanggalpengembalian = ((DateTime)reader["tanggalpengembalian"]).ToString("yyyy-MM-dd"); // Format return date
                         }
                         else
                         {
-                            renters.tanggalpengembalian = null;
+                            renters.tanggalpengembalian = "Belum ada";
                         }
                         if (reader["status_kembali"] != DBNull.Value)
                         {

@@ -48,9 +48,9 @@ namespace Projek_Akhir_PBO.View.Pemilik
             table.Columns.Add("Id", typeof(int));
             table.Columns.Add("Nama Penyewa", typeof(string));
             table.Columns.Add("Nomor E-wallet", typeof(string));
-            table.Columns.Add("Tanggal Peminjaman", typeof(DateTime));
+            table.Columns.Add("Tanggal Peminjaman", typeof(string));
             table.Columns.Add("Status Peminjaman", typeof(string));
-            table.Columns.Add("Tanggal Pengembalian", typeof(DateTime));
+            table.Columns.Add("Tanggal Pengembalian", typeof(string));
             table.Columns.Add("Status Pengembalian", typeof(string));
             table.Columns.Add("Total Harga", typeof(int));
             foreach (var renters in rentersController.ListRenters)
