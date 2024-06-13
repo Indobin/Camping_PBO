@@ -46,12 +46,12 @@ namespace Projek_Akhir_PBO
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string namapenyewa = namabox.Text;
+            string nama_penyewa = namabox.Text;
             string alamat_penyewa = alamatbox.Text;
-            string no_teleponpenyewa = notelpbox.Text;
-            string namapemilik = namabox.Text;
+            string no_telepon_penyewa = notelpbox.Text;
+            string nama_pemilik = namabox.Text;
             string alamat_pemilik = alamatbox.Text;
-            string no_teleponpemilik = notelpbox.Text;
+            string no_telepon_pemilik = notelpbox.Text;
             string username = usernamebox.Text;
             string password = passwordbox.Text;
             string konfirmasi = konfirmasibox.Text;
@@ -79,13 +79,13 @@ namespace Projek_Akhir_PBO
                             }
                         }
 
-                        string register = "INSERT INTO penyewa (id_penyewa, namapenyewa, alamat_penyewa, no_teleponpenyewa, username, password) VALUES (nextval('id_penyewa_seq'), @namapenyewa, @alamat_penyewa, @no_teleponpenyewa, @username, @password)";
+                        string register = "INSERT INTO penyewa (id_penyewa, nama_penyewa, alamat_penyewa, no_telepon_penyewa, username, password) VALUES (nextval('id_penyewa_seq'), @nama_penyewa, @alamat_penyewa, @no_telepon_penyewa, @username, @password)";
 
                         using (NpgsqlCommand cmd = new NpgsqlCommand(register, con))
                         {
-                            cmd.Parameters.AddWithValue("namapenyewa", namapenyewa);
+                            cmd.Parameters.AddWithValue("nama_penyewa", nama_penyewa);
                             cmd.Parameters.AddWithValue("alamat_penyewa", alamat_penyewa);
-                            cmd.Parameters.AddWithValue("no_teleponpenyewa", no_teleponpenyewa);
+                            cmd.Parameters.AddWithValue("no_telepon_penyewa", no_telepon_penyewa);
                             cmd.Parameters.AddWithValue("username", username);
                             cmd.Parameters.AddWithValue("password", password);
                             cmd.ExecuteNonQuery();
@@ -110,13 +110,13 @@ namespace Projek_Akhir_PBO
                             }
                         }
 
-                        string register = "INSERT INTO pemilik (id_pemilik, namapemilik, alamat_pemilik, no_teleponpemilik, username, password) VALUES (nextval('id_pemilik_seq'), @namapemilik, @alamat_pemilik, @no_teleponpemilik, @username, @password)";
+                        string register = "INSERT INTO pemilik (id_pemilik, nama_pemilik, alamat_pemilik, no_telepon_pemilik, username, password) VALUES (nextval('id_pemilik_seq'), @nama_pemilik, @alamat_pemilik, @no_telepon_pemilik, @username, @password)";
 
                         using (NpgsqlCommand cmd = new NpgsqlCommand(register, con))
                         {
-                            cmd.Parameters.AddWithValue("namapemilik", namapemilik);
+                            cmd.Parameters.AddWithValue("nama_pemilik", nama_pemilik);
                             cmd.Parameters.AddWithValue("alamat_pemilik", alamat_pemilik);
-                            cmd.Parameters.AddWithValue("no_teleponpemilik", no_teleponpemilik);
+                            cmd.Parameters.AddWithValue("no_telepon_pemilik", no_telepon_pemilik);
                             cmd.Parameters.AddWithValue("username", username);
                             cmd.Parameters.AddWithValue("password", password);
                             cmd.ExecuteNonQuery();
