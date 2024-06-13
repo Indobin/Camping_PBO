@@ -8,7 +8,7 @@ namespace Projek_Akhir_PBO.Models.Penyewa
 {
     internal class ReportsPy
     {
-        public int id_laporan;
+        public int id_laporan {  get; set; }
         public string isi_laporan;
         public string tanggal_laporan;
         public bool status_laporan_bool;

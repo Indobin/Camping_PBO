@@ -9,12 +9,12 @@ namespace Projek_Akhir_PBO.Models.Pemilik
     internal class DataTransaksi
     {
     
-        public string nama_penyewa;
-        public string jenis_ewallet;
-        public string nomor_ewallet;
-        public DateTime tanggal_peminjaman;
-        public DateTime tanggalpengembalian;
-        public long total_harga_keseluruhan;
-        public int id_peminjaman;
+        public string nama_penyewa {  get; set; }
+        public string jenis_ewallet {  get; set; }
+        public string nomor_ewallet { get; set; }
+        public DateTime tanggal_peminjaman {  get; set; }
+        public DateTime tanggalpengembalian { get; set; }
+        public long total_harga_keseluruhan { get; set; }
+        public int id_peminjaman { get; set; }
     }
 }

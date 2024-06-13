@@ -12,7 +12,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
     internal class StockController
     {
         public int UserId { get; set; }
-        public List<Stock> ListStock = new List<Stock>();
+        public List<Stock> ListStock { get; private set; } = new List<Stock>();
         
       
         public void Read()
@@ -72,12 +72,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                 }
                 using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
-                    cmd.Parameters.AddWithValue("@nama_alat", stock.namaalatcamping);
-                    cmd.Parameters.AddWithValue("@harga", stock.hargaalatcamping);
-                    cmd.Parameters.AddWithValue("@jumlah", stock.jumlahalatcamping);
-                    cmd.Parameters.AddWithValue("@deskripsi", stock.deskripsi);
-                    cmd.Parameters.AddWithValue("@id_kategori", stock.id_kategori);
-                    cmd.Parameters.AddWithValue("@dihentikan", stock.dihentikan);
+                    AddParameters(cmd, stock);
                     cmd.Parameters.AddWithValue("@userId", UserId);
 
                     cmd.ExecuteNonQuery();
@@ -112,18 +107,21 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                 }
                 using (NpgsqlCommand cmd = new NpgsqlCommand(query, db.Connection))
                 {
-                    cmd.Parameters.AddWithValue("@nama_alat", stock.namaalatcamping);
-                    cmd.Parameters.AddWithValue("@harga", stock.hargaalatcamping);
-                    cmd.Parameters.AddWithValue("@jumlah", stock.jumlahalatcamping);
-                    cmd.Parameters.AddWithValue("@deskripsi", stock.deskripsi);
-                    cmd.Parameters.AddWithValue("@id_kategori", stock.id_kategori);
-                    cmd.Parameters.AddWithValue("@dihentikan", stock.dihentikan);
-                    cmd.Parameters.AddWithValue("@userId", UserId);
+                    AddParameters(cmd, stock);
                     cmd.Parameters.AddWithValue("@idBarang", stock.id_alatcamping);
                     cmd.ExecuteNonQuery();
 
                 }
             }
+        }
+        private void AddParameters(NpgsqlCommand cmd, Stock stock)
+        {
+            cmd.Parameters.AddWithValue("@nama_alat", stock.namaalatcamping);
+            cmd.Parameters.AddWithValue("@harga", stock.hargaalatcamping);
+            cmd.Parameters.AddWithValue("@jumlah", stock.jumlahalatcamping);
+            cmd.Parameters.AddWithValue("@deskripsi", stock.deskripsi);
+            cmd.Parameters.AddWithValue("@id_kategori", stock.id_kategori);
+            cmd.Parameters.AddWithValue("@dihentikan", stock.dihentikan);
         }
     }
 }

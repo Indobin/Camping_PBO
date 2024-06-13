@@ -54,56 +54,32 @@ namespace Projek_Akhir_PBO.View.Pemilik
                 return Text;
             }
         }
-        private void button1tambah_Click(object sender, EventArgs e)
+        private Stock StockForm()
         {
-            if (string.IsNullOrEmpty(guna2nama.Text.Trim()) || string.IsNullOrEmpty(guna2Harga.Text.Trim()))
-            {
-                MessageBox.Show("Nama barang atau harga tidak boleh kosong", "Tambah Data",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (string.IsNullOrEmpty(guna2Stok.Text.Trim()) || string.IsNullOrEmpty(richTextDeskripsi.Text.Trim()))
-            {
-                MessageBox.Show("Stok atau deskirpsi tidak boleh kosong", "Tambah Data",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (string.IsNullOrEmpty(guna2ComboBoxKategori.Text.Trim()) || string.IsNullOrEmpty(guna2ComboBoxStatus.Text.Trim()))
-            {
-                MessageBox.Show("kategori atau status tidak boleh kosong", "Tambah Data",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (!int.TryParse(guna2Harga.Text.Trim(), out int harga))
-            {
-                MessageBox.Show("Harga harus berupa angka", "Tambah Data",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (!int.TryParse(guna2Stok.Text.Trim(), out int stok))
-            {
-                MessageBox.Show("Jumlah stok harus berupa angka", "Tambah Data",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            string status = guna2ComboBoxStatus.SelectedItem.ToString();
             ComboBoxItem kategoriselect = (ComboBoxItem)guna2ComboBoxKategori.SelectedItem;
-            bool dihentikan = (status == "Aktif") ? false : true;
-            Stock stock = new Stock
+            bool dihentikan = guna2ComboBoxStatus.SelectedItem.ToString() == "Tidak Aktif";
+
+            return new Stock
             {
                 namaalatcamping = guna2nama.Text.Trim(),
                 hargaalatcamping = int.Parse(guna2Harga.Text.Trim()),
                 jumlahalatcamping = int.Parse(guna2Stok.Text.Trim()),
                 deskripsi = richTextDeskripsi.Text.Trim(),
                 id_kategori = kategoriselect.Value,
-                dihentikan = dihentikan
+                dihentikan = dihentikan,
+                status = dihentikan ? "Tidak Aktif" : "Aktif",
+                namakategori = kategoriselect.Text
             };
-
-            stockController.Tambah(stock, guna2nama.Text);
-            ClearAll();
-            DataAlat();
+        }
+        private void button1tambah_Click(object sender, EventArgs e)
+        {
+            if (FormValidasi())
+            {
+                var newform = StockForm();
+                stockController.Tambah(newform, guna2nama.Text);
+                ClearAll();
+                DataAlat();
+            }
         }
 
         private void UCStockPemilik_Load(object sender, EventArgs e)
@@ -278,6 +254,35 @@ namespace Projek_Akhir_PBO.View.Pemilik
             richTextDeskripsi.Text = string.Empty;
             guna2ComboBoxKategori.SelectedIndex = -1;
             guna2ComboBoxStatus.SelectedIndex = -1;
+        }
+        private bool FormValidasi()
+        {
+            if (string.IsNullOrEmpty(guna2nama.Text.Trim()) || string.IsNullOrEmpty(guna2Harga.Text.Trim()))
+            {
+                MessageBox.Show("Nama barang atau harga tidak boleh kosong", "Tambah Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrEmpty(guna2Stok.Text.Trim()) || string.IsNullOrEmpty(richTextDeskripsi.Text.Trim()))
+            {
+                MessageBox.Show("Stok atau deskripsi tidak boleh kosong", "Tambah Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrEmpty(guna2ComboBoxKategori.Text.Trim()) || string.IsNullOrEmpty(guna2ComboBoxStatus.Text.Trim()))
+            {
+                MessageBox.Show("Kategori atau status tidak boleh kosong", "Tambah Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (!int.TryParse(guna2Harga.Text.Trim(), out _))
+            {
+                MessageBox.Show("Harga harus berupa angka", "Tambah Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (!int.TryParse(guna2Stok.Text.Trim(), out _))
+            {
+                MessageBox.Show("Jumlah stok harus berupa angka", "Tambah Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }
