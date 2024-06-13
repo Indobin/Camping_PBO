@@ -11,14 +11,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
 {
     internal class StockController
     {
-        private int _userId;
+        public int UserId { get; set; }
         public List<Stock> ListStock = new List<Stock>();
         
-        public int UserId
-        {
-            get { return _userId; }
-            set { _userId = value; }
-        }
+      
         public void Read()
         {
             string query = string.Format(@"SELECT a.id_alatcamping, a.namaalatcamping, a.hargaalatcamping, a.jumlahalatcamping, a.dihentikan, k.namakategori, a.deskripsi
@@ -31,7 +27,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                 db.Open();
                 using (NpgsqlCommand data = new NpgsqlCommand(query, db.Connection))
                 {
-                    data.Parameters.AddWithValue("@userId", _userId);
+                    data.Parameters.AddWithValue("@userId", UserId);
                     NpgsqlDataReader reader = data.ExecuteReader();
                     ListStock.Clear();
                     while (reader.Read())
@@ -59,7 +55,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
             using (var db = new DBConnection())
             {
                 db.Open();
-                using (NpgsqlCommand cmdcek = new NpgsqlCommand(query, db.Connection))
+                using (NpgsqlCommand cmdcek = new NpgsqlCommand(cek, db.Connection))
                 {
 
                     cmdcek.Parameters.AddWithValue("@nama_alat", nama_alat);
@@ -82,7 +78,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     cmd.Parameters.AddWithValue("@deskripsi", stock.deskripsi);
                     cmd.Parameters.AddWithValue("@id_kategori", stock.id_kategori);
                     cmd.Parameters.AddWithValue("@dihentikan", stock.dihentikan);
-                    cmd.Parameters.AddWithValue("@userId", _userId);
+                    cmd.Parameters.AddWithValue("@userId", UserId);
 
                     cmd.ExecuteNonQuery();
 
@@ -99,7 +95,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
             using (var db = new DBConnection())
             {
                 db.Open();
-                using (NpgsqlCommand cmdcek = new NpgsqlCommand(query, db.Connection))
+                using (NpgsqlCommand cmdcek = new NpgsqlCommand(cek, db.Connection))
                 {
 
                     cmdcek.Parameters.AddWithValue("@nama_alat", nama_alat);
@@ -122,9 +118,10 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     cmd.Parameters.AddWithValue("@deskripsi", stock.deskripsi);
                     cmd.Parameters.AddWithValue("@id_kategori", stock.id_kategori);
                     cmd.Parameters.AddWithValue("@dihentikan", stock.dihentikan);
-                    cmd.Parameters.AddWithValue("@userId", _userId);
+                    cmd.Parameters.AddWithValue("@userId", UserId);
                     cmd.Parameters.AddWithValue("@idBarang", stock.id_alatcamping);
                     cmd.ExecuteNonQuery();
+
                 }
             }
         }

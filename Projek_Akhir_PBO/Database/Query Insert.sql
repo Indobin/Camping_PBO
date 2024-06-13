@@ -4,7 +4,7 @@ values ('Kamera Cannon','20000','8','spesifikasi bisa zoom 1000x',false,1,1)
 insert into alat_camping (namaalatcamping,hargaalatcamping,jumlahalatcamping,deskripsi,dihentikan,id_pemilik,id_kategori)
 values ('Powebank','15000','6','baterai 120000 MAH',false,1,1)
 
-Tidak disetujui
+--Tidak disetujui
 insert into pembayaran_ewallet(nomor_ewallet,jenis_ewallet)
 values ('089685032962','Gopay')
 
@@ -16,7 +16,7 @@ values (1,1,10,5)
 insert into detail_transaksi(id_peminjaman,id_alatcamping,lama_sewa,quantity)
 values (1,2,10,5)
 
-Disetujui
+--Disetujui
 insert into pembayaran_ewallet(nomor_ewallet,jenis_ewallet)
 values ('08134546782','Dana')
 
