@@ -33,7 +33,8 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                              LEFT JOIN pengembalian peng ON p.id_peminjaman = peng.id_peminjaman
                              JOIN pembayaran_ewallet pe ON p.id_ewallet = pe.id_ewallet
                              JOIN pemilik pem ON pem.id_pemilik = ac.id_pemilik
-                             WHERE pem.id_pemilik = @userId and peng.status_kembali = false
+                             WHERE pem.id_pemilik = @userId  AND (p.status_pinjam = true OR p.status_pinjam = false) 
+    						 AND (peng.status_kembali IS NULL OR peng.status_kembali = false)
                              GROUP BY p.id_peminjaman, r.nama_penyewa, pe.nomor_ewallet, p.tanggal_peminjaman, 
                              p.status_pinjam, peng.tanggalpengembalian, peng.status_kembali, dt.lama_sewa
                              ORDER BY p.tanggal_peminjaman ASC;";
@@ -64,6 +65,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                         {
                             renters.tanggalpengembalian = null;
                         }
+                       
                         if (reader["status_kembali"] != DBNull.Value)
                         {
                             renters.status_kembali = (bool?)reader["status_kembali"];
@@ -74,6 +76,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                             renters.status_kembali = false;
                             renters.status_kembali_string = "Proses";
                         }
+                      
                         ListRenters.Add(renters);
                     }
                 }
@@ -107,7 +110,8 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
             {
                 if (status_kembali)
                 {
-                    string query = @"UPDATE pengembalian SET status_kembali = @status_kembali, tanggalpengembalian = @tanggalpengembalian WHERE id_peminjaman = @id_peminjaman";
+                    string query = @"Insert into pengembalian (tanggalpengembalian, status_kembali, id_peminjaman)
+                                     Values(@tanggalpengembalian, @status_kembali, @id_peminjaman )";
                     using (var db = new DBConnection())
                     {
                         db.Open();

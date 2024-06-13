@@ -23,7 +23,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
 
         public void Read()
         {
-            string query = @"select p.id_penyewa,p.nama_penyewa, pee.jenis_ewallet,pee.nomor_ewallet, pem.tanggal_peminjaman,peng.tanggalpengembalian,
+            string query = @"select pem.id_peminjaman,p.nama_penyewa, pee.jenis_ewallet,pee.nomor_ewallet, pem.tanggal_peminjaman,peng.tanggalpengembalian,
                          SUM(ac.hargaalatcamping * dt.quantity * dt.lama_sewa) AS total_harga_keseluruhan
                             from peminjaman pem
 							join pembayaran_ewallet pee on pee.id_ewallet = pem.id_ewallet
@@ -32,8 +32,8 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                             JOIN alat_camping ac ON ac.id_alatcamping = dt.id_alatcamping
                             join pengembalian peng on pem.id_peminjaman = peng.id_peminjaman
 							where peng.status_kembali = true
-                            group by p.id_penyewa,p.nama_penyewa,pem.tanggal_peminjaman,peng.tanggalpengembalian,pee.jenis_ewallet,pee.nomor_ewallet
-							Order By p.id_penyewa;";
+                            group by pem.id_peminjaman ,p.nama_penyewa,pem.tanggal_peminjaman,peng.tanggalpengembalian,pee.jenis_ewallet,pee.nomor_ewallet
+							";
 
              using (var db = new DBConnection())
             {
@@ -46,7 +46,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                     while (reader.Read())
                     {
                         DataTransaksi dataTransakasi = new DataTransaksi();
-                        dataTransakasi.id_penyewa = (int)reader["id_penyewa"];
+                        dataTransakasi.id_peminjaman = (int)reader["id_peminjaman"];
                         dataTransakasi.nama_penyewa = (string)reader["nama_penyewa"];
                         dataTransakasi.jenis_ewallet = (string)reader["jenis_ewallet"];
                         dataTransakasi.nomor_ewallet = (string)reader["nomor_ewallet"];
@@ -65,7 +65,7 @@ namespace Projek_Akhir_PBO.Controller.Pemilik
                      JOIN alat_camping ac ON dt.id_alatcamping = ac.id_alatcamping
 					 join peminjaman pem on pem.id_peminjaman = dt.id_peminjaman
 					 join penyewa p on p.id_penyewa = pem.id_penyewa
-					 where pem.id_peminjaman = @id_peminjaman"
+					 where dt.id_peminjaman = @id_peminjaman"
             ;
             List<DetailPeminjamanDT> details = new List<DetailPeminjamanDT>();
 

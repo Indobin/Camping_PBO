@@ -39,7 +39,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
         {
             datatransaksiController.Read();
             DataTable table = new DataTable();
-            table.Columns.Add("Id_penyewa", typeof(int));
+            table.Columns.Add("Id Peminjaman", typeof(int));
             table.Columns.Add("Nama Penyewa", typeof(string));
             table.Columns.Add("Jenis Ewallet", typeof(string));
             table.Columns.Add("Nomor Ewallet", typeof(string));
@@ -48,7 +48,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
             table.Columns.Add("Total Harga Keseluruhan", typeof(long));
             foreach (var datatransaksi in datatransaksiController.Listdatatransaksi)
             {
-                table.Rows.Add(datatransaksi.id_penyewa, datatransaksi.nama_penyewa, datatransaksi.jenis_ewallet, datatransaksi.nomor_ewallet, datatransaksi.tanggal_peminjaman, datatransaksi.tanggalpengembalian, datatransaksi.total_harga_keseluruhan);
+                table.Rows.Add(datatransaksi.id_peminjaman, datatransaksi.nama_penyewa, datatransaksi.jenis_ewallet, datatransaksi.nomor_ewallet, datatransaksi.tanggal_peminjaman, datatransaksi.tanggalpengembalian, datatransaksi.total_harga_keseluruhan);
             }
 
             dataGridView1.DataSource = table;

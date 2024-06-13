@@ -33,6 +33,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private int idBarangSelected = -1;
         StockController stockController;
+       
         public UCStockPemilik()
         {
             stockController = new StockController();
@@ -101,8 +102,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
             };
 
             stockController.Tambah(stock, guna2nama.Text);
-            MessageBox.Show("Alat camping berhasil ditambahkan.", "Tambah Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //ResetInputFields();
+            ClearAll();
             DataAlat();
         }
 
@@ -177,12 +177,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private void button1Clear_Click(object sender, EventArgs e)
         {
-            guna2nama.Text = string.Empty;
-            guna2Harga.Text = string.Empty;
-            guna2Stok.Text = string.Empty;
-            richTextDeskripsi.Text = string.Empty;
-            guna2ComboBoxKategori.SelectedIndex = -1;
-            guna2ComboBoxStatus.SelectedIndex = -1;
+            ClearAll();
         }
 
         private void button2edit_Click(object sender, EventArgs e)
@@ -241,7 +236,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
             stockController.Edit(stock, guna2nama.Text, idBarangSelected);
             MessageBox.Show("Alat camping berhasil diedit.", "Edit Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //ResetInputFields();
+            ClearAll();
             DataAlat();
         }
 
@@ -274,6 +269,15 @@ namespace Projek_Akhir_PBO.View.Pemilik
             guna2ComboBoxKategori.Items.Clear();
             datakategori();
             DataAlat();
+        }
+        public void ClearAll()
+        {
+            guna2nama.Text = string.Empty;
+            guna2Harga.Text = string.Empty;
+            guna2Stok.Text = string.Empty;
+            richTextDeskripsi.Text = string.Empty;
+            guna2ComboBoxKategori.SelectedIndex = -1;
+            guna2ComboBoxStatus.SelectedIndex = -1;
         }
     }
 }

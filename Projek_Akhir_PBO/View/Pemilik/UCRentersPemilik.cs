@@ -70,14 +70,18 @@ namespace Projek_Akhir_PBO.View.Pemilik
 
         private void button1Clear_Click(object sender, EventArgs e)
         {
+            ClearAll();
+        }
+        public void ClearAll()
+        {
             tb1.Text = string.Empty;
             tb4.Text = string.Empty;
             tb2.Text = string.Empty;
             tb3.Text = string.Empty;
             cbpeminjaman.SelectedIndex = -1;
             cbpengembalian.SelectedIndex = -1;
+            dataGridView2.Visible = false;
         }
-
         private void button2edit_Click(object sender, EventArgs e)
         {
             if (idRentersSelected == -1)
@@ -94,6 +98,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
                 status_pinjam = status_pinjam
             };
             rentersController.UpdateStatusPinjam(renters);
+            ClearAll();
             LoadDataGrid();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -116,7 +121,10 @@ namespace Projek_Akhir_PBO.View.Pemilik
                 tb2.Enabled = false;
                 tb4.Enabled = false;
                 tb3.Enabled = false;
-
+                if (cbpeminjaman.Text == "Terkirim")
+                {
+                    cbpeminjaman.Enabled = false;
+                }
                 dataGridView2.Visible = true;
                 label3.Visible = true;
                 DataGridViewRow baris = dataGridView1.Rows[e.RowIndex];
@@ -172,6 +180,7 @@ namespace Projek_Akhir_PBO.View.Pemilik
             };
 
             rentersController.UpdateStatusKembali(renters.id_peminjaman, status_kembali, renters.status_pinjam);
+            ClearAll();
             LoadDataGrid();
         }
     }
