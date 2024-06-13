@@ -157,7 +157,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
 
         public void InsertTransaction()
         {
-            string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=321;Database=Camping;CommandTimeout=10";
+            string conStr = "Server=localhost;Port=5432;User Id=postgres;Password=firsta;Database=Camping;CommandTimeout=10";
             using (NpgsqlConnection conn = new NpgsqlConnection(conStr))
             {
                 conn.Open();
@@ -245,7 +245,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
         {
             datagridTransaction.Rows.Clear();
             boxNoEWallet.Text = string.Empty;
-            comboBoxEWallet.Text = string.Empty;
+            comboBoxEWallet.SelectedIndex = -1;
             guna2TextBoxRent.Text = string.Empty;
             lblTotal.Text = string.Empty;
         }
@@ -253,7 +253,7 @@ namespace Projek_Akhir_PBO.View.Penyewa
         {
             datagridTransaction.Rows.Clear();
             boxNoEWallet.Text = string.Empty;
-            comboBoxEWallet.Text = string.Empty;
+            comboBoxEWallet.SelectedIndex = -1;
             guna2TextBoxRent.Text = string.Empty;
             lblTotal.Text = string.Empty;
         }

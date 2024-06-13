@@ -9,6 +9,5 @@ namespace Projek_Akhir_PBO.Models.Penyewa
     internal class TransactionPy
     {
         public int id_ewallet;
-        //public 
     }
 }

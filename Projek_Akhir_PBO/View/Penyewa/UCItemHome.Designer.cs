@@ -61,7 +61,7 @@
             lblPrice.Font = new Font("Lufga Medium", 14F, FontStyle.Bold);
             lblPrice.ForeColor = Color.FromArgb(140, 140, 140);
             lblPrice.ImageAlign = ContentAlignment.MiddleLeft;
-            lblPrice.Location = new Point(76, 150);
+            lblPrice.Location = new Point(87, 155);
             lblPrice.Name = "lblPrice";
             lblPrice.RightToLeft = RightToLeft.No;
             lblPrice.Size = new Size(23, 24);
@@ -76,7 +76,7 @@
             price.Font = new Font("Lufga Medium", 14F, FontStyle.Bold);
             price.ForeColor = Color.FromArgb(140, 140, 140);
             price.ImageAlign = ContentAlignment.MiddleLeft;
-            price.Location = new Point(13, 150);
+            price.Location = new Point(24, 155);
             price.Name = "price";
             price.RightToLeft = RightToLeft.No;
             price.Size = new Size(67, 24);
@@ -87,13 +87,13 @@
             // lblDesc
             // 
             lblDesc.BackColor = Color.Transparent;
-            lblDesc.Font = new Font("Lufga", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDesc.Font = new Font("Lufga", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDesc.ForeColor = Color.FromArgb(90, 80, 80);
             lblDesc.ImageAlign = ContentAlignment.MiddleLeft;
-            lblDesc.Location = new Point(13, 59);
+            lblDesc.Location = new Point(13, 44);
             lblDesc.Name = "lblDesc";
             lblDesc.RightToLeft = RightToLeft.No;
-            lblDesc.Size = new Size(232, 73);
+            lblDesc.Size = new Size(232, 106);
             lblDesc.TabIndex = 22;
             lblDesc.Text = "Deskripsi";
             lblDesc.TextAlign = ContentAlignment.MiddleCenter;
@@ -101,7 +101,7 @@
             // lblNama
             // 
             lblNama.BackColor = Color.Transparent;
-            lblNama.Font = new Font("Lufga Medium", 16F, FontStyle.Bold);
+            lblNama.Font = new Font("Lufga Medium", 15F, FontStyle.Bold);
             lblNama.ForeColor = Color.FromArgb(14, 115, 116);
             lblNama.ImageAlign = ContentAlignment.MiddleLeft;
             lblNama.Location = new Point(13, 16);

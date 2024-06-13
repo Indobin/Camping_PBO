@@ -89,7 +89,7 @@
             guna2ComboBoxPeminjaman.DropDownStyle = ComboBoxStyle.DropDownList;
             guna2ComboBoxPeminjaman.FocusedColor = Color.FromArgb(94, 148, 255);
             guna2ComboBoxPeminjaman.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBoxPeminjaman.Font = new Font("Lufga", 15F);
+            guna2ComboBoxPeminjaman.Font = new Font("Lufga", 14F);
             guna2ComboBoxPeminjaman.ForeColor = Color.Black;
             guna2ComboBoxPeminjaman.ItemHeight = 30;
             guna2ComboBoxPeminjaman.Location = new Point(611, 435);
@@ -259,7 +259,7 @@
             guna2tanggal.Checked = true;
             guna2tanggal.CustomizableEdges = customizableEdges5;
             guna2tanggal.FillColor = Color.White;
-            guna2tanggal.Font = new Font("Segoe UI", 9F);
+            guna2tanggal.Font = new Font("Lufga", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2tanggal.Format = DateTimePickerFormat.Long;
             guna2tanggal.Location = new Point(34, 435);
             guna2tanggal.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);

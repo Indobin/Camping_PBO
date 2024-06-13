@@ -82,6 +82,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Lufga", 15F);
             label2.Location = new Point(326, 498);
@@ -93,12 +94,13 @@
             // 
             // button2edit
             // 
+            button2edit.Anchor = AnchorStyles.None;
             button2edit.BackColor = Color.RoyalBlue;
             button2edit.FlatStyle = FlatStyle.Flat;
             button2edit.Font = new Font("Segoe UI", 20F);
             button2edit.ForeColor = Color.White;
             button2edit.Location = new Point(512, 696);
-            button2edit.Margin = new Padding(2, 2, 2, 2);
+            button2edit.Margin = new Padding(2);
             button2edit.Name = "button2edit";
             button2edit.Size = new Size(114, 59);
             button2edit.TabIndex = 53;
@@ -108,6 +110,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Lufga", 15F);
             label3.Location = new Point(326, 580);
@@ -119,6 +122,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F);
             label1.Location = new Point(470, 496);
@@ -130,6 +134,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15F);
             label4.Location = new Point(470, 576);
@@ -141,6 +146,7 @@
             // 
             // guna2Nohp
             // 
+            guna2Nohp.Anchor = AnchorStyles.None;
             guna2Nohp.BorderColor = Color.Black;
             guna2Nohp.BorderRadius = 5;
             guna2Nohp.CustomizableEdges = customizableEdges3;
@@ -165,6 +171,7 @@
             // 
             // guna2nama
             // 
+            guna2nama.Anchor = AnchorStyles.None;
             guna2nama.BorderColor = Color.Black;
             guna2nama.BorderRadius = 5;
             guna2nama.CustomizableEdges = customizableEdges5;
@@ -178,7 +185,7 @@
             guna2nama.ForeColor = SystemColors.WindowText;
             guna2nama.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2nama.Location = new Point(502, 493);
-            guna2nama.Margin = new Padding(12, 12, 12, 12);
+            guna2nama.Margin = new Padding(12);
             guna2nama.Name = "guna2nama";
             guna2nama.PasswordChar = '\0';
             guna2nama.PlaceholderText = "";
@@ -189,6 +196,7 @@
             // 
             // guna2ButtonSave
             // 
+            guna2ButtonSave.Anchor = AnchorStyles.None;
             guna2ButtonSave.CustomizableEdges = customizableEdges7;
             guna2ButtonSave.DisabledState.BorderColor = Color.DarkGray;
             guna2ButtonSave.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -207,6 +215,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = Properties.Resources.icon_profil_removebg_preview;
             pictureBox1.Location = new Point(502, 159);
             pictureBox1.Name = "pictureBox1";

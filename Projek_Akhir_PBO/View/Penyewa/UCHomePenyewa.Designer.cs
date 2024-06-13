@@ -41,6 +41,7 @@
             button3 = new Button();
             button4 = new Button();
             panelItem = new FlowLayoutPanel();
+            panelkategori = new FlowLayoutPanel();
             guna2Panel3.SuspendLayout();
             paneltopdashboard.SuspendLayout();
             SuspendLayout();
@@ -104,7 +105,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(231, 237, 214);
-            button1.Font = new Font("Lufga SemiBold", 12F, FontStyle.Bold);
+            button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             button1.ForeColor = Color.FromArgb(140, 140, 140);
             button1.Location = new Point(434, 159);
             button1.Name = "button1";
@@ -117,7 +118,7 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(220, 225, 189);
-            button2.Font = new Font("Lufga SemiBold", 12F, FontStyle.Bold);
+            button2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             button2.ForeColor = SystemColors.WindowFrame;
             button2.Location = new Point(24, 159);
             button2.Name = "button2";
@@ -130,7 +131,7 @@
             // button3
             // 
             button3.BackColor = Color.FromArgb(231, 237, 214);
-            button3.Font = new Font("Lufga SemiBold", 12F, FontStyle.Bold);
+            button3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             button3.ForeColor = Color.FromArgb(140, 140, 140);
             button3.Location = new Point(289, 159);
             button3.Name = "button3";
@@ -142,7 +143,7 @@
             // button4
             // 
             button4.BackColor = Color.FromArgb(231, 237, 214);
-            button4.Font = new Font("Lufga SemiBold", 12F, FontStyle.Bold);
+            button4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             button4.ForeColor = Color.FromArgb(140, 140, 140);
             button4.Location = new Point(145, 159);
             button4.Name = "button4";
@@ -154,15 +155,23 @@
             // panelItem
             // 
             panelItem.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelItem.Location = new Point(18, 205);
+            panelItem.Location = new Point(24, 205);
             panelItem.Name = "panelItem";
-            panelItem.Size = new Size(1259, 659);
+            panelItem.Size = new Size(1253, 659);
             panelItem.TabIndex = 65;
+            // 
+            // panelkategori
+            // 
+            panelkategori.Location = new Point(24, 137);
+            panelkategori.Name = "panelkategori";
+            panelkategori.Size = new Size(1253, 62);
+            panelkategori.TabIndex = 66;
             // 
             // UCHomePenyewa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panelkategori);
             Controls.Add(panelItem);
             Controls.Add(button4);
             Controls.Add(button1);
@@ -192,5 +201,6 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private FlowLayoutPanel panelItem;
+        private FlowLayoutPanel panelkategori;
     }
 }

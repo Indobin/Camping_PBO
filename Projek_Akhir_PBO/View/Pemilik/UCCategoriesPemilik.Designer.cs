@@ -82,7 +82,7 @@
             button1tambah.FlatStyle = FlatStyle.Flat;
             button1tambah.Font = new Font("Lufga", 20.25F);
             button1tambah.ForeColor = Color.White;
-            button1tambah.Location = new Point(715, 388);
+            button1tambah.Location = new Point(920, 399);
             button1tambah.Margin = new Padding(2);
             button1tambah.Name = "button1tambah";
             button1tambah.Size = new Size(114, 59);
@@ -97,7 +97,7 @@
             button2edit.FlatStyle = FlatStyle.Flat;
             button2edit.Font = new Font("Lufga", 20.25F);
             button2edit.ForeColor = Color.White;
-            button2edit.Location = new Point(876, 388);
+            button2edit.Location = new Point(1081, 399);
             button2edit.Margin = new Padding(2);
             button2edit.Name = "button2edit";
             button2edit.Size = new Size(114, 59);
@@ -110,17 +110,17 @@
             // 
             textBoxKategori.BorderStyle = BorderStyle.FixedSingle;
             textBoxKategori.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxKategori.Location = new Point(715, 210);
+            textBoxKategori.Location = new Point(885, 221);
             textBoxKategori.Margin = new Padding(2);
             textBoxKategori.Name = "textBoxKategori";
-            textBoxKategori.Size = new Size(275, 34);
+            textBoxKategori.Size = new Size(342, 34);
             textBoxKategori.TabIndex = 48;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(715, 168);
+            label2.Location = new Point(885, 179);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(157, 26);
@@ -140,6 +140,7 @@
             dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.CausesValidation = false;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -161,7 +162,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.Location = new Point(45, 168);
+            dataGridView1.Location = new Point(34, 168);
             dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -177,7 +178,7 @@
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(627, 651);
+            dataGridView1.Size = new Size(805, 651);
             dataGridView1.TabIndex = 46;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -186,16 +187,16 @@
             comboBox1Status.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1Status.FormattingEnabled = true;
             comboBox1Status.Items.AddRange(new object[] { "Aktif", "Tidak Aktif" });
-            comboBox1Status.Location = new Point(715, 310);
+            comboBox1Status.Location = new Point(885, 321);
             comboBox1Status.Name = "comboBox1Status";
-            comboBox1Status.Size = new Size(275, 34);
+            comboBox1Status.Size = new Size(342, 34);
             comboBox1Status.TabIndex = 52;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Lufga", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(715, 273);
+            label1.Location = new Point(885, 284);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(75, 26);
